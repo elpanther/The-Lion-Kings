@@ -10,7 +10,31 @@
 
 body {
 text-align: center;
-background-color: cadetblue;
+}
+
+input {
+background-color: #C6D3EE;
+border-color: transparent;
+}
+
+#save {
+background-color: #1034A6;
+border-color: transparent;
+margin-right: 7.5px;
+}
+
+#da {
+background-color: #DC6363;
+border-color: transparent;
+}
+
+#ap {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 165px;
+    margin-left: 675px;
+    background-color: #FEE5A2;
+    border-radius: 50px;
 }
 
 </style>
@@ -18,35 +42,39 @@ background-color: cadetblue;
 </head>
 <body>
 
+<div id="ap">
 <p>Add Photo</p>
-
+</div>
+<br>
     <form action="/action_page.php">
-        <label for="username">Name:</label>
+        <label for="username">Name</label> <br>
         <input type="text" id="username" name="username" required>
       </form>
-
+      <br>
       <form action="/action_page.php">
-        <label for="username">Email:</label>
+        <label for="username">Email</label> <br>
         <input type="text" id="username" name="username" required>
       </form>
-
+      <br>
       <form action="/action_page.php">
-        <label for="username">Phone:</label>
+        <label for="username">Phone</label> <br>
         <input type="text" id="username" name="username" required> 
       </form>
-
+      <br>
       <form action="/action_page.php">
-        <label for="username">Password:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username">Password</label> <br>
+        <input type="password" id="username" name="username" required>
       </form>
-
+      <br>
       <form action="/action_page.php">
-        <label for="username">Confirm Password:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username">Confirm Password</label> <br>
+        <input type="password" id="username" name="username" required>
       </form>
                               
-        <button>Save</button>
+<br>
 
-        <button>Delete Account</button>
+        <button id="save">Save</button>
+
+        <button id="da">Delete Account</button>
 
 </body>
