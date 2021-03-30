@@ -2,99 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Registration</title>
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@500&display=swap');
 
         * {
-        box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Style inputs */
-        input[type=text], input[type=email], textarea {
+        body {
+            padding: 0 10px;
+        }
+        body::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+        body::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+        body::-webkit-scrollbar-track {
+            background: #1e1e24;
+        }
+
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper {
+            max-width: 500px;
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
+            background: #5E95E1;
+            margin: 20px auto;
+            padding: 30px;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
         }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
+        .wrapper .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #000000;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .wrapper .form {
+            font-family: 'Architects Daughter', cursive;
+            width: 100%;
+        }
+        .wrapper .form .input_field {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .wrapper .form .input_field label {
+            width: 200px;
+            color: #757575;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .wrapper .form .input_field .input {
+            width: 100%;
+            outline: none;
+            border: 1px solid #d5dbd9;
+            font-size: 15px;
+            padding: 8px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .wrapper .form .input_field .input:focus {
+            border: 1px solid #757575;
+        }
+        .wrapper .form .button .btn {
+            width: 100%;
+            padding: 8px 10px;
+            font-size: 15px;
+            border: 0;
+            background: #757575;
+            color: #fff;
             cursor: pointer;
+            border-radius: 3px;
+            outline: none;
+        }
+        .wrapper .form .button:last-child {
+            margin-bottom: 0;
+        }
+        .wrapper .form .button .btn:hover {
+            background: #1e1e24;
         }
 
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        /* Style the container/contact section */
-        .container {
-            border-radius: 5px;
-            background-color: #5E95E1;
-            padding: 10px;
-        }
-
-        /* Create two columns that float next to eachother */
-        .column {
-            float: left;
-            width: 50%;
-            margin-top: 6px;
-            padding: 20px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-        .column, input[type=submit] {
-            width: 100%;
-            margin-top: 0;
-        }
+        @media (max-width: 420px){
+            .wrapper .form .input_field {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .wrapper .form .input_field label {
+                margin-bottom: 5px;
+            }
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
-    <!-- Contacts form -->
-    <div class="container">
-        <div style="text-align:center">
-            <!-- Title and text -->
-          <h2>Contact Us</h2>
-          <p>If you have any problems or qusetions please contact us.</p>
+    <form action="main.html">
+        <div class="wrapper">
+            <div class="title">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="">
+
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <input type="text" class="input" required>
+                </div>
+                <div class="input_field">
+                    <input type="text" class="input" required>
+                </div>
+                <div class="input_field">
+                    <input type="textarea" class="input" required>
+                </div>
+                <div class="button">
+                    <button type="submit" onclick="mySubmit()" class="btn">Send message</button>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="column">
-            <form action="/action_page.php">
-                <!-- Enter first name here -->
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-                <!-- Enter last name here -->
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-                <!-- Enter email address here -->
-              <label for="Email" >Email Address</label>
-                <input type="email" id="Email" name="email" placeholder="Your email address.." required>
-                <!-- Enter text here -->
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <!-- Submit button -->
-              <input type="submit" value="Submit">
-            </form>
-          </div>
-        </div>
-      </div>
+    </form>
 </body>
 </html>
