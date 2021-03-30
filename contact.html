@@ -105,6 +105,11 @@
         form input {
           background-color: #5E95E1;
         }
+        textarea {
+            min-height: 5em;
+            max-height: 50vh;
+            width: 100%;
+        }
 
         @media (max-width: 420px){
             form .input_field {
@@ -134,7 +139,7 @@
                   <input type="text" placeholder="Email" class="input" required>
               </div>
               <div class="input_field">
-                <textarea class="textarea" maxlength="320" placeholder="Message" cols="30" rows="10"></textarea>
+                <textarea class="textarea" placeholder="Message" cols="30" rows="10"></textarea>
               </div>
               <div class="button">
                 <button type="submit" class="btn">Send message</button>
