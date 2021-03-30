@@ -51,7 +51,7 @@
         .wrapper .text {
           font-family: 'Roboto', sans-serif;
         }
-        .wrapper #form {
+        form .wrapper {
             font-family: 'Roboto', sans-serif;
             width: 100%;
         }
@@ -59,32 +59,39 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-        }
-        form .input_field label {
-            width: 200px;
-            color: #757575;
-            margin-right: 10px;
-            font-size: 14px;
+            color: #000;
         }
         form .input_field .input {
             width: 100%;
             outline: none;
-            border: 1px solid #d5dbd9;
+            border: 1px solid #5E95E1;
+            border-bottom: 2px solid #000;
             font-size: 15px;
             padding: 8px 10px;
             border-radius: 3px;
             transition: all 0.3s ease;
+            font-family: 'Roboto',sans-serif;
+        }
+        form .input_field .textarea {
+          width: 100%;
+          outline: none;
+          font-size: 15px;
+          padding: 8px 10px;
+          border-radius: 3px;
+          transition: all 0.3s ease;
+          font-family: 'Roboto',sans-serif;
+          border: 1px solid #5E95E1;
         }
         form .input_field .input:focus {
-            border: 1px solid #757575;
+            border-bottom: 3.5px solid #000;
         }
         form .button .btn {
             width: 100%;
             padding: 8px 10px;
             font-size: 15px;
             border: 0;
-            background: #757575;
-            color: #fff;
+            background: #FEE5A2;
+            color: #000;
             cursor: pointer;
             border-radius: 3px;
             outline: none;
@@ -93,7 +100,10 @@
             margin-bottom: 0;
         }
         form .button .btn:hover {
-            background: #1e1e24;
+            background: #e6c97b;
+        }
+        form input {
+          background-color: #5E95E1;
         }
 
         @media (max-width: 420px){
@@ -114,8 +124,7 @@
             <div class="text">
               <p style="text-align: center;">If you have any problems or questions please contact us.</p>
             </div>
-            <form id="form">
-                <div class="input_field">
+                <div class="input_field" style="margin-top: 20px;">
                     <input type="text" placeholder="First Name" class="input" required>
                 </div>
                 <div class="input_field">
@@ -124,13 +133,13 @@
                 <div class="input_field">
                   <input type="text" placeholder="Email" class="input" required>
               </div>
-                <div class="input_field">
-                    <textarea maxlength="320" placeholder="Message" cols="30" rows="10"></textarea>
-                </div>
-                <div class="button">
-                    <button type="submit" onclick="mySubmit()" class="btn">Send message</button>
-                </div>
-              </form>
+              <div class="input_field">
+                <textarea class="textarea" maxlength="320" placeholder="Message" cols="30" rows="10"></textarea>
+              </div>
+              <div class="button">
+                <button type="submit" class="btn">Send message</button>
+              </div>
+            </div>
         </div>
     </form>
 </body>
