@@ -4,95 +4,82 @@
   <title>Out of Pocket - Sign Up</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-
-
-body, html {
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #F0F8FF
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-/* Add styles to the form container */
-.container {
-  position: absolute;
-  margin: 20px;
-  max-width: 400px;
-  padding: 16px;
-  background-color: #5E95E1;
-  border-radius: 12px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password], input[type=email] {
-  width: 100%;
-  padding: 3px;
-  margin: 15px 0 30px 0;
-  border: none;
-  background: #F0F8FF;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-input::placeholder{
-color: black;
-font-style: italic;
-}
-
-.button {
-  background-color: #F0F8FF;
-  border-style: none;
-}
-
-.button:hover {
-  background-color: #FEE5A2;
-}
-</style>
+<title>Sign up</title>
 </head>
 <body>
 
-
-
   <form action="/action_page.php" class="container" style="margin-left: 35%;">
     <h1>Create an account</h1>
-
-    
     <input type="text" placeholder="Enter first name" name="fname" required>
 
-    
     <input type="text" placeholder="Enter last name" name="lname" required>
     
-
-   
     <input type="text" placeholder="Enter username" name="Username" required>
 
-    
     <input type="password" placeholder="Enter password" name="psw" required>
 
-    
     <input type="password" placeholder="Verify password" name="vpsw" required>
 
-    
     <input type="email" placeholder="Enter email" name="email" required>
 
-    
     <input type="submit" value="Create an account" class="button">
-
-    
   </form>
-</div>
 
 
 
+<style>
+  body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F0F8FF
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: #5E95E1;
+    border-radius: 12px;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 3px;
+    margin: 15px 0 30px 0;
+    border: none;
+    background: #F0F8FF;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  input::placeholder{
+  color: black;
+  font-style: italic;
+  }
+  
+  .button {
+    background-color: #F0F8FF;
+    border-style: none;
+    color: black;
+  }
+  
+  .button:hover {
+    background-color: #FEE5A2;
+  }
+  
+  input:hover {
+    background-color: #FEE5A2;
+  }
+  </style>
 </body>
 </html>
