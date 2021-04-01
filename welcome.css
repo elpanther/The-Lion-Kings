@@ -1,0 +1,30 @@
+.intro {
+    text-align: center;
+    font-size: 30px;
+}
+p {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.btn {
+    border: none;
+    padding: 20px 100px;
+    border-radius: 50%;
+}
+#logIn {
+    background-color: #1034A6;
+}
+#getStarted {
+    background-color: #FEE5A2;
+}
+.buttons {
+    position: relative;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
