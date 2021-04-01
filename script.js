@@ -9,7 +9,7 @@ document.addEventListener('input', function (event) {
 
 var autoExpand = function (field) {
 
-	// Reset field height
+	// Reset field heightg
 	field.style.height = 'inherit';
 
 	// Get the computed styles for the element

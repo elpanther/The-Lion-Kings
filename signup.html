@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Out of Pocket - Sign Up</title>
+  <title>Out oof Pocket - Sign Up</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
@@ -11,6 +11,19 @@
 <body>
   
 
+
+  <nav>
+    <div class="toggle">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+    </div>
+    <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="items/items.html">Items</a></li>
+        <li><a href="profile/profile.html">Profile</a></li>
+        <li><a href="resources/resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
 
   <form action="/action_page.php" class="container" style="margin-left: 35%;">
     <h1>Create an account</h1>
@@ -35,68 +48,5 @@
 
     <input type="submit" value="Create an account" class="button">
   </form>
-
-
-
-<style>
-  body, html {
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #F0F8FF
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Add styles to the form container */
-  .container {
-    position: absolute;
-    margin: 30px;
-    max-width: 400px;
-    padding: 16px;
-    background-color: #5E95E1;
-    border-radius: 12px;
-  }
-  
-  /* Full-width input fields */
-  input[type=text], input[type=password], input[type=email] {
-    width: 100%;
-    padding: 3px;
-    margin: 3px 0 30px 0;
-    border: none;
-    background: #F0F8FF;
-  }
-  
-  /* Darkens input fields on click*/
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  input::placeholder{
-  color: black;
-  font-style: italic;
-  }
-  
-  .button {
-    background-color: #F0F8FF;
-    border-style: none;
-    color: black;
-    width: 115px;
-  }
-  
-  .button:hover {
-    background-color: #FEE5A2;
-  }
-  
-  input:hover {
-    background-color: #FEE5A2;
-  }
-
-  h1 {
-    margin-bottom: 20px;
-  }
-  </style>
 </body>
 </html>
