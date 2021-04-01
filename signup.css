@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F0F8FF
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    margin: 30px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: #5E95E1;
+    border-radius: 12px;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 3px;
+    margin: 3px 0 30px 0;
+    border: none;
+    background: #F0F8FF;
+  }
+  
+  /* Darkens input fields on click*/
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  input::placeholder{
+  color: black;
+  font-style: italic;
+  }
+  
+  .button {
+    background-color: #F0F8FF;
+    border-style: none;
+    color: black;
+    width: 115px;
+  }
+  
+  .button:hover {
+    background-color: #FEE5A2;
+  }
+  
+  input:hover {
+    background-color: #FEE5A2;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
