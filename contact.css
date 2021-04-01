@@ -7,15 +7,6 @@
 body {
     padding: 0 10px;
 }
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
-body::-webkit-scrollbar-thumb {
-    background: #000000;
-}
-body::-webkit-scrollbar-track {
-    background: #1e1e24;
-}
 
 .form {
     font-family: 'Roboto', sans-serif;
@@ -28,6 +19,7 @@ body::-webkit-scrollbar-track {
     width: 100%;
     background: #5E95E1;
     margin: 20px auto;
+    margin-top: 60px;
     padding: 30px;
 }
 .title {
