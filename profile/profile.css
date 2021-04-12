@@ -1,0 +1,100 @@
+
+body {
+    text-align: center;
+    }
+    
+    input {
+    background-color: #C6D3EE;
+    border-color: transparent;
+    }
+    
+    #save {
+    color: white;
+    background-color: #1034A6;
+    border-color: transparent;
+    margin-right: 7.5px;
+    }
+    
+    #da {
+    background-color: #DC6363;
+    border-color: transparent;
+    }
+    
+    .ap {
+        font-size: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 165px;
+        background-color: #FEE5A2;
+        border-radius: 50%;
+        text-align: center;
+    }
+    
+ /*   .container {
+        height: 90vh;
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      } */
+      .cell {
+        text-align: center;
+        padding: 4rem;
+      }
+      /* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Universal font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation bar design */
+nav {
+    width: 100%;
+    background-color: #1034A6;
+}
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+ul li:hover {
+    background-color: #5E95E1;
+}
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:active {
+    background-color: #5E95E1;
+}
+.active {
+    background-color: #5E95E1;
+}
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: left;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+label {
+  position: relative;
+  left: -70%;
+}
