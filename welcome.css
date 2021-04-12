@@ -21,7 +21,6 @@ p {
     background-color: #FEE5A2;
 }
 .buttons {
-    position: relative;
     position: absolute;
     top: 70%;
     left: 50%;
