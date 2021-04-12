@@ -16,14 +16,19 @@ p {
 }
 #logIn {
     background-color: #1034A6;
+    color:aliceblue;
+    right:-60%;  
+    position:absolute;
 }
 #getStarted {
     background-color: #FEE5A2;
+    overflow:hidden;
+    position:relative;
 }
 .buttons {
     position: absolute;
     top: 70%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
+    -ms-transform: translate(50%, -50%);
     transform: translate(-50%, -50%);
 }
