@@ -25,3 +25,4 @@ var autoExpand = function (field) {
 	field.style.height = height + 'px';
 
 };
+
