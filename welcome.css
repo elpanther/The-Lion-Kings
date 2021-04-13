@@ -22,7 +22,7 @@ p {
 }
 #getStarted {
     background-color: #FEE5A2;
-    overflow:hidden;
+    /*overflow:hidden;*/
     position:relative;
 }
 .buttons {
