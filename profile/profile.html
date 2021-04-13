@@ -5,48 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Out of Pocket - Profile Page</title>
-    <link rel="stylesheet" href="style.css">
-<style>
-
-body {
-text-align: center;
-}
-
-input {
-background-color: #C6D3EE;
-border-color: transparent;
-}
-
-#save {
-color: white;
-background-color: #1034A6;
-border-color: transparent;
-margin-right: 7.5px;
-}
-
-#da {
-background-color: #DC6363;
-border-color: transparent;
-}
-
-.ap {
-    font-size: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: 165px;
-    margin-left: 675px;
-    background-color: #FEE5A2;
-    border-radius: 50%;
-    text-align: center;
-}
-
-</style>
+    <link rel="stylesheet" href="profile.css">
 
 </head>
 <body>
 
     <nav>
         <ul>
+        <li><a href="home/home.html">Home</a></li>
         <li><a href="items/items.html">Items</a></li>
         <li class="active"><a href="profile/profile.html">Profile</a></li>
         <li><a href="resources/resources.html">Resources</a></li>
@@ -54,35 +20,40 @@ border-color: transparent;
     </ul>
   </nav>
 
-<div class="ap">
-<p>Add Photo?</p>
-</div>
-<br>
-    <form action="/action_page.php0">
-        <label for="username">Name</label> <br>
-        <input type="text" id="username" name="username" required>
+  <div class="pineapple">
+        <form action="/action_page.php0">
 
-      
-        <label for="username">Email</label> <br>
-        <input type="text" id="username" name="username" required>
+          <div class="ap">
+            <p>Add Photo?</p>
+            </div> <br>
+            <div class="n">
+            <label for="username" position="absolute">Name</label>
+            <input type="text" class="username" name="username" required>
+            <br><br>
+          </div>
+            <div class="e">
+            <label for="username">Email</label>
+            <input type="text" class="username" name="username" required>
+            <br><br>
+          </div>
+            <div class="p">
+            <label for="username">Phone</label>
+            <input type="text" class="username" name="username" required> 
+            <br><br>
+          </div>
+          <div class="pw">
+            <label for="username">Password</label>
+            <input type="password" class="username" name="username" required>
+            <br><br>
+          </div>
+          <div class="cpw">
+            <label for="username">Confirm Password</label>
+            <input type="password" class="username" name="username" required>
+          </div>
+<br><br>
+<button id="save">Save</button> <button id="da">Delete Account</button>
 
-      
-        <label for="username">Phone</label> <br>
-        <input type="text" id="username" name="username" required> 
-
-      
-        <label for="username">Password</label> <br>
-        <input type="password" id="username" name="username" required>
-
-     
-        <label for="username">Confirm Password</label> <br>
-        <input type="password" id="username" name="username" required>
-      </form>
-                              
-<br>
-
-        <button id="save">Save</button>
-
-        <button id="da">Delete Account</button>
-
+          </form>
+   </div>    
+          
 </body>
