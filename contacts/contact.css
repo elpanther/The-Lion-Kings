@@ -89,3 +89,57 @@ input::placeholder {
         align-items: flex-start;
     }
 }
+
+
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Universal font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation bar design */
+nav {
+    width: 100%;
+    background-color: #1034A6;
+}
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+ul li:hover {
+    background-color: #5E95E1;
+}
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:active {
+    background-color: #5E95E1;
+}
+.active {
+    background-color: #5E95E1;
+}
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    text-align: left;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
