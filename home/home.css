@@ -12,15 +12,15 @@ body {
 
 .checking {
     margin: 100px;
-   margin-left: 200px;
    float: left;
-   margin-left: 200px;
+   margin-left: 300px;
+  
 }
 
 .savings {
     margin: 100px;
     float: right;
-   margin-right: 200px;
+   margin-right: 300px;
 }
 
 h1 {
