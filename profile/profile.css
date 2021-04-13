@@ -19,7 +19,15 @@ body {
     background-color: #DC6363;
     border-color: transparent;
     }
-    
+
+  /*  .pineapple {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    right: 60%;
+    transform: translate(-50%, -50%);
+    }
+    */
     .ap {
         font-size: 25px;
         padding-top: 25px;
@@ -29,18 +37,11 @@ body {
         border-radius: 50%;
         text-align: center;
     }
-    
- /*   .container {
-        height: 90vh;
-        margin: 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-      } */
-      .cell {
-        text-align: center;
-        padding: 4rem;
-      }
+
+    .username {
+        left: 50%
+    }
+
       /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -92,9 +93,4 @@ ul li:active {
     color: #fff;
     font-size: 30px;
     display: none;
-}
-
-label {
-  position: relative;
-  left: -70%;
 }
