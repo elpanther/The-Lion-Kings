@@ -10,6 +10,31 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.checking {
+    margin: 100px;
+   float: left;
+   margin-left: 300px;
+  
+}
+
+.savings {
+    margin: 100px;
+    float: right;
+   margin-right: 300px;
+}
+
+h1 {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
 /* Navigation bar design */
 nav {
     width: 100%;
