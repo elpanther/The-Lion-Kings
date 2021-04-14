@@ -29,7 +29,6 @@ p {
 #getStarted {
     background-color: #FEE5A2;
     position:relative;
-    z-index: 2;
 }
 .buttons {
     position: absolute;
