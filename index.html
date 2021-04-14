@@ -33,10 +33,23 @@
                 <button class="btn" id="getStarted" onclick="window.location.href='signup.html'">
                     <strong>Get Started</strong>
                 </button>
-                <button class="btn" id="logIn">
-                    <strong>Log In</strong>
-                </button>
-            </div>
+                <button id="btn" class="open-button" onclick="openForm()">Log In</button>
+                <div class="form-popup" id="myForm">
+                  <form action="home.html" class="form-container">
+                    <h1>Login</h1>
+                
+                    <label for="email"><b>Username</b></label>
+                    <input type="text" placeholder="Enter username" name="username" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" maxlength="6" placeholder="Enter Password" name="psw" required>
+                
+                    <button type="submit" class="open">Login</button>
+                    <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+                </div>
         </main>
 
+        <script src="script.js"></script>
 </body>
