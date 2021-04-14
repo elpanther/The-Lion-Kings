@@ -10,24 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Navigation bar design */
-nav {
-    width: 100%;
-    background-color: #1034A6;
-}
+.new-item {
+background-color: #1034A6;
 
-ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 20px;
-}
-
+<<<<<<< HEAD
 ul li:hover {
     background-color: #5E95E1;
 }
@@ -53,3 +39,6 @@ ul li:active {
     display: none;
 }
 
+=======
+}
+>>>>>>> 4e0d68d75a514e9eab5c6effefcfbd4cf3b4be41
