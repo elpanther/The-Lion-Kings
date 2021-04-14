@@ -1,3 +1,66 @@
+/*.bookingForm {
+	height:500px;
+	background-image:url('images/formpattern.png') 
+    
+}
+
+.bookingForm img {
+	width:200px;
+	margin:90px 0 0 170px;
+
+}
+/*need to come back to later 
+.bookingForm img:nth-child(3){
+	margin:240px 0 0 -200px;	
+	
+}
+
+form {
+    text-align: center;
+	padding:20px 0 0 70px;
+	margin-left: 10%;
+	color:#fff;
+    display: inline-block;
+}
+/*this is for text width column2
+.formColumn2 label span {
+    text-align: center;
+    width: 140px;
+    display: inline-block;
+}
+
+.formColumn1,.formColumn2{
+    text-align: center;
+	float:left;
+    display: inline-block;
+}
+
+/*aligning top column 2 with title
+.formColumn2 {
+    text-align: center;
+	margin-top: 80px;
+	margin-left: 50px;
+    display: inline-block;
+}
+
+/*drop down and input width
+select,input{
+    text-align: center;
+	width:200px;
+	margin:10px 0;
+    display: inline-block;
+}
+
+/*leave
+ textarea {
+    text-align: center;
+ 	vertical-align: top;
+ 	height:110px;
+ 	width: 200px;
+ 	resize:none;
+display: inline-block;
+ }
+*/
 body {
     text-align: center;
     }
@@ -31,9 +94,19 @@ body {
         text-align: center;
     }
 
-    .username {
-        left: 50%
-    }
+.pineapple {
+    display: inline-block;
+}
+
+label {
+    float: left;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0px 4px 0px 6px;
+}
 
       /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
