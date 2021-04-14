@@ -20,11 +20,11 @@ p {
     right:-60%;  
     position:absolute;
     z-index: 0;
-<<<<<<< HEAD
+
     border-radius: 50%;
     padding: 20px 100px;
-=======
->>>>>>> 7c47da939f58da4a110c6f947b3227e35eacf8d5
+
+
 }
 #getStarted {
     background-color: #FEE5A2;

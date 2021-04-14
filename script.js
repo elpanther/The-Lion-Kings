@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
   }
@@ -6,7 +6,7 @@ function openForm() {
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
   }
-=======
+
 // Auto-extending textarea
 
 // NOTE: The textarea only expands as far as the page is able to go, so the scroll bar will appear after a couple hundred characters.
@@ -44,4 +44,4 @@ $(document).ready(function() {
 	// Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
 	// $.fn.popup.defaults.pagecontainer = '#page'
   });
->>>>>>> 7c47da939f58da4a110c6f947b3227e35eacf8d5
+
