@@ -1,6 +1,41 @@
+body {
+    text-align: center;
+    }
+    
+    input {
+    background-color: #C6D3EE;
+    border-color: transparent;
+    }
+    
+    #save {
+    color: white;
+    background-color: #1034A6;
+    border-color: transparent;
+    margin-right: 7.5px;
+    }
+    
+    #da {
+    background-color: #DC6363;
+    border-color: transparent;
+    }
 
+    .ap {
+        margin: 0 auto;
+        margin-top: 25px;
+        font-size: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 165px;
+        background-color: #FEE5A2;
+        border-radius: 50%;
+        text-align: center;
+    }
 
-/* font-family: 'Roboto', sans-serif; */
+    .username {
+        left: 50%
+    }
+
+      /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* Universal font */
@@ -9,31 +44,6 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-
-.checking {
-    margin: 100px;
-   margin-left: 200px;
-   float: left;
-   margin-left: 200px;
-}
-
-.savings {
-    margin: 100px;
-    float: right;
-   margin-right: 200px;
-}
-
-h1 {
-    display: inline;
-}
-
-
-
-
-
-
-
-
 
 /* Navigation bar design */
 nav {
