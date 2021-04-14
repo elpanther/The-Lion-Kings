@@ -14,17 +14,21 @@ p {
     padding: 20px 100px;
     border-radius: 50%;
 }
-#logIn {
+#btn {
     background-color: #1034A6;
     color:aliceblue;
     right:-60%;  
     position:absolute;
     z-index: 0;
+
+    border-radius: 50%;
+    padding: 20px 100px;
+
+
 }
 #getStarted {
     background-color: #FEE5A2;
     position:relative;
-    z-index: 2;
 }
 .buttons {
     position: absolute;
@@ -33,3 +37,71 @@ p {
     -ms-transform: translate(50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.open-button {
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The popup form  */
+  .form-popup {
+    display: none;
+    position: absolute;
+    border: 2px black solid;
+    top: -230;
+    right: 50px;
+    left: 83px;
+    width: 100%;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .open {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+  }
+  
+  .form-container .btn-cancel {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Add a red background color to the cancel button */
+  .form-container .btn-cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .open:hover, .open-button:hover {
+    opacity: 1;
+  }
