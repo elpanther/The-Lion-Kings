@@ -19,11 +19,12 @@ p {
     color:aliceblue;
     right:-60%;  
     position:absolute;
+    z-index: 0;
 }
 #getStarted {
     background-color: #FEE5A2;
-    overflow:hidden;
     position:relative;
+    z-index: 2;
 }
 .buttons {
     position: absolute;
