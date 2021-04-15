@@ -19,9 +19,14 @@
         </ul>
     </nav>
 
-    <button class="new-item" id="open-button" onclick="openForm">Add new item</button>
+    <button class="new-item" id="open-button" onclick="on()">Add new item</button>
+    
+    
+      
+
     
     <section id="add-new-item" class="pop-up">
+        <form action="/action_page.php" class="form-container">
         <h3>Item Setup</h3>
         <br>
         <label for="name"><span>Name</span>
@@ -31,9 +36,9 @@
          <label for="purpose"><span>Purpose</span>
             <select name="purposes" id="select-purpose">
                 <option value="">Select purpose</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="">Savings</option>
+                <option value="">Spending</option>
+                <option value="">Deposits</option>
             </select>
          </label>
          <br>
@@ -56,6 +61,7 @@
          <br>
          <button id="btn" class="cancel">Cancel</button>
          <button id="btn" class="confirm">Confirm</button>
+        </form>
     </section>
     <!-- <section id="edit-item" class="pop-up">
         <h3>Edit Item</h3>

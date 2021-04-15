@@ -1,10 +1,10 @@
 
 function openForm() {
-	document.getElementById("myForm").style.display = "block";
+	document.getElementById("add-new-item").style.display = "block";
   }
   
   function closeForm() {
-	document.getElementById("myForm").style.display = "none";
+	document.getElementById("add-new-item").style.display = "none";
   }
 
 // Auto-extending textarea
@@ -45,5 +45,11 @@ $(document).ready(function() {
 	// $.fn.popup.defaults.pagecontainer = '#page'
   });
 
-
+  function on() {
+	document.getElementById("open-button").style.display = "block";
+  }
+  
+  function off() {
+	document.getElementById("overlay").style.display = "none";
+  }
 
