@@ -10,5 +10,15 @@ body {
 
 .new-item {
 background-color: #1034A6;
+color: #F0F8FF;
+border: none;
+border-radius: 8px;
+width: 170px;
+height: 40px;
+margin-top: 30px;
+margin-left: 200px;
+}
 
+.new-item:hover {
+    background-color: #5E95E1;
 }
