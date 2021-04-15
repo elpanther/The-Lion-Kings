@@ -10,7 +10,7 @@ function openForm() {
 // Auto-extending textarea
 
 // NOTE: The textarea only expands as far as the page is able to go, so the scroll bar will appear after a couple hundred characters.
-  
+
 document.addEventListener('input', function (event) {
 	if (event.target.tagName.toLowerCase() !== 'textarea') return;
 	autoExpand(event.target);
@@ -44,6 +44,4 @@ $(document).ready(function() {
 	// Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
 	// $.fn.popup.defaults.pagecontainer = '#page'
   });
-
-
 
