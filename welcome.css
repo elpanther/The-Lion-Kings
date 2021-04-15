@@ -101,7 +101,3 @@ p {
     background-color: red;
   }
   
-  /* Add some hover effects to buttons */
-  .form-container .open:hover, .open-button:hover {
-    opacity: 1;
-  }
