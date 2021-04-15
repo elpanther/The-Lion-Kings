@@ -1,10 +1,10 @@
 
 function openForm() {
-	document.getElementById("myForm").style.display = "block";
+	document.getElementById("add-new-item").style.display = "block";
   }
   
   function closeForm() {
-	document.getElementById("myForm").style.display = "none";
+	document.getElementById("add-new-item").style.display = "none";
   }
 
 // Auto-extending textarea
@@ -45,3 +45,14 @@ $(document).ready(function() {
 	// $.fn.popup.defaults.pagecontainer = '#page'
   });
 
+<<<<<<< HEAD
+  function on() {
+	document.getElementById("open-button").style.display = "block";
+  }
+  
+  function off() {
+	document.getElementById("overlay").style.display = "none";
+  }
+
+=======
+>>>>>>> de5e2564b7c5cd2e9b178dcf13c766f3a88afaea
