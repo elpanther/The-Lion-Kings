@@ -17,3 +17,30 @@ height: 40px;
 margin-top: 30px;
 margin-left: 200px;
 }
+
+/* Section colors and sizes */
+.pop-up {
+    background-color: #5E95E1;
+    margin: auto;
+    width: 60%;
+}
+
+section {
+    text-align: center;
+}
+
+/* Red and green button style */
+#btn {
+    width: 80px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+}
+
+.cancel {
+    background-color: #C07474;
+}
+
+.confirm {
+    background-color: #7EC074;
+}
