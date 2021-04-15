@@ -10,7 +10,7 @@ function openForm() {
 // Auto-extending textarea
 
 // NOTE: The textarea only expands as far as the page is able to go, so the scroll bar will appear after a couple hundred characters.
-  
+
 document.addEventListener('input', function (event) {
 	if (event.target.tagName.toLowerCase() !== 'textarea') return;
 	autoExpand(event.target);
@@ -45,6 +45,7 @@ $(document).ready(function() {
 	// $.fn.popup.defaults.pagecontainer = '#page'
   });
 
+<<<<<<< HEAD
   function on() {
 	document.getElementById("open-button").style.display = "block";
   }
@@ -53,3 +54,5 @@ $(document).ready(function() {
 	document.getElementById("overlay").style.display = "none";
   }
 
+=======
+>>>>>>> de5e2564b7c5cd2e9b178dcf13c766f3a88afaea

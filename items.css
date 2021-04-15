@@ -10,6 +10,8 @@ body {
 
 input {
 width: 150px ;
+height: 15px;
+
 }
 
 .new-item {
