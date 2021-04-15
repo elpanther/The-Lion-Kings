@@ -8,6 +8,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+input {
+width: 150px ;
+}
+
 .new-item {
 background-color: #1034A6;
 color: #F0F8FF;
@@ -49,3 +53,4 @@ section {
 .new-item:hover {
     background-color: #5E95E1;
 }
+
