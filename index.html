@@ -31,16 +31,19 @@
             </div>
             
                 <p class="quote">“Your financial future strategized today”</p>
-            
+                
             <div class="buttons">
+                
                 <button class="btn" id="getStarted" onclick="window.location.href='signup.html'">
                     <strong>Get Started</strong>
                 </button>
                 <button id="btn" class="open-button" onclick="openForm()">Log In</button>
-                <div class="form-popup" id="myForm">
-                  <form action="home.html" class="form-container">
+                <div class="overlay">
+                    <div class="form-popup" id="myForm">
+                  
+                      <form action="home.html" class="form-container">
                     <h1>Login</h1>
-                
+               
                     <label for="email"><b>Username</b></label>
                     <input type="text" placeholder="Enter username" name="username" required>
                 
@@ -52,7 +55,11 @@
                   </form>
                 </div>
                 </div>
+            </div>
         </main>
+        
 
         <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 </body>
