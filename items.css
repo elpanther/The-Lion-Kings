@@ -29,8 +29,7 @@ margin-left: 200px;
 .pop-up {
     background-color: #5E95E1;
     margin: auto;
-    width: 60%;
-    display: none;
+    width: 30%;
   position: fixed;
   bottom: 0;
   right: 15px;
