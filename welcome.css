@@ -51,7 +51,7 @@ p {
     display: block;
     top: 0;
     left: 0;
-    color: rgba(160, 148, 148, 0.5);
+    color: black;
     /* opacity: .8; */
     cursor: pointer;
      z-index: 100; 
