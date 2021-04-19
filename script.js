@@ -1,12 +1,10 @@
 
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
-<<<<<<< HEAD
 	//document.getElementById("add-new-item").style.display = "block";
 	//document.getElementsByClassName("overlay").style.display = "block";
 	
-=======
->>>>>>> 35ba94bd31de0c89030ba9b0c6d5ef03953a322c
+
   }
 
   function mask() {
