@@ -1,3 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #f2f2f2;
+  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+/* actual form */
+.form-popup{
+  width: 380px;
+  background: #5E95E1;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: -230;
+    right: 50px;
+    left: 50px;
+}
+/* darker background */
+#mask{
+  display: none;
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+ 
+}
+/* Login title */
+.form-popup .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 15px 15px;
+  background: linear-gradient(-135deg,  #1034A6,#FEE5A2 );
+  width: 380px fit-content;
+  
+}
+/* form formatting */
+.form-popup form{
+  padding: 10px 30px 50px 30px;
+}
+.form-popup form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+/* input effects */
+.form-popup form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease; 
+}
+.form-popup form .field input:focus,
+form .field input:valid{
+  border-color: #4158d0;
+  
+  
+}
+.form-popup form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  
+  
+  
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: black;
+  background: transparent;
+  transform: translateY(-50%);
+  
+  
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+  
+  
+}
+/* remember login */
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+  
+  
+}
+/* forgot password */
+form .content .pass-link{
+  color: "";
+  
+}
+/* login button*/
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg,  #1034A6,#FEE5A2);
+  transition: all 0.3s ease;
+  
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+  
+}
+/* link to sign up from login */
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+/* ================================================= */
 .intro {
     text-align: center;
     font-size: 30px;
@@ -39,6 +219,7 @@ p {
     transform: translate(-50%, -50%);
 }
 
+/* login button??? */
 .open-button {
     color: white;
     border: none;
@@ -48,56 +229,53 @@ p {
     position: fixed;
     width: 100%;
     height: 100%;
-    display: block;
+    display: none;
     top: 0;
     left: 0;
-    color: rgba(160, 148, 148, 0.5);
-    /* opacity: .8; */
+    opacity: .8;
     cursor: pointer;
-     z-index: 100; 
+    z-index: 100;
+    
   }
   
   /* The popup form  */
-  .form-popup {
-    display: none;
-    position: absolute;
-    border: 2px black solid;
+  /* .form-popup { */
+    /* border: 2px black solid;
     top: -230;
     right: 50px;
     left: 50%;
-    width: 100%;
-    z-index: 4;
-    /* z-index: 2;
-    width:300px;
+    width: 100%; */
+    
+    /* width:300px;
     position:absolute;
     left:50%;
     top:100px;
-    margin-left:-150px; */
-  }
+    margin-left:-150px; */ 
+  /* } */
   
-  /* Add styles to the form container */
-  .form-container {
+  /* Add styles to the form container
+  /* .form-container {
     padding: 10px;
-    background-color: white;
-  }
+    background-color:#5E95E1;
+  } */
   
   /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
+  /* .form-container input[type=text], .form-container input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
-  }
+  } */
   
   /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  /* .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
-  }
+  } */
   
   /* Set a style for the submit/login button */
-  .form-container .open {
+  /* .form-container .open {
     background-color: #4CAF50;
     color: white;
     padding: 16px 20px;
@@ -105,19 +283,10 @@ p {
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
-  }
+  } */ 
   
-  .form-container .btn-cancel {
-    background-color: red;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
+  
 
   /* Add a red background color to the cancel button */
-  .form-container .btn-cancel {
-    background-color: red;
-  }
+  
   

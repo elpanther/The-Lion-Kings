@@ -2,8 +2,16 @@
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
 	//document.getElementById("add-new-item").style.display = "block";
-	$('.overlay').fadeIn(300);
+	//document.getElementsByClassName("overlay").style.display = "block";
+	
   }
+
+  function mask() {
+	document.getElementsById("mask").style.background = "block"
+	//document.getElementById("add-new-item").style.display = "block";
+	// $('.overlay').fadeIn(300);
+  }
+
   
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
@@ -41,7 +49,7 @@ var autoExpand = function (field) {
 
 // Pop up form
 // $(document).ready(function() {
-// 	$('#overlay').fadeIn(300);
+// 	$(".form-popup, overlay").hide.fadeIn(300);
 
 // 	// Initialize the plugin
 // 	//$("#myForm").popup();
