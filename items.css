@@ -23,6 +23,8 @@ width: 170px;
 height: 40px;
 margin-top: 30px;
 margin-left: 200px;
+position: fixed;
+cursor: pointer;
 }
 
 /* Section colors and sizes */
@@ -30,9 +32,15 @@ margin-left: 200px;
     background-color: #5E95E1;
     margin: auto;
     width: 30%;
+
+    border-radius: 8px;
+    display: none;
+
   position: fixed;
   bottom: 0;
   right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
 }
 
 section {
@@ -45,6 +53,8 @@ section {
     height: 40px;
     margin-top: 30px;
     border: none;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .cancel {

@@ -1,10 +1,22 @@
+
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
+
+//log in
+function openForm() {
+	document.getElementById("myForm").style.display = "block";
+	//document.getElementById("add-new-item").style.display = "block";
+	$('.overlay').fadeIn(300);
+
   }
   
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
+
+	//document.getElementById("add-new-item").style.display = "none";
+
   }
+  //add new item
 
 // Auto-extending textarea
 
@@ -35,23 +47,34 @@ var autoExpand = function (field) {
 };
 
 // Pop up form
-$(document).ready(function() {
+// $(document).ready(function() {
+// 	$('#overlay').fadeIn(300);
 
-	// Initialize the plugin
-	$('#add-new-item').popup();
+// 	// Initialize the plugin
+// 	//$("#myForm").popup();
 
-	// Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
-	// $.fn.popup.defaults.pagecontainer = '#page'
-  });
+// 	// Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
+// 	// $.fn.popup.defaults.pagecontainer = '#page'
+	
+//   });
+// $(document).ready(function() {
+// 	$('#btn').click(function() {
+// 	   $('#myForm').fadeIn(300);
+// 	});
+ 
+// 	$('#close').click(function() {
+// 	   $('#myForm').fadeOut(300);
+// 	});
+//  });
+  
 
 
   function on() {
-	document.getElementById("open-button").style.display = "block";
+	
+		document.getElementsByClassName("overlay").style.display = "block";
+	//$('#myForm').fadeIn(300);
   }
   
-  function off() {
-	document.getElementById("overlay").style.display = "none";
-  }
-
-
-
+//   function off() {
+	
+//   }
