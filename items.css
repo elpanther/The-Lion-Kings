@@ -9,22 +9,21 @@ body {
 }
 
 input {
-width: 150px ;
-height: 15px;
-
+    width: 150px ;
+    height: 15px;
 }
 
 .new-item {
-background-color: #1034A6;
-color: #F0F8FF;
-border: none;
-border-radius: 8px;
-width: 170px;
-height: 40px;
-margin-top: 30px;
-margin-left: 200px;
-position: fixed;
-cursor: pointer;
+    background-color: #1034A6;
+    color: #F0F8FF;
+    border: none;
+    border-radius: 8px;
+    width: 170px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 200px;
+    position: fixed;
+    cursor: pointer;
 }
 
 /* Section colors and sizes */
@@ -32,19 +31,13 @@ cursor: pointer;
     background-color: #5E95E1;
     margin: auto;
     width: 30%;
-
     border-radius: 8px;
-<<<<<<< HEAD
-    /* display: none; */
-=======
     display: none;
-
->>>>>>> 35ba94bd31de0c89030ba9b0c6d5ef03953a322c
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
 }
 
 section {
