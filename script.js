@@ -1,13 +1,20 @@
+
+function openForm() {
+	document.getElementById("myForm").style.display = "block";
+
 //log in
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
 	//document.getElementById("add-new-item").style.display = "block";
 	$('.overlay').fadeIn(300);
+
   }
   
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
+
 	//document.getElementById("add-new-item").style.display = "none";
+
   }
   //add new item
 
@@ -61,6 +68,7 @@ var autoExpand = function (field) {
 //  });
   
 
+
   function on() {
 	
 		document.getElementsByClassName("overlay").style.display = "block";
@@ -70,4 +78,3 @@ var autoExpand = function (field) {
 //   function off() {
 	
 //   }
-

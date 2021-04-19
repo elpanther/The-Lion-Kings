@@ -32,8 +32,10 @@ cursor: pointer;
     background-color: #5E95E1;
     margin: auto;
     width: 30%;
+
     border-radius: 8px;
     display: none;
+
   position: fixed;
   bottom: 0;
   right: 15px;
