@@ -114,6 +114,24 @@ var btnOpen = document.getElementById("open-button");
 // Get the close button
 var btnClose = document.getElementsByClassName("cancel");
 
+// Open the popup
+btnOpen.onclick = function() {
+    modal.className = "Modal is-visuallyHidden";
+    setTimeout(function() {
+      container.className = "MainContainer is-blurred";
+      modal.className = "Modal";
+    }, 100);
+    container.parentElement.className = "ModalOpen";
+}
+
+// Close the popup
+btnClose.onclick = function() {
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    body.className = "";
+    container.tagName = "section";
+    container.parentElement.tagName = "";
+}
+
 // When the user clicks anywhere outside of the popup, close it
 window.onclick = function(event) {
     if (event.target == modal) {
