@@ -7,6 +7,10 @@ function openForm() {
 
   }
 
+
+ 
+
+
   function mask() {
 	document.getElementsById("mask").style.background = "block"
 
@@ -16,9 +20,9 @@ function openForm() {
 
 
 
-  function closeForm() {
-	document.getElementById("myForm").style.display = "none";
-  }
+//   function closeForm() {
+// 	document.getElementById("myForm").style.display = "none";
+//   }
   //add new item
 
 // Auto-extending textarea
