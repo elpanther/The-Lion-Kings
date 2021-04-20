@@ -1,6 +1,20 @@
 
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
+	//document.getElementById("add-new-item").style.display = "block";
+	//document.getElementsByClassName("overlay").style.display = "block";
+// 	var overlay = document.getElementById('overlay');
+// 	var dialog = document.getElementById('myForm');
+// 	document.getElementById('show').onclick = function() {
+// 	  overlay.fadeIn(250);
+// 	  dialog.fadeIn(300);
+// 	};
+// 	document.getElementById('exit').onclick = function() {
+// 	  overlay.fadeOut(300);
+// 	  dialog.fadeOut(250);
+// 	};
+//   })();
+}
   }
 
   function mask() {
