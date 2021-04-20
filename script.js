@@ -3,9 +3,18 @@ function openForm() {
 	document.getElementById("myForm").style.display = "block";
 	//document.getElementById("add-new-item").style.display = "block";
 	//document.getElementsByClassName("overlay").style.display = "block";
-	
-
-  }
+// 	var overlay = document.getElementById('overlay');
+// 	var dialog = document.getElementById('myForm');
+// 	document.getElementById('show').onclick = function() {
+// 	  overlay.fadeIn(250);
+// 	  dialog.fadeIn(300);
+// 	};
+// 	document.getElementById('exit').onclick = function() {
+// 	  overlay.fadeOut(300);
+// 	  dialog.fadeOut(250);
+// 	};
+//   })();
+}
 
   function mask() {
 	document.getElementsById("mask").style.background = "block"
@@ -82,3 +91,53 @@ var autoExpand = function (field) {
 	
 //   }
 
+// Displays the item setup form
+function openItem() {
+	document.getElementById("add-new-item").style.display = "block";
+  }
+
+// Sets the display of the item setup form to none
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('add-new-item');
+
+// Get the main container and the body
+var body = document.getElementsByTagName('body');
+var container = document.getElementsByTagName('section');
+
+// Get the open button
+var btnOpen = document.getElementById("open-button");
+
+// Get the close button
+var btnClose = document.getElementsByClassName("cancel");
+
+// Open the popup
+btnOpen.onclick = function() {
+    modal.className = "Modal is-visuallyHidden";
+    setTimeout(function() {
+      container.className = "MainContainer is-blurred";
+      modal.className = "Modal";
+    }, 100);
+    container.parentElement.className = "ModalOpen";
+}
+
+// Close the popup
+btnClose.onclick = function() {
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    body.className = "";
+    container.tagName = "section";
+    container.parentElement.tagName = "";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.className = "Modal is-hidden";
+        body.className = "";
+        container.tagName = "section";
+        container.parentElement.className = "";
+    }
+}
