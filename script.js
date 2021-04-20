@@ -1,4 +1,10 @@
+// blur
+  function toggle() {
+	let blur = document.getElementById('blur');
+	blur.classList.toggle('active')
+}
 
+// Opens the form
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
 	//document.getElementById("add-new-item").style.display = "block";
@@ -16,6 +22,7 @@ function openForm() {
 //   })();
 }
 
+
   function mask() {
 	document.getElementsById("mask").style.background = "block"
 
@@ -25,9 +32,9 @@ function openForm() {
 
 
 
-  function closeForm() {
-	document.getElementById("myForm").style.display = "none";
-  }
+//   function closeForm() {
+// 	document.getElementById("myForm").style.display = "none";
+//   }
   //add new item
 
 // Auto-extending textarea
