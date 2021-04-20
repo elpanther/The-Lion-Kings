@@ -15,7 +15,6 @@ function openForm() {
 // 	};
 //   })();
 }
-  }
 
   function mask() {
 	document.getElementsById("mask").style.background = "block"
@@ -115,25 +114,7 @@ var btnOpen = document.getElementById("open-button");
 // Get the close button
 var btnClose = document.getElementsByClassName("cancel");
 
-// Open the modal
-btnOpen.onclick = function() {
-    modal.className = "Modal is-visuallyHidden";
-    setTimeout(function() {
-      container.className = "MainContainer is-blurred";
-      modal.className = "Modal";
-    }, 100);
-    container.parentElement.className = "ModalOpen";
-}
-
-// Close the modal
-btnClose.onclick = function() {
-    modal.className = "Modal is-hidden is-visuallyHidden";
-    body.className = "";
-    container.tagName = "section";
-    container.parentElement.tagName = "";
-}
-
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the popup, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.className = "Modal is-hidden";
