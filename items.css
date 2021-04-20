@@ -28,7 +28,6 @@ input {
 
 /* Section colors and sizes */
 .pop-up {
-    background-color: #5E95E1;
     margin: auto;
     width: 30%;
     border-radius: 8px;
@@ -38,20 +37,6 @@ input {
     right: 15px;
     border: 3px solid #f1f1f1;
     z-index: 9;
-}
-
-section {
-    text-align: center;
-}
-
-/* Red and green button style */
-#btn {
-    width: 80px;
-    height: 40px;
-    margin-top: 30px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
 }
 
 .cancel {

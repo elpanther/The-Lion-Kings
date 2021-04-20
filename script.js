@@ -5,11 +5,13 @@ function openForm() {
 
   function mask() {
 	document.getElementsById("mask").style.background = "block"
+
 	//document.getElementById("add-new-item").style.display = "block";
 	// $('.overlay').fadeIn(300);
   }
 
-  
+
+
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
   }
