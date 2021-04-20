@@ -1,13 +1,20 @@
 
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
-<<<<<<< HEAD
 	//document.getElementById("add-new-item").style.display = "block";
 	//document.getElementsByClassName("overlay").style.display = "block";
-	
-=======
->>>>>>> 35ba94bd31de0c89030ba9b0c6d5ef03953a322c
-  }
+// 	var overlay = document.getElementById('overlay');
+// 	var dialog = document.getElementById('myForm');
+// 	document.getElementById('show').onclick = function() {
+// 	  overlay.fadeIn(250);
+// 	  dialog.fadeIn(300);
+// 	};
+// 	document.getElementById('exit').onclick = function() {
+// 	  overlay.fadeOut(300);
+// 	  dialog.fadeOut(250);
+// 	};
+//   })();
+}
 
   function mask() {
 	document.getElementsById("mask").style.background = "block"
