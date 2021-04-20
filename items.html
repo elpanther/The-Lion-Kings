@@ -19,14 +19,11 @@
         </ul>
     </nav>
 
-    <button class="new-item" id="open-button" onclick="openForm()">Add new item</button>
+    <button class="new-item" id="open-button" onclick="openItem()">Add new item</button>
     
-    
-      
-
     
     <section id="add-new-item" class="pop-up">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
         <h3>Item Setup</h3>
         <br>
         <label for="name"><span>Name</span>
@@ -48,10 +45,25 @@
          <br>
          <label for="catagory"><span>Catagory</span>
             <select name="catagories" id="select-catagory">
-                <option value="">Select catagory</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="select catagory">Select catagory</option>
+                <option value="">Restaurants & Bars</option>
+                <option value="">Shopping</option>
+                <option value="">Taxi & Car Service</option>
+                <option value="">Bills & Utilities</option>
+                <option value="">Gas & Fuel</option>
+                <option value="">Groceries</option>
+                <option value="">Travel</option>
+                <option value="">Household</option>
+                <option value="">Entertainment</option>
+                <option value="">Business Services</option>
+                <option value="">Bank Check</option>
+                <option value="">Education</option>
+                <option value="">Fees</option>
+                <option value="">Hotel</option>
+                <option value="">Income</option>
+                <option value="">Insurance</option>
+                <option value="">Personal Care</option>
+                <option value="">Transfer</option>
             </select>
          </label>
          <br>
@@ -59,7 +71,7 @@
             <input type="text" name="description"/>
          </label>
          <br>
-         <button id="btn" class="cancel" onclick="closeForm()">Cancel</button>
+         <button id="btn" class="cancel" onclick="closeItem()">Cancel</button>
          <button id="btn" class="confirm">Confirm</button>
         </form>
     </section>
@@ -113,4 +125,3 @@
     </script>
 </body>
 </html>
-

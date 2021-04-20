@@ -1,10 +1,6 @@
 
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
-	//document.getElementById("add-new-item").style.display = "block";
-	//document.getElementsByClassName("overlay").style.display = "block";
-	
-
   }
 
 
@@ -86,3 +82,12 @@ var autoExpand = function (field) {
 	
 //   }
 
+// Displays the item setup form
+function openItem() {
+	document.getElementById("add-new-item").style.display = "block";
+  }
+
+// Sets the display of the item setup form to none
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
