@@ -15,14 +15,17 @@ function openForm() {
 // 	};
 //   })();
 }
+  }
 
   function mask() {
 	document.getElementsById("mask").style.background = "block"
+
 	//document.getElementById("add-new-item").style.display = "block";
 	// $('.overlay').fadeIn(300);
   }
 
-  
+
+
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
   }
@@ -89,3 +92,12 @@ var autoExpand = function (field) {
 	
 //   }
 
+// Displays the item setup form
+function openItem() {
+	document.getElementById("add-new-item").style.display = "block";
+  }
+
+// Sets the display of the item setup form to none
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
