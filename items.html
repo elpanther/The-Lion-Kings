@@ -9,113 +9,114 @@
     <link rel="stylesheet" href="items.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li class="active"><a href="items.html">Items</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <button class="new-item" id="open-button" onclick="openItem()">Add new item</button>
+    <div id="myModal" class="Modal is-hidden is-visuallyHidden"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="items.html">Items</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     
-    
-    <section id="add-new-item" class="pop-up">
-        <form class="form-container">
-        <h3>Item Setup</h3>
-        <br>
-        <label for="name"><span>Name</span>
-            <input type="text" name="name" size="20"/>
-         </label>
-         <br>
-         <label for="purpose"><span>Purpose</span>
-            <select name="purposes" id="select-purpose">
-                <option value="">Select purpose</option>
-                <option value="">Savings</option>
-                <option value="">Spending</option>
-                <option value="">Deposits</option>
-            </select>
-         </label>
-         <br>
-         <label for="money"><span>Amount</span>
-            <input type="number" name="deposits"/>
-         </label>
-         <br>
-         <label for="catagory"><span>Catagory</span>
-            <select name="catagories" id="select-catagory">
-                <option value="select catagory">Select catagory</option>
-                <option value="">Restaurants & Bars</option>
-                <option value="">Shopping</option>
-                <option value="">Taxi & Car Service</option>
-                <option value="">Bills & Utilities</option>
-                <option value="">Gas & Fuel</option>
-                <option value="">Groceries</option>
-                <option value="">Travel</option>
-                <option value="">Household</option>
-                <option value="">Entertainment</option>
-                <option value="">Business Services</option>
-                <option value="">Bank Check</option>
-                <option value="">Education</option>
-                <option value="">Fees</option>
-                <option value="">Hotel</option>
-                <option value="">Income</option>
-                <option value="">Insurance</option>
-                <option value="">Personal Care</option>
-                <option value="">Transfer</option>
-            </select>
-         </label>
-         <br>
-         <label for="description"><span>Description</span>
-            <input type="text" name="description"/>
-         </label>
-         <br>
-         <button id="btn" class="cancel" onclick="closeItem()">Cancel</button>
-         <button id="btn" class="confirm">Confirm</button>
-        </form>
-    </section>
-    <!-- <section id="edit-item" class="pop-up">
-        <h3>Edit Item</h3>
-        <br>
-        <label for="name"><span>Name</span>
-            <input type="text" name="name"/>
-         </label>
-         <br>
-         <label for="purpose"><span>Purpose</span>
-            <select name="purposes" id="select-purpose">
-                <option value="">Select purpose</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-         </label>
-         <br>
-         <label for="money"><span>Amount</span>
-            <input type="number" name="deposits"/>
-         </label>
-         <br>
-         <label for="catagory"><span>Catagory</span>
-            <select name="catagories" id="select-catagory">
-                <option value="">Select catagory</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-         </label>
-         <br>
-         <label for="description"><span>Description</span>
-            <input type="text" name="description"/>
-         </label>
-         <br>
-         <button id="btn" class="cancel">Cancel</button>
-         <button id="btn" class="confirm">Confirm</button>
-    </section>
-    <section class="pop-up">
-        <p>Are you sure you want to delete this item?</p>
-        <button id="btn" class="cancel">No</button>
-        <button id="btn" class="confirm">Yes</button>
-    </section> -->
+        <button class="new-item" id="open-button" onclick="openItem(); myBlurFunction()">Add new item</button>
+        
+        
+        <section id="add-new-item" class="pop-up">
+            <form class="form-container">
+            <h3>Item Setup</h3>
+            <br>
+            <label for="name"><span>Name</span>
+                <input type="text" name="name" size="20"/>
+             </label>
+             <br>
+             <label for="purpose"><span>Purpose</span>
+                <select name="purposes" id="select-purpose">
+                    <option value="">Select purpose</option>
+                    <option value="">Savings</option>
+                    <option value="">Spending</option>
+                    <option value="">Deposits</option>
+                </select>
+             </label>
+             <br>
+             <label for="money"><span>Amount</span>
+                <input type="number" name="deposits"/>
+             </label>
+             <br>
+             <label for="catagory"><span>Catagory</span>
+                <select name="catagories" id="select-catagory">
+                    <option value="select catagory">Select catagory</option>
+                    <option value="">Restaurants & Bars</option>
+                    <option value="">Shopping</option>
+                    <option value="">Taxi & Car Service</option>
+                    <option value="">Bills & Utilities</option>
+                    <option value="">Gas & Fuel</option>
+                    <option value="">Groceries</option>
+                    <option value="">Travel</option>
+                    <option value="">Household</option>
+                    <option value="">Entertainment</option>
+                    <option value="">Business Services</option>
+                    <option value="">Bank Check</option>
+                    <option value="">Education</option>
+                    <option value="">Fees</option>
+                    <option value="">Hotel</option>
+                    <option value="">Income</option>
+                    <option value="">Insurance</option>
+                    <option value="">Personal Care</option>
+                    <option value="">Transfer</option>
+                </select>
+             </label>
+             <br>
+             <label for="description"><span>Description</span>
+                <input type="text" name="description"/>
+             </label>
+             <br>
+             <button class="cancel" onclick="closeItem()">Cancel</button>
+             <button class="confirm button">Confirm</button>
+            </form>
+        </section>
+        <!-- <section id="edit-item" class="pop-up">
+            <h3>Edit Item</h3>
+            <br>
+            <label for="name"><span>Name</span>
+                <input type="text" name="name"/>
+             </label>
+             <br>
+             <label for="purpose"><span>Purpose</span>
+                <select name="purposes" id="select-purpose">
+                    <option value="">Select purpose</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+             </label>
+             <br>
+             <label for="money"><span>Amount</span>
+                <input type="number" name="deposits"/>
+             </label>
+             <br>
+             <label for="catagory"><span>Catagory</span>
+                <select name="catagories" id="select-catagory">
+                    <option value="">Select catagory</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+             </label>
+             <br>
+             <label for="description"><span>Description</span>
+                <input type="text" name="description"/>
+             </label>
+             <br>
+             <button id="btn" class="cancel">Cancel</button>
+             <button id="btn" class="confirm">Confirm</button>
+        </section>
+        <section class="pop-up">
+            <p>Are you sure you want to delete this item?</p>
+            <button id="btn" class="cancel">No</button>
+            <button id="btn" class="confirm">Yes</button>
+        </section> -->
 
 
 

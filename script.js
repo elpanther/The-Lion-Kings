@@ -87,3 +87,44 @@ function openItem() {
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
+
+// Get the modal
+var modal = document.getElementById('add-new-item');
+
+// Get the main container and the body
+var body = document.getElementsByTagName('body');
+var container = document.getElementsByTagName('section');
+
+// Get the open button
+var btnOpen = document.getElementById("open-button");
+
+// Get the close button
+var btnClose = document.getElementsByClassName("cancel");
+
+// Open the modal
+btnOpen.onclick = function() {
+    modal.className = "Modal is-visuallyHidden";
+    setTimeout(function() {
+      container.className = "MainContainer is-blurred";
+      modal.className = "Modal";
+    }, 100);
+    container.parentElement.className = "ModalOpen";
+}
+
+// Close the modal
+btnClose.onclick = function() {
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    body.className = "";
+    container.tagName = "section";
+    container.parentElement.tagName = "";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.className = "Modal is-hidden";
+        body.className = "";
+        container.tagName = "section";
+        container.parentElement.className = "";
+    }
+}
