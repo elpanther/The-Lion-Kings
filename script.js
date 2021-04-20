@@ -1,10 +1,13 @@
+// blur
+  function toggle() {
+	let blur = document.getElementById('blur');
+	blur.classList.toggle('active')
+}
 
+// Opens the form
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
   }
-
-
- 
 
 
   function mask() {

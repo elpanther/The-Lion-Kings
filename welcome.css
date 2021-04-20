@@ -12,6 +12,21 @@ html,body{
   background: #f2f2f2;
   /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
+
+/* blurs the background */
+.container#blur.active {
+    filter: blur(20px);
+   z-index: 5;
+}
+
+#blur {
+    z-index: 5;
+}
+/* not finished, still needs work 
+ #popup {
+
+} */
+
 ::selection{
   background: #4158d0;
   color: #fff;
@@ -24,16 +39,13 @@ html,body{
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
   display: none;
   position: absolute;
-  z-index: 4;
-  top: -230;
-    right: 50px;
-    left: 50px;
+  z-index: 100;
+  top: 10%;
+   
+    left: 37.5%;
     
 }
 
-
-
-	
 
 /* darker background */
 #mask{
@@ -45,7 +57,7 @@ html,body{
   width: 100%;
   height: 100%;
   opacity: .8;
-box-shadow: #999999;
+
  
 }
 /* Login title */
@@ -196,13 +208,8 @@ p {
     margin-right: 100px;
 }
 
-/* gives the get started button a border, padding, and position */
-.btn {
-    border: none;
-    padding: 20px 100px;
-    border-radius: 50%;
-    
-}
+
+
 /* Changes color, size, and position of the login button */
 #login {
     background-color: #1034A6;
@@ -216,12 +223,14 @@ p {
  
 }
 
-/* gives get started button color and position */
+/* gives get started button color, border, padding, and position */
 #getStarted {
     background-color: #FEE5A2;
     position:relative;
     z-index: 0;
-    
+    border: none;
+    padding: 20px 100px;
+    border-radius: 50%;
 }
 
 /* puts the button in place(center) */
@@ -240,6 +249,7 @@ p {
  
 nav {
     text-align: center;
+    
 }
 /* doesn't work */
   /* .overlay {

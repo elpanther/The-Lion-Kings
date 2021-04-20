@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="container" id="blur">
     <nav>
         <ul>
         <li><a href="resources.html">Resources</a></li>
@@ -33,14 +34,15 @@
                 
             <!-- <div class="mask" onclick="closeForm()"> -->
                
+            </div>
+                
                     <div class="buttons">
-        
-                <button class="btn" id="getStarted" onclick="window.location.href='signup.html'">
+                <button  id="getStarted" onclick="window.location.href='signup.html'">
                     <strong>Get Started</strong>
                 </button>
                 
-                <button id="Login" onclick="openForm();mask()">Log In</button>
-                    
+                    <button id="Login" onclick="openForm();toggle()">Log In</button>
+                    </div>
                         <div class="form-popup" id="myForm">
                             <div id="mask"></div>
                       <form action="home.html" class="form-container">
@@ -68,30 +70,16 @@
                               </div>
                       <div class="signup-link">
                       Not a member? <a href="signup.html">Signup now</a>
-                    <!-- <h1>Login</h1>
-               
-                    <label for="email"><b>Username</b></label>
-                    <input type="text" placeholder="Enter username" name="username" required>
-                
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" maxlength="6" placeholder="Enter Password" name="psw" required>
-                
-                    <button type="submit" class="open">Login</button> -->
-                    <!-- <button type="button" class="btn-cancel" onclick="closeForm()">Close</button> -->
+                    </div>
                   </form>
                 </div>
-            </div>
+            
+        
         </main>
         
-
-        <script src="script.js">
-            function openForm() {
-	document.getElementById("myForm").style.display = "block";
-  }
   
-  function closeForm() {
-	document.getElementById("myForm").style.display = "none";
-  }
+        <script src="script.js">
+
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
