@@ -5,6 +5,9 @@ body {
     .file {
          background-color: transparent;
          color: transparent;
+         visibility: ;
+         display: hidden;
+         position: relative;
     }
 
     input {
@@ -42,6 +45,10 @@ body {
 
 label {
     float: left;
+}
+
+#pic {
+    float: unset;
 }
 
 span {
