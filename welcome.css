@@ -19,14 +19,6 @@ html,body{
    z-index: 5;
 }
 
-#blur {
-    z-index: 5;
-}
-/* not finished, still needs work 
- #popup {
-
-} */
-
 ::selection{
   background: #4158d0;
   color: #fff;
@@ -41,14 +33,13 @@ html,body{
   position: absolute;
   z-index: 100;
   top: 10%;
-   
-    left: 37.5%;
+left: 37.5%;
     
 }
 
 
 /* darker background */
-#mask{
+/* #mask{
   display: none;
   background: rgba(90, 88, 88, 0.8);
   position: absolute;
@@ -59,7 +50,7 @@ html,body{
   opacity: .8;
 
  
-}
+} */
 /* Login title */
 .form-popup .title{
   font-size: 35px;

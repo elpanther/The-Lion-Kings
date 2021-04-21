@@ -17,7 +17,7 @@ body, html {
   .container {
     position: absolute;
     margin: 30px;
-    max-width: 400px;
+    max-width: 500px;
     padding: 16px;
     background-color: #5E95E1;
     border-radius: 12px;
@@ -27,7 +27,7 @@ body, html {
   /* Full-width input fields */
   input[type=text], input[type=password], input[type=email] {
     width: 100%;
-    padding: 3px;
+    padding: 8px;
     margin: 3px 0 30px 0;
     border: none;
     background: #F0F8FF;
@@ -49,6 +49,7 @@ body, html {
     border-style: none;
     color: black;
     width: 120px;
+    height: 30px;
   }
   
   .button:hover {
