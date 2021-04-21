@@ -5,7 +5,7 @@ body {
     .file {
          background-color: transparent;
          color: transparent;
-         visibility: ;
+         visibility: 0;
          display: hidden;
          position: relative;
     }
