@@ -10,7 +10,7 @@ html,body{
   width: 100%;
   place-items: center;
   background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+  background: linear-gradient( #f0f8ff, 75%, #5E95E1);
 }
 
 /* blurs the background */
@@ -217,14 +217,18 @@ p {
 /* gives get started button color, border, padding, and position */
 #getStarted {
     background-color: #FEE5A2;
-    position:relative;
+    position: relative;
     z-index: 0;
     border: none;
     padding: 20px 100px;
     border-radius: 50%;
+    
 }
 
-/* puts the button in place(center) */
+
+
+
+/* puts the buttons in place(center) */
 .buttons {
     position: absolute;
     top: 70%;
