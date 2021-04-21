@@ -1,5 +1,7 @@
 body {
     text-align: center;
+    background: linear-gradient( #f0f8ff, 75%, #5E95E1);
+    background-size: 120% 120%;
     }
     
     .file {
