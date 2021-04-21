@@ -10,7 +10,7 @@ html,body{
   width: 100%;
   place-items: center;
   background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+  background: linear-gradient( #f0f8ff, 75%, #5E95E1);
 }
 
 /* blurs the background */
@@ -18,14 +18,6 @@ html,body{
     filter: blur(20px);
    z-index: 5;
 }
-
-#blur {
-    z-index: 5;
-}
-/* not finished, still needs work 
- #popup {
-
-} */
 
 ::selection{
   background: #4158d0;
@@ -41,14 +33,13 @@ html,body{
   position: absolute;
   z-index: 100;
   top: 10%;
-   
-    left: 37.5%;
+left: 37.5%;
     
 }
 
 
 /* darker background */
-#mask{
+/* #mask{
   display: none;
   background: rgba(90, 88, 88, 0.8);
   position: absolute;
@@ -59,7 +50,7 @@ html,body{
   opacity: .8;
 
  
-}
+} */
 /* Login title */
 .form-popup .title{
   font-size: 35px;
@@ -226,14 +217,18 @@ p {
 /* gives get started button color, border, padding, and position */
 #getStarted {
     background-color: #FEE5A2;
-    position:relative;
+    position: relative;
     z-index: 0;
     border: none;
     padding: 20px 100px;
     border-radius: 50%;
+    
 }
 
-/* puts the button in place(center) */
+
+
+
+/* puts the buttons in place(center) */
 .buttons {
     position: absolute;
     top: 70%;

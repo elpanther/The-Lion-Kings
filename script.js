@@ -1,3 +1,13 @@
+// Hide buttons on click
+	function hide() {
+		let x = document.getElementById("hidden");
+		if (x.style.display === "none") {
+		  x.style.display = "block";
+		} else {
+		  x.style.display = "none";
+		}
+	  }
+
 // blur
   function toggle() {
 	let blur = document.getElementById('blur');
@@ -7,6 +17,9 @@
 // Opens the form
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
+
+
+
 	//document.getElementById("add-new-item").style.display = "block";
 	//document.getElementsByClassName("overlay").style.display = "block";
 // 	var overlay = document.getElementById('overlay');
@@ -23,12 +36,12 @@ function openForm() {
 }
 
 
-  function mask() {
-	document.getElementsById("mask").style.background = "block"
+//   function mask() {
+// 	document.getElementsById("mask").style.background = "block"
 
-	//document.getElementById("add-new-item").style.display = "block";
-	// $('.overlay').fadeIn(300);
-  }
+// 	//document.getElementById("add-new-item").style.display = "block";
+// 	// $('.overlay').fadeIn(300);
+//   }
 
 
 
