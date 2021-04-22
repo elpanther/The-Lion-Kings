@@ -9,6 +9,9 @@ body {
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
     background-size: 1100% 1100%;
 }
+.pull-right{
+    float:right;
+    }
 
 input {
     width: 150px ;

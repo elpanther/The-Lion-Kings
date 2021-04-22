@@ -36,12 +36,16 @@
                
             </div>
                 
-                    <div class="buttons" id="hidden">
+                    <div class="buttons">
                 <button  id="getStarted" onclick="window.location.href='signup.html'">
                     <strong>Get Started</strong>
                 </button>
                 
+<<<<<<< HEAD
                     <button id="Login" onclick="openForm();toggle();hide();">Log In</button>
+=======
+                    <button id="Login" onclick="openForm();toggle()">Log In</button>
+>>>>>>> 72d65ab2ee55f019843973bdb4c2654361aa6297
                     </div>
                         <div class="form-popup" id="myForm">
                             <div id="mask"></div>
@@ -49,7 +53,7 @@
                             <div class="title">
                       <h1>Login</h1> </div>
                               <div class="field">
-                                <input type="email" required>
+                                <input type="text" required>
                                 <label>Email Address</label>
                               </div>
                       <div class="field">
@@ -66,8 +70,9 @@
                       <a href="#">Forgot password?</a></div>
                       </div>
                       <div class="field">
-                                <input type="submit" value="Login">
-                              </div>
+                            <input type="submit" value="Login">
+                            <button value="Cancel" onclick="closeForm()">Cancel</button>
+                      </div>
                       <div class="signup-link">
                       Not a member? <a href="signup.html">Signup now</a>
                     </div>
