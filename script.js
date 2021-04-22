@@ -119,7 +119,7 @@ function openItem() {
   }
 
 // Sets the display of the item setup form to none
-<<<<<<< HEAD
+
 // function closeItem() {
 // 	document.getElementsById("add-new-item").style.display = "none";
 // }
@@ -164,8 +164,8 @@ function openItem() {
 //         container.parentElement.className = "";
 //     }
 // }
-=======
+
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
->>>>>>> 72d65ab2ee55f019843973bdb4c2654361aa6297
+
