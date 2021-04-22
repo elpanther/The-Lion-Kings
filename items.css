@@ -16,6 +16,7 @@ body {
 input {
     width: 150px ;
     height: 15px;
+    
 }
 
 .new-item {
@@ -60,8 +61,17 @@ input {
     background-color: #5E95E1;
 }
 
+/* adds opacity to the background might change..... */
+.container#blur.active {
+    /* filter: blur(20px); */
+   z-index: 5;
+ filter: opacity(30%);
+
+ 
+}
+
 /* Pop-up blur */
-.Modal {
+/* .Modal {
     display: block;
     position: fixed;
     left: 40;
@@ -75,7 +85,7 @@ input {
     -webkit-transition: 0.5s;
     overflow: auto;
     transition: all 0.3s linear;
-  }
+  } */
   
   .Modal-content {
     background-color: #fefefe;
@@ -84,9 +94,9 @@ input {
     border-radius: 4px;
     max-width: 300px;
     height: 450px;
-  }
+  } */
   
-  .ModalOpen { overflow: hidden; }
+   .ModalOpen { overflow: hidden; }
   
   .is-hidden { display: none; }
   
