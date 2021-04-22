@@ -11,9 +11,12 @@ body {
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
     background-size: 175% 175%;
 }
-
+/* logout button */
+.pull-right{
+float:right;
+}
 .checking {
-    margin: 100px;
+margin: 100px;
    float: left;
    margin-left: 300px;
   

@@ -3,8 +3,11 @@ body {
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
     background-size: 120% 120%;
     }
-    
-    .file {
+
+.pull-right{
+        float:right;
+        }
+.file {
          background-color: transparent;
          color: transparent;
          visibility: 0;
