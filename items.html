@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="items.css">
 </head>
 <body>
+    <div class="container" id="blur">
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -20,8 +21,8 @@
             </ul>
         </nav>
     
-        <button class="new-item" id="open-button" onclick="openItem(); myBlurFunction()">Add new item</button>
-        
+        <button class="new-item" id="open-button" onclick="openItem();toggle()">Add new item</button>
+    </div>
         
         <section id="add-new-item" class="pop-up">
             <div id="myModal" class="Modal is-hidden is-visuallyHidden"></div>
