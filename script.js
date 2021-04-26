@@ -119,7 +119,10 @@ function openItem() {
   }
 
 // Sets the display of the item setup form to none
+<<<<<<< HEAD
 
+=======
+>>>>>>> 988b0315de8e34fed7247c2d4ea9b4ccba673a28
 // function closeItem() {
 // 	document.getElementsById("add-new-item").style.display = "none";
 // }
@@ -164,8 +167,14 @@ function openItem() {
 //         container.parentElement.className = "";
 //     }
 // }
+<<<<<<< HEAD
 
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
 
+=======
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
+>>>>>>> 988b0315de8e34fed7247c2d4ea9b4ccba673a28
