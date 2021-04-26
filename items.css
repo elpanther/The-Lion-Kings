@@ -14,20 +14,41 @@ body {
     }
 
  /* changes the input and select boxes   */
-input, select {
+/* input, select {
     width: 150px ;
-    height: 20px;
+   
     margin: 0 0 10px 0;
     
+} */
+input {
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 0 10px 0;
 }
 
+select {
+    padding: 6px;
+    font-size: 14px;
+    width: 190px;
+    margin: 0 0 10px 0;
+}
+
+label {
+    width: 280px;
+    display: inline-block;
+    text-align: right;
+ }
 
 section {
+    text-align: center;
+    padding: 5px;
+}
+/* section {
     padding: 5px;
     text-align: center;
     display: inline-block;
-   
-}
+  
+} */ 
 
 /* button and form design */
 .new-item {
