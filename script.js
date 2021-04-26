@@ -125,10 +125,7 @@ function openItem() {
   }
 
 // Sets the display of the item setup form to none
-<<<<<<< HEAD
 
-=======
->>>>>>> 988b0315de8e34fed7247c2d4ea9b4ccba673a28
 // function closeItem() {
 // 	document.getElementsById("add-new-item").style.display = "none";
 // }
@@ -170,19 +167,18 @@ function openItem() {
 // if ( blur.classList.toggle == 'active' ) {
 // 	window.onclick = closeForm();
 // }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
 
-=======
+
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
->>>>>>> 988b0315de8e34fed7247c2d4ea9b4ccba673a28
-=======
+
+
 
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
@@ -195,4 +191,4 @@ function closeItem() {
 // function closePopup() {
 // 	document.getElementsById("myForm").style.display = 'none';
 // }
->>>>>>> 4b28500b69c49d5b9365b6cc6a677db15711c3c6
+
