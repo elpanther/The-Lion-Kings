@@ -1,8 +1,14 @@
-body {
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
-    background-size: 120% 120%;
+    background-size: 170% 170%;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .pull-right{
         float:right;
@@ -17,7 +23,11 @@ body {
 
     input {
     background-color: #C6D3EE;
-    border-color: transparent;
+    border: none;
+    margin: 0 0 10px 0;
+    width: 160px;
+    height: 15px;
+    
     }
     
     #save {
@@ -44,39 +54,31 @@ body {
         text-align: center;
     }
 
-.pineapple {
-    display: inline-block;
+.box {
+    display: inline;
+   
 }
 
-label {
-    float: left;
-}
+
+/* .profile {
+   
+    
+}  */
+
 
 #pic {
     float: unset;
 }
 
-span {
-    display: block;
-    overflow: hidden;
-    padding: 0px 4px 0px 6px;
-}
 
-      /* font-family: 'Roboto', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* Universal font */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
+   
 
 /* Navigation bar design */
 nav {
-    text-align: left;
     width: 100%;
     background-color: #1034A6;
+    text-align: left;
 }
 
 ul {
@@ -115,3 +117,5 @@ ul li:active {
     font-size: 30px;
     display: none;
 }
+
+
