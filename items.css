@@ -20,6 +20,7 @@ body {
     margin: 0 0 10px 0;
     
 } */
+
 input {
     padding: 5px;
     font-size: 14px;
@@ -41,7 +42,7 @@ label {
 
 section {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 /* section {
     padding: 5px;
