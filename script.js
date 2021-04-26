@@ -1,5 +1,5 @@
 // Hide buttons on click
-	function hide() {
+	function hideButtons() {
 		let x = document.getElementById("hidden");
 		if (x.style.display === "none") {
 		  x.style.display = "block";
@@ -9,25 +9,14 @@
 	  }
 
 // blur
-  function toggle() {
+  function blurToggle() {
 	let blur = document.getElementById('blur');
-	blur.classList.toggle('active')
+	blur.classList.toggle('active');
 }
 
 // Opens the form
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
-
-
-
-	document.getElementById("add-new-item").style.display = "block";
-	document.getElementsByClassName("overlay").style.display = "block";
-	var overlay = document.getElementById('overlay');
-	var dialog = document.getElementById('myForm');
-	document.getElementById('show').onclick = function() {
-	  overlay.fadeIn(250);
-	  dialog.fadeIn(300);
-	};
 // 	document.getElementById('exit').onclick = function() {
 // 	  overlay.fadeOut(300);
 // 	  dialog.fadeOut(250);
@@ -41,14 +30,31 @@ function openForm() {
 
 // 	//document.getElementById("add-new-item").style.display = "block";
 // 	// $('.overlay').fadeIn(300);
-//   }
+// //   }
 
+function hideNav() {
+	document.getElementsByTagName("ul").style.display = "none";
+}
 
+// function hideHover() {
+// 	let x = document.getElementsByTagName("ul li:hover");
+// 		if (x.style.display === "none") {
+// 		  x.style.display = "block";
+// 		} else {
+// 		  x.style.display = "none";
+// 		}
+// 	  }
 
   function closeForm() {
 	document.getElementById("myForm").style.display = "none";
-
-	document.getElementsByTagName("ul").style.display = "none";
+	let blur = document.getElementById('blur');
+	blur.classList.toggle('active');
+	let x = document.getElementById("hidden");
+		if (x.style.display === "none") {
+		  x.style.display = "block";
+		} else {
+		  x.style.display = "none";
+		}
   }
   //add new item
 
@@ -158,15 +164,13 @@ function openItem() {
 //     container.parentElement.tagName = "";
 // }
 
-// // When the user clicks anywhere outside of the popup, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.className = "Modal is-hidden";
-//         body.className = "";
-//         container.tagName = "section";
-//         container.parentElement.className = "";
-//     }
+// When the user clicks anywhere outside of the popup, close it
+// let blur = document.getElementById('blur');
+
+// if ( blur.classList.toggle == 'active' ) {
+// 	window.onclick = closeForm();
 // }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 function closeItem() {
@@ -178,3 +182,17 @@ function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
 >>>>>>> 988b0315de8e34fed7247c2d4ea9b4ccba673a28
+=======
+
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
+
+// $('#blur').click(function() {
+// 	$('#blur, #myForm').css('display','none');
+// });
+
+// function closePopup() {
+// 	document.getElementsById("myForm").style.display = 'none';
+// }
+>>>>>>> 4b28500b69c49d5b9365b6cc6a677db15711c3c6
