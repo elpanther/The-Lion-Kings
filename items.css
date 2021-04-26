@@ -13,12 +13,44 @@ body {
     float:right;
     }
 
-input {
+ /* changes the input and select boxes   */
+/* input, select {
     width: 150px ;
-    height: 15px;
+   
+    margin: 0 0 10px 0;
     
+} */
+input {
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 0 10px 0;
 }
 
+select {
+    padding: 6px;
+    font-size: 14px;
+    width: 190px;
+    margin: 0 0 10px 0;
+}
+
+label {
+    width: 280px;
+    display: inline-block;
+    text-align: right;
+ }
+
+section {
+    text-align: center;
+    padding: 5px;
+}
+/* section {
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+  
+} */ 
+
+/* button and form design */
 .new-item {
     background-color: #1034A6;
     color: #F0F8FF;
@@ -37,29 +69,32 @@ input {
     background-color: #5E95E1;
     margin: auto;
     width: 30%;
-    border-radius: 8px;
+    border-radius: 30px;
     display: none;
     bottom: 0;
-    right: 15px;
     border: 3px solid #f1f1f1;
     z-index: 9;
 }
 
+/* Gives style to the cancel btn */
 .cancel {
     background-color: #C07474;
-}
-
-.confirm {
-    background-color: #7EC074;
-}
-
-.button {
+    border: none;
     border-radius: 5px;
 }
+
+/* Gives style to the confirm btn */
+.confirm {
+    background-color: #7EC074;
+    border-radius: 5px;
+    border: none;
+}
+
 
 .new-item:hover {
     background-color: #5E95E1;
 }
+
 
 /* adds opacity to the background might change..... */
 .container#blur.active {
@@ -87,16 +122,16 @@ input {
     transition: all 0.3s linear;
   } */
   
-  .Modal-content {
+  /* .Modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border-radius: 4px;
     max-width: 300px;
     height: 450px;
   } */
   
-   .ModalOpen { overflow: hidden; }
+   /* .ModalOpen { overflow: hidden; }
   
   .is-hidden { display: none; }
   
@@ -105,4 +140,4 @@ input {
   .is-blurred {
     filter: blur(2px);
     -webkit-filter: blur(2px);
-  }
+  } */ 

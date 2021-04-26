@@ -125,6 +125,7 @@ function openItem() {
   }
 
 // Sets the display of the item setup form to none
+
 // function closeItem() {
 // 	document.getElementsById("add-new-item").style.display = "none";
 // }
@@ -167,6 +168,18 @@ function openItem() {
 // 	window.onclick = closeForm();
 // }
 
+
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
+
+
+function closeItem() {
+	document.getElementsById("add-new-item").style.display = "none";
+}
+
+
+
 function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
@@ -178,3 +191,4 @@ function closeItem() {
 // function closePopup() {
 // 	document.getElementsById("myForm").style.display = 'none';
 // }
+
