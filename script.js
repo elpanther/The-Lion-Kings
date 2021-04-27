@@ -175,6 +175,8 @@ function closeItem() {
 }
 
 
+
+
 // $('#blur').click(function() {
 // 	$('#blur, #myForm').css('display','none');
 // });

@@ -16,13 +16,6 @@ body {
     float:right;
     }
 
-input[type='submit'], button, [aria-label]{
-    cursor: pointer;
-}
-#spoiler{
-    display: none;
-}
-
 /* Navigation bar design */
 .sub-nav {
     width: 100%;
