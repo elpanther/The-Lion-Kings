@@ -16,10 +16,11 @@ body {
     float:right;
     }
 
-input[type='submit'], button, [aria-label]{
+input[type='submit'], button, [aria-label] {
     cursor: pointer;
 }
-#spoiler{
+
+#spoiler {
     display: none;
 }
 
