@@ -175,15 +175,7 @@ function closeItem() {
 }
 
 
-function closeItem() {
-	document.getElementsById("add-new-item").style.display = "none";
-}
 
-
-
-function closeItem() {
-	document.getElementsById("add-new-item").style.display = "none";
-}
 
 // $('#blur').click(function() {
 // 	$('#blur, #myForm').css('display','none');
