@@ -171,7 +171,7 @@ function openItem() {
 
 
 function closeItem() {
-	document.getElementsByClassName('expenses-form').style.display = "none";
+	document.getElementsById("add-new-item").style.display = "none";
 }
 
 

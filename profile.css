@@ -100,27 +100,12 @@ button:focus{
 }
 
 
- /* .file {
-         background-color: transparent;
-         color: transparent;
-         visibility: 0;
-         display: hidden;
-         position: relative;
-    }
 
-    input {
-    border: none;
-    margin: 0 0 10px 0;
-    width: 160px;
-    height: 15px;
-    
-    } */
-    
     #save {
+      margin-bottom: 2px;
     color: white;
     background-color: #1034A6;
     border-color: transparent;
-    margin-right: 7.5px;
     }
     
     #da {
@@ -128,7 +113,7 @@ button:focus{
     border-color: transparent;
     }
 
-    /* .ap {
+     .ap {
         margin: 0 auto;
         margin-top: 25px;
         font-size: 25px;
@@ -139,18 +124,6 @@ button:focus{
         border-radius: 50%;
         text-align: center;
     }
-
-.box {
-    display: inline;
-   
-}
-
-
-#pic {
-    float: unset;
-}
-
- */
 
    
 

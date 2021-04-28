@@ -212,39 +212,15 @@ section {
   .is-hidden { display: none; }
   
   .is-visuallyHidden { opacity: 0; }
-
   .is-blurred {
     filter: blur(2px);
     -webkit-filter: blur(2px);
   } */
 
-  .employee-form {
-    border-style: solid;
-    /* margin-bottom: 10px; */
-    /* margin-left: 10px; */
-    padding: 10px;
-    /* width: 50%; */
-    margin: auto;
-    width: 50%;
-    /* border: 3px solid green; */
-    /* padding: 10px; */
-}
 
-.employees-table {
-    border-style: solid;
-    /* margin-bottom: 10px; */
-    /* margin-left: 10px; */
-    padding: 20px;
-    /* width: 50%; */
-    margin: auto;
-    width: 70%;
-    /* border: 3px solid green; */
-    /* padding: 10px; */
-}
 
-body > table{
-    width: 80%;
-}
+
+
 
 table{
     border-collapse: collapse;
