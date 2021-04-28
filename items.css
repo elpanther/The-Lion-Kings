@@ -21,13 +21,14 @@ body {
     
 } */
 
+
+
+
 input {
     padding: 5px;
     font-size: 14px;
     margin: 0 0 10px 0;
 }
-
-
 
 select {
     padding: 6px;
@@ -44,7 +45,7 @@ label {
 
 section {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 /* section {
     padding: 5px;
@@ -104,8 +105,11 @@ section {
     /* filter: blur(20px); */
    z-index: 5;
  filter: opacity(30%);
+}
 
- 
+.expenses-table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Pop-up blur */
@@ -139,8 +143,43 @@ section {
   .is-hidden { display: none; }
   
   .is-visuallyHidden { opacity: 0; }
-
   .is-blurred {
     filter: blur(2px);
     -webkit-filter: blur(2px);
-  } */ 
+  } */
+
+
+
+
+
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+.expenses-table {
+    margin-top: 100px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+.hide{
+    display:none;
+}
