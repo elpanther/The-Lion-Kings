@@ -174,8 +174,31 @@ function closeItem() {
 	document.getElementsById("add-new-item").style.display = "none";
 }
 
+// Hide file on click
+function hideFile() {
+	let x = document.getElementById("file");
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
+  }
 
+//   allows user to add a image
+function readURL(input) {
+	if (input.files && input.files[0]) {
+		let reader = new FileReader();
 
+		reader.onload = function (e) {
+			$('#pic')
+				.attr('src', e.target.result)
+				.width(150)
+				.height(200);
+		};
+
+		reader.readAsDataURL(input.files[0]);
+	}
+}
 
 // $('#blur').click(function() {
 // 	$('#blur, #myForm').css('display','none');

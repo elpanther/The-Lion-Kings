@@ -33,18 +33,19 @@ Profile</div>
 <form action="#">
 
   <div class="ap">
-    <input type="file">
+    <input type="file" id="file" onchange="readURL(this);" onclick="hideFile()" />
+    <img id="pic" />
   </div>
 
         <div class="field">
           <input type="text"  required>
-          <span class="fa-user-circle-o"></span>
+          <span class="fas fa-user"></span>
           <label>Name</label>
         </div>
         <!-- placeholder="Your Name" -->
 <div class="field">
           <input type="email"  required>
-          <span class="fas fa-user"></span>
+          <span class="fas fa-envelope"></span>
           <label>Email</label>
         </div>
         <!-- placeholder="Email Address" -->
@@ -74,5 +75,7 @@ Profile</div>
  
   </form>
 </div>
+<script src="script.js"> </script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </body>
 </html>
