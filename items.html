@@ -31,7 +31,7 @@
     <section id="add-new-item" class="pop-up">
         <div class="expenses-form">
             <div id="myModal" class="Modal is-hidden is-visuallyHidden"></div>
-            <form class="form-container" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <form class="form-container" autocomplete="off">
                 <h3>Item Setup</h3>
                 <form>
                     <div>
@@ -86,7 +86,7 @@
                     </div>
                     <button class="cancel" onclick="closeItem()">Cancel</button>
                     <div class="form-action-buttons">
-                        <button type="submit" class="confirm" onclick="saveFile();">Submit</button>
+                        <button type="submit" class="confirm" onclick="saveFile();event.preventDefault();onFormSubmit();">Submit</button>
                     </div>
                 </form>
             </form>
