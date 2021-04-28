@@ -203,7 +203,8 @@ function readFormData() {
     formData["name"] = document.getElementById("name").value;
     formData["purpose"] = document.getElementById("purpose").value;
     formData["amount"] = document.getElementById("amount").value;
-    formData["catagory"] = document.getElementById("catagory").value;
+    formData["category"] = document.getElementById("category").value;
+    formData["description"] = document.getElementById("description").value;
     return formData;
 }
 
@@ -217,9 +218,11 @@ function insertNewRecord(data) {
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.amount;
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.catagory;
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell4.innerHTML = data.category;
+    cell5 = newRow.insertCell(4);
+	cell5.innerHTML = data.description;
+	cell6 = newRow.insertCell(5)
+    cell6.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -227,7 +230,8 @@ function resetForm() {
     document.getElementById("name").value = "";
     document.getElementById("purpose").value = "";
     document.getElementById("amount").value = "";
-    document.getElementById("catagory").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("description").value = "";
     selectedRow = null;
 }
 
@@ -236,13 +240,15 @@ function onEdit(td) {
     document.getElementById("name").value = selectedRow.cells[0].innerHTML;
     document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
     document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("catagory").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("category").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("description").value = selectedRow.cells[4].innerHTML;
 }
 function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.fullName;
-    selectedRow.cells[1].innerHTML = formData.email;
-    selectedRow.cells[2].innerHTML = formData.salary;
-    selectedRow.cells[3].innerHTML = formData.city;
+    selectedRow.cells[0].innerHTML = formData.name;
+    selectedRow.cells[1].innerHTML = formData.purpose;
+    selectedRow.cells[2].innerHTML = formData.amount;
+    selectedRow.cells[3].innerHTML = formData.category;
+    selectedRow.cells[4].innerHTML = formData.description;
 }
 
 function onDelete(td) {
@@ -265,4 +271,78 @@ function onFormSubmit() {
             updateRecord(formData);
         resetForm();
     }
+}
+
+// let saveFile = () => {
+    	
+// 	// Get the data from each element on the form.
+// 	const fname = document.getElementById('fname');
+// 	const lname = document.getElementById('lname');
+// 	const username = document.getElementById('username');
+// 	const psw = document.getElementById('psw');
+// 	const vpsw = document.getElementById('vpsw');
+// 	const email = document.getElementById('email');
+	
+// 	// This variable stores all the data.
+// 	let data = 
+// 		'\r Firstname: ' + fname.value + ' \r\n ' + 
+// 		'Lastname: ' +lname.value + ' \r\n ' + 
+// 		'Username: ' + username.value + ' \r\n ' + 
+// 		'Password: ' + psw.value + ' \r\n ' + 
+// 		'Verify: ' + vpsw.value; + '\r\n' +
+// 		'Email: ' + email.value; + '\r\n'
+	
+// 	// Convert the text to BLOB.
+// 	const textToBLOB = new Blob([data], { type: 'text/plain' });
+// 	const sFileName = 'file.txt';	   // The file to save the data.
+
+// 	let newLink = document.createElement("a");
+// 	newLink.download = sFileName;
+
+// 	if (window.webkitURL != null) {
+// 		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+// 	}
+// 	else {
+// 		newLink.href = window.URL.createObjectURL(textToBLOB);
+// 		newLink.style.display = "none";
+// 		document.body.appendChild(newLink);
+// 	}
+
+// 	newLink.click(); 
+// }
+
+let saveFile = () => {
+    	
+	// Get the data from each element on the form.
+	const name = document.getElementById('name');
+	const amount = document.getElementById('amount');
+	const purpose = document.getElementById('purpose');
+	const category = document.getElementById('category');
+	const description = document.getElementById('description');
+	
+	// This variable stores all the data.
+	let data = 
+		'\r Name: ' + name.value + ' \r\n ' + 
+		'Amount: ' + amount.value + ' \r\n ' + 
+		'Purpose: ' + purpose.value + ' \r\n ' + 
+		'Category: ' + category.value + ' \r\n ' + 
+		'Description: ' + description.value; + '\r\n'
+	
+	// Convert the text to BLOB.
+	const textToBLOB = new Blob([data], { type: 'text/plain' });
+	const sFileName = 'file.txt';	   // The file to save the data.
+
+	let newLink = document.createElement("a");
+	newLink.download = sFileName;
+
+	if (window.webkitURL != null) {
+		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+	}
+	else {
+		newLink.href = window.URL.createObjectURL(textToBLOB);
+		newLink.style.display = "none";
+		document.body.appendChild(newLink);
+	}
+
+	newLink.click(); 
 }

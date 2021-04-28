@@ -55,9 +55,9 @@
                         </label>
                     </div>
                     <div>
-                        <label for="catagory"><span>Catagory</span>
-                            <select name="catagories" id="catagory">
-                                <option value="select catagory">Select catagory</option>
+                        <label for="category"><span>Catagory</span>
+                            <select name="categories" id="category">
+                                <option value="select category">Select category</option>
                                 <option value="">Restaurants & Bars</option>
                                 <option value="">Shopping</option>
                                 <option value="">Taxi & Car Service</option>
@@ -78,10 +78,15 @@
                                 <option value="">Transfer</option>
                             </select>
                         </label>
+                        <label for="description">
+                            <div class="input_field">
+                            <textarea class="textarea" placeholder="Description" cols="30" rows="10" id="description"></textarea>
+                            </div>
+                        </label>
                     </div>
                     <button class="cancel" onclick="closeItem()">Cancel</button>
                     <div class="form-action-buttons">
-                        <input type="submit" class="confirm"></input>
+                        <button type="submit" class="confirm" onclick="saveFile();">Submit</button>
                     </div>
                 </form>
             </form>
