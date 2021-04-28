@@ -21,6 +21,11 @@ body{
   background: linear-gradient( #f0f8ff, 55%, #5E95E1);
   background-size: 170% 170%;
 }
+
+input[type=file] {
+    width: 55%;
+}
+
 .profile{
   width: 330px;
   padding: 40px 30px;
