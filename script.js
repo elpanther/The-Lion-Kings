@@ -171,7 +171,7 @@ function openItem() {
 
 
 function closeItem() {
-	document.getElementsByClassName('expenses-form').style.display = "none";
+	document.getElementsById("add-new-item").style.display = "none";
 }
 
 
@@ -184,85 +184,3 @@ function closeItem() {
 // function closePopup() {
 // 	document.getElementsById("myForm").style.display = 'none';
 // }
-
-var selectedRow = null
-
-function onFormSubmit() {
-    if (validate()) {
-        var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
-        resetForm();
-    }
-}
-
-function readFormData() {
-    var formData = {};
-    formData["name"] = document.getElementById("name").value;
-    formData["purpose"] = document.getElementById("purpose").value;
-    formData["amount"] = document.getElementById("amount").value;
-    formData["catagory"] = document.getElementById("catagory").value;
-    return formData;
-}
-
-function insertNewRecord(data) {
-    var table = document.getElementById("expensesList").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.name;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.purpose;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.amount;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.catagory;
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
-}
-
-function resetForm() {
-    document.getElementById("name").value = "";
-    document.getElementById("purpose").value = "";
-    document.getElementById("amount").value = "";
-    document.getElementById("catagory").value = "";
-    selectedRow = null;
-}
-
-function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("name").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("catagory").value = selectedRow.cells[3].innerHTML;
-}
-function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.fullName;
-    selectedRow.cells[1].innerHTML = formData.email;
-    selectedRow.cells[2].innerHTML = formData.salary;
-    selectedRow.cells[3].innerHTML = formData.city;
-}
-
-function onDelete(td) {
-    if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
-        document.getElementById("expensesList").deleteRow(row.rowIndex);
-        resetForm();
-    }
-}
-// Let's understand the above JavaScript code.
-
-// Handling HTML form submission with the following function:
-
-function onFormSubmit() {
-    if (validate()) {
-        var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
-        resetForm();
-    }
-}
