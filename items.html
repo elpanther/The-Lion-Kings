@@ -31,7 +31,7 @@
     <section id="add-new-item" class="pop-up">
         <div class="expenses-form">
             <div id="myModal" class="Modal is-hidden is-visuallyHidden"></div>
-            <form class="form-container" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <form class="form-container" autocomplete="off">
                 <h3>Item Setup</h3>
                 <form>
                     <div>
@@ -55,9 +55,15 @@
                         </label>
                     </div>
                     <div>
+<<<<<<< HEAD
                         <label for="catagory"><span>Category</span>
                             <select name="catagories" id="catagory">
                                 <option value="select catagory">Select catagory</option>
+=======
+                        <label for="category"><span>Catagory</span>
+                            <select name="categories" id="category">
+                                <option value="select category">Select category</option>
+>>>>>>> ca4f1a669a3034e12899942efbacf3909a55fbd7
                                 <option value="">Restaurants & Bars</option>
                                 <option value="">Shopping</option>
                                 <option value="">Taxi & Car Service</option>
@@ -78,10 +84,15 @@
                                 <option value="">Transfer</option>
                             </select>
                         </label>
+                        <label for="description">
+                            <div class="input_field">
+                            <textarea class="textarea" placeholder="Description" cols="30" rows="10" id="description"></textarea>
+                            </div>
+                        </label>
                     </div>
                     <button class="cancel" onclick="closeItem();blurToggle()">Cancel</button>
                     <div class="form-action-buttons">
-                        <input type="submit" class="confirm"></input>
+                        <button type="submit" class="confirm" onclick="saveFile();event.preventDefault();onFormSubmit();">Submit</button>
                     </div>
                 </form>
             </form>
