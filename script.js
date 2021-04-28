@@ -171,7 +171,7 @@ function openItem() {
 
 
 function closeItem() {
-	document.getElementsById("add-new-item").style.display = "none";
+	document.getElementById("add-new-item").style.display = "none";
 }
 
 
