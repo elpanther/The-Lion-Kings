@@ -190,10 +190,10 @@ function readURL(input) {
 		let reader = new FileReader();
 
 		reader.onload = function (e) {
-			$('#pic')
+			$('.wrapper')
 				.attr('src', e.target.result)
-				.width(150)
-				.height(200);
+				.width(165)
+				.height(165);
 		};
 
 		reader.readAsDataURL(input.files[0]);
