@@ -190,10 +190,10 @@ function readURL(input) {
 		let reader = new FileReader();
 
 		reader.onload = function (e) {
-			$('#pic')
+			$('.wrapper')
 				.attr('src', e.target.result)
-				.width(150)
-				.height(200);
+				.width(165)
+				.height(165);
 		};
 
 		reader.readAsDataURL(input.files[0]);
@@ -361,38 +361,38 @@ function onFormSubmit() {
 // 	newLink.click(); 
 // }
 
-let saveFile = () => {
+// let saveFile = () => {
     	
-	// Get the data from each element on the form.
-	const name = document.getElementById('name');
-	const amount = document.getElementById('amount');
-	const purpose = document.getElementById('purpose');
-	const category = document.getElementById('category');
-	const description = document.getElementById('description');
+// 	// Get the data from each element on the form.
+// 	const name = document.getElementById('name');
+// 	const amount = document.getElementById('amount');
+// 	const purpose = document.getElementById('purpose');
+// 	const category = document.getElementById('category');
+// 	const description = document.getElementById('description');
 	
-	// This variable stores all the data.
-	let data = 
-		'\r Name: ' + name.value + ' \r\n ' + 
-		'Amount: ' + amount.value + ' \r\n ' + 
-		'Purpose: ' + purpose.value + ' \r\n ' + 
-		'Category: ' + category.value + ' \r\n ' + 
-		'Description: ' + description.value; + '\r\n'
+// 	// This variable stores all the data.
+// 	let data = 
+// 		'\r Name: ' + name.value + ' \r\n ' + 
+// 		'Amount: ' + amount.value + ' \r\n ' + 
+// 		'Purpose: ' + purpose.value + ' \r\n ' + 
+// 		'Category: ' + category.value + ' \r\n ' + 
+// 		'Description: ' + description.value; + '\r\n'
 	
-	// Convert the text to BLOB.
-	const textToBLOB = new Blob([data], { type: 'text/plain' });
-	const sFileName = 'file.txt';	   // The file to save the data.
+// 	// Convert the text to BLOB.
+// 	const textToBLOB = new Blob([data], { type: 'text/plain' });
+// 	const sFileName = 'file.txt';	   // The file to save the data.
 
-	let newLink = document.createElement("a");
-	newLink.download = sFileName;
+// 	let newLink = document.createElement("a");
+// 	newLink.download = sFileName;
 
-	if (window.webkitURL != null) {
-		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-	}
-	else {
-		newLink.href = window.URL.createObjectURL(textToBLOB);
-		newLink.style.display = "none";
-		document.body.appendChild(newLink);
-	}
+// 	if (window.webkitURL != null) {
+// 		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+// 	}
+// 	else {
+// 		newLink.href = window.URL.createObjectURL(textToBLOB);
+// 		newLink.style.display = "none";
+// 		document.body.appendChild(newLink);
+// 	}
 
-	newLink.click(); 
-}
+// 	newLink.click(); 
+// }

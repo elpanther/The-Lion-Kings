@@ -22,6 +22,20 @@ body {
 } */
 
 
+<<<<<<< HEAD
+=======
+.expenses-table{
+    border-style: solid;
+    /* margin-bottom: 10px; */
+    /* margin-left: 10px; */
+    padding: 20px;
+    /* width: 50%; */
+    margin: auto;
+    width: 70%;
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+}
+>>>>>>> 54777d71e82bff4ae06ee5d2a8207efb0057a7b3
 
 body > table{
     width: 80%;
@@ -55,7 +69,7 @@ input[type=text], input[type=number] {
     box-sizing: border-box;
 }
 
-a{
+a {
     cursor: pointer;
     text-decoration: underline;
     color: #0000ee;
