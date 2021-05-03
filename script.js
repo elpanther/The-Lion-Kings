@@ -186,18 +186,44 @@ function hideFile() {
 
 //   allows user to add a image
 function readURL(input) {
-	if (input.files && input.files[0]) {
-		let reader = new FileReader();
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
 
-		reader.onload = function (e) {
-			$('#pic')
-				.attr('src', e.target.result)
-				.width(150)
-				.height(200);
-		};
+      reader.onload = function (e) {
+          $('#profile_img')
+              .attr('src', e.target.result)
+              .width(165)
+              .height(165);
+      };
 
-		reader.readAsDataURL(input.files[0]);
-	}
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("Howto");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+Howto.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 // $('#blur').click(function() {
@@ -334,38 +360,38 @@ function onFormSubmit() {
 // 	newLink.click(); 
 // }
 
-let saveFile = () => {
+// let saveFile = () => {
     	
-	// Get the data from each element on the form.
-	const name = document.getElementById('name');
-	const amount = document.getElementById('amount');
-	const purpose = document.getElementById('purpose');
-	const category = document.getElementById('category');
-	const description = document.getElementById('description');
+// 	// Get the data from each element on the form.
+// 	const name = document.getElementById('name');
+// 	const amount = document.getElementById('amount');
+// 	const purpose = document.getElementById('purpose');
+// 	const category = document.getElementById('category');
+// 	const description = document.getElementById('description');
 	
-	// This variable stores all the data.
-	let data = 
-		'\r Name: ' + name.value + ' \r\n ' + 
-		'Amount: ' + amount.value + ' \r\n ' + 
-		'Purpose: ' + purpose.value + ' \r\n ' + 
-		'Category: ' + category.value + ' \r\n ' + 
-		'Description: ' + description.value; + '\r\n'
+// 	// This variable stores all the data.
+// 	let data = 
+// 		'\r Name: ' + name.value + ' \r\n ' + 
+// 		'Amount: ' + amount.value + ' \r\n ' + 
+// 		'Purpose: ' + purpose.value + ' \r\n ' + 
+// 		'Category: ' + category.value + ' \r\n ' + 
+// 		'Description: ' + description.value; + '\r\n'
 	
-	// Convert the text to BLOB.
-	const textToBLOB = new Blob([data], { type: 'text/plain' });
-	const sFileName = 'file.txt';	   // The file to save the data.
+// 	// Convert the text to BLOB.
+// 	const textToBLOB = new Blob([data], { type: 'text/plain' });
+// 	const sFileName = 'file.txt';	   // The file to save the data.
 
-	let newLink = document.createElement("a");
-	newLink.download = sFileName;
+// 	let newLink = document.createElement("a");
+// 	newLink.download = sFileName;
 
-	if (window.webkitURL != null) {
-		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-	}
-	else {
-		newLink.href = window.URL.createObjectURL(textToBLOB);
-		newLink.style.display = "none";
-		document.body.appendChild(newLink);
-	}
+// 	if (window.webkitURL != null) {
+// 		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+// 	}
+// 	else {
+// 		newLink.href = window.URL.createObjectURL(textToBLOB);
+// 		newLink.style.display = "none";
+// 		document.body.appendChild(newLink);
+// 	}
 
-	newLink.click(); 
-}
+// 	newLink.click(); 
+// }
