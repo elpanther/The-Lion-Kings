@@ -226,7 +226,6 @@ window.onclick = function(event) {
   }
 }
 
-
 // $('#blur').click(function() {
 // 	$('#blur, #myForm').css('display','none');
 // });
