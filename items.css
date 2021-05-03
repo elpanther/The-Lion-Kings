@@ -22,6 +22,7 @@ body {
 } */
 
 
+
 .expenses-table{
     border-style: solid;
     /* margin-bottom: 10px; */
@@ -33,6 +34,7 @@ body {
     /* border: 3px solid green; */
     /* padding: 10px; */
 }
+
 
 body > table{
     width: 80%;
