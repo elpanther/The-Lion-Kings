@@ -186,18 +186,18 @@ function hideFile() {
 
 //   allows user to add a image
 function readURL(input) {
-	if (input.files && input.files[0]) {
-		let reader = new FileReader();
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
 
-		reader.onload = function (e) {
-			$('.wrapper')
-				.attr('src', e.target.result)
-				.width(165)
-				.height(165);
-		};
+      reader.onload = function (e) {
+          $('#profile_img')
+              .attr('src', e.target.result)
+              .width(165)
+              .height(165);
+      };
 
-		reader.readAsDataURL(input.files[0]);
-	}
+      reader.readAsDataURL(input.files[0]);
+  }
 }
 
 // $('#blur').click(function() {
