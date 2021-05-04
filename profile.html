@@ -34,7 +34,9 @@
 
     <form action="#">
       <div class="wrapper">
-        <img id="profile_img" src="#" alt="your image" />
+        <div class="img">
+          <img id="profile_img" src="#" alt="your image" onclick="changeImage()"/>
+        </div>
         <input type="file" class="my_file" onchange="readURL(this)">
       </div>
 

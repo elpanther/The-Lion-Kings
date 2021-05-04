@@ -200,6 +200,12 @@ function readURL(input) {
   }
 }
 
+function changeImage(imgName)
+  {
+     image = document.getElementById('profile_img');
+     image.src = imgName;
+  }
+
 // Get the modal
 var modal = document.getElementById("myModal");
 

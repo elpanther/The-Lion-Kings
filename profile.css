@@ -185,6 +185,10 @@ ul li:active {
   transform: 0.5s;
 }
 
+.img {
+  font-size: 0;
+}
+
 .my_file::-webkit-file-upload-button {
   visibility: hidden;
 }
