@@ -9,7 +9,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
-    background-size: 600% 600%;
+    background-size: 1400% 1400%;
 }
 /* logout button */
 .pull-right{
@@ -73,66 +73,43 @@ body {
 
 .saving img {
     width: 20%;
-    height: 20%;
-    float: left;
-   margin: 80px;
+   margin: 20px;
+   margin-left: 90px;
+   float: left;
   }
   
+
+
 .saving-info {
-    margin-top: 100px;
+    margin-top: 37px;
 }
 
-h3 {
+#SA {
     text-align: center;
-    margin: 30px;
+   margin-left: 300px;
 }
 
-/* Navigation bar design */
-nav {
-    width: 100%;
-    background-color: #1034A6;
+
+.checking img {
+    width: 20%;
+   margin-right: 90px;
+   float: right;
+  margin-bottom: 20px;
+  }
+
+  .checking-info {
+    margin-left: 100px;
 }
 
-ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
+#CA {
+    margin: 60px;
+   margin-left: 300px;
+   
 }
-
-ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 20px;
-}
-
-ul li:hover {
-    background-color: #5E95E1;
-}
-ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-ul li:active {
-    background-color: #5E95E1;
-}
-.active {
-    background-color: #5E95E1;
-}
-.toggle {
-    width: 100%;
-    padding: 10px 20px;
-    background: #001f44;
-    text-align: left;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 30px;
-    display: none;
-}
-
 .navbar {
     overflow: hidden;
-    background-color: #333; 
+    background-color: #1034A6; 
+    text-align: center;
   }
   
   .navbar a {
@@ -145,7 +122,7 @@ ul li:active {
   }
   
   .subnav {
-    /* float: left; */
+    float: left;
     overflow: hidden;
   }
   
@@ -157,11 +134,13 @@ ul li:active {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-   
+    margin: 0;
+    background-color: #5E95E1;
   }
   
   .navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: red;
+    background-color: #5E95E1;
+    text-align: center;
   }
   
   .subnav-content {
@@ -171,8 +150,14 @@ ul li:active {
     background-color: red;
     width: 100%;
     z-index: 1;
+    background-color: #FEE5A2;
   }
-
+  
+  .subnav-content a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
   
   .subnav-content a:hover {
     background-color: #eee;
@@ -181,4 +166,12 @@ ul li:active {
   
   .subnav:hover .subnav-content {
     display: block;
+    
   }
+
+
+
+  .pull-right{
+    float:right;
+    list-style: none;
+}
