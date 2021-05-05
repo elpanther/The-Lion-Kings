@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Out of Pocket - Profile Page</title>
+  <title>Profile Page</title>
   <link rel="stylesheet" href="profile.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
 
@@ -28,57 +28,60 @@
 
   <div class="profile">
     <div class="text">
-Profile
-</div>
+      Profile
+    </div>
 
 
-<form action="#">
-  <div class="ap">
-    <input type="file" id="file" onchange="readURL(this);" onclick="hideFile()" />
-    <img id="pic" />
+    <form action="#">
+      <div class="wrapper">
+        <div class="img">
+          <img id="profile_img" src="#" alt="your image" onclick="changeImage()"/>
+        </div>
+        <input type="file" class="my_file" onchange="readURL(this)">
+      </div>
+
+
+
+      <div class="field">
+        <input type="text" required>
+        <span class="fas fa-user"></span>
+        <label>Name</label>
+      </div>
+      <!-- placeholder="Your Name" -->
+      <div class="field">
+        <input type="email" required>
+        <span class="fas fa-envelope"></span>
+        <label>Email</label>
+      </div>
+      <!-- placeholder="Email Address" -->
+      <div class="field">
+        <input type="tel" required>
+        <span class="fas fa-phone"></span>
+        <label>Phone Number</label>
+      </div>
+      <!-- placeholder="Phone Number" -->
+      <div class="field">
+        <input type="password" required>
+        <span class="fas fa-lock"></span>
+        <label>Password</label>
+      </div>
+      <!-- placeholder="Password" -->
+      <div class="field">
+        <input type="password" required>
+        <span class="fas fa-lock"></span>
+        <label>Confirm Password</label>
+      </div>
+      <!-- placeholder="Confirm Password"  -->
+
+      <!-- <div class="field"> -->
+      <button id="save" type="submit">Update</button>
+      <!-- </div> -->
+      <button id="da">Delete Account</button>
+
+    </form>
   </div>
-
-
-
-        <div class="field">
-          <input type="text"  required>
-          <span class="fas fa-user"></span>
-          <label>Name</label>
-        </div>
-        <!-- placeholder="Your Name" -->
-<div class="field">
-          <input type="email"  required>
-          <span class="fas fa-envelope"></span>
-          <label>Email</label>
-        </div>
-        <!-- placeholder="Email Address" -->
-<div class="field">
-          <input type="tel"  required>
-          <span class="fas fa-phone"></span>
-          <label>Phone Number</label>
-        </div>
-        <!-- placeholder="Phone Number" -->
-<div class="field">
-          <input type="password"  required>
-          <span class="fas fa-lock"></span>
-          <label>Password</label>
-        </div>  
-        <!-- placeholder="Password" -->
-<div class="field">
-          <input type="password" required>
-          <span class="fas fa-lock"></span>
-          <label>Confirm Password</label>
-        </div>      
-        <!-- placeholder="Confirm Password"  -->
-
-<!-- <div class="field"> -->
-          <button id="save" type="submit">Update</button>
-        <!-- </div> -->
-<button id="da">Delete Account</button>
- 
-  </form>
-</div>
-<script src="script.js"> </script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="script.js"> </script>
+  <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </body>
+
 </html>

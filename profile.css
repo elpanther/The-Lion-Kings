@@ -118,19 +118,6 @@ button:focus{
     border-color: transparent;
     }
 
-     .ap {
-        margin: 0 auto;
-        margin-top: 25px;
-        font-size: 25px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        width: 165px;
-        background-color: #FEE5A2;
-        border-radius: 50%;
-        text-align: center;
-    }
-
-   
 
 /* Navigation bar design */
 nav {
@@ -177,4 +164,43 @@ ul li:active {
     font-size: 30px;
     display: none;
 }
+.wrapper {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid #fff;
+  background-size: 100% 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
 
+.my_file {
+  position: relative;
+  bottom: 0;
+  outline: none;
+  width: 100%;
+  padding: 50px 120px;
+  cursor: pointer;
+  transform: 0.5s;
+}
+
+.img {
+  font-size: 0;
+}
+
+.my_file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.my_file::before {
+  font-size: 50px;
+  display: inline-block;
+}
+.my_file::after {
+  top: 70px;
+  display: block;
+  position: absolute;
+}
+.my_file:hover {
+  opacity: 1;
+}
