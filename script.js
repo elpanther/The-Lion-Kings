@@ -209,11 +209,7 @@ window.onclick = function(event) {
   }
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 2ef17c1c0e250ef3f404538dd4ceda9cb68dface
 var selectedRow = null
 
 function onFormSubmit() {
