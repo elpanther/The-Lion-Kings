@@ -17,21 +17,7 @@
 // Opens the form
 function openForm() {
 	document.getElementById("myForm").style.display = "block";
-// 	document.getElementById('exit').onclick = function() {
-// 	  overlay.fadeOut(300);
-// 	  dialog.fadeOut(250);
-// 	};
-//   })();
 }
-
-
-
-//   function mask() {
-// 	document.getElementsById("mask").style.background = "block"
-
-// 	//document.getElementById("add-new-item").style.display = "block";
-// 	// $('.overlay').fadeIn(300);
-// //   }
 
 function hideNav() {
 	document.getElementsByTagName("ul").style.display = "none";
@@ -113,7 +99,6 @@ var autoExpand = function (field) {
   function on() {
 	
 		document.getElementsByClassName("overlay").style.display = "block";
-	//$('#myForm').fadeIn(300);
   }
   
 //   function off() {
@@ -224,8 +209,11 @@ window.onclick = function(event) {
   }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2ef17c1c0e250ef3f404538dd4ceda9cb68dface
 var selectedRow = null
 
 function onFormSubmit() {
