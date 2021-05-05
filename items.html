@@ -35,74 +35,65 @@
                 <h3>Item Setup</h3>
                 <form>
                     <div>
+                        <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
                         <label for="name"><span>Name</span>
+                            
                             <input type="text" name="name" id="name" size="20" />
+                            
                         </label>
                     </div>
                     <div>
+                        <label class="validation-error hide" id="purposeValidationError">This field is required.</label>
                         <label for="purpose"><span>Purpose</span>
                             <select name="purpose" id="purpose">
-                                <option value="">Select purpose</option>
-                                <option value="">Savings</option>
-                                <option value="">Spending</option>
-                                <option value="">Deposits</option>
+                                <option value="Select purpose">Select purpose</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Spending">Spending</option>
+                                <option value="Deposits">Deposits</option>
                             </select>
                         </label>
                     </div>
                     <div>
+                        <label class="validation-error hide" id="amountValidationError">This field is required.</label>
                         <label for="amount"><span>Amount</span>
                             <input type="number" name="amount" id="amount"/>
                         </label>
                     </div>
                     <div>
-
+                        <label class="validation-error hide" id="categoryValidationError">This field is required.</label>
                         <label for="category"><span>Catagory</span>
                             <select name="categories" id="category">
                                 <option value="select category">Select category</option>
-
-                        <label for="catagory"><span>Category</span>
-                            <select name="catagories" id="catagory">
-                                <option value="select catagory">Select catagory</option>
-
-                        <label for="category"><span>Catagory</span>
-                            <select name="categories" id="category">
-                                <option value="select category">Select category</option>
-
-                        <label for="category"><span>Catagory</span>
-                            <select name="categories" id="category">
-                                <option value="select category">Select category</option>
-                        <label for="category"><span>Catagory</span>
-                            <select name="categories" id="category">
-                                <option value="select category">Select category</option>
-                                <option value="">Restaurants & Bars</option>
-                                <option value="">Shopping</option>
-                                <option value="">Taxi & Car Service</option>
-                                <option value="">Bills & Utilities</option>
-                                <option value="">Gas & Fuel</option>
-                                <option value="">Groceries</option>
-                                <option value="">Travel</option>
-                                <option value="">Household</option>
-                                <option value="">Entertainment</option>
-                                <option value="">Business Services</option>
-                                <option value="">Bank Check</option>
-                                <option value="">Education</option>
-                                <option value="">Fees</option>
-                                <option value="">Hotel</option>
-                                <option value="">Income</option>
-                                <option value="">Insurance</option>
-                                <option value="">Personal Care</option>
-                                <option value="">Transfer</option>
+                                <option value="Restaurants & Bars">Restaurants & Bars</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Taxi & Car Service">Taxi & Car Service</option>
+                                <option value="Bills & Utilities">Bills & Utilities</option>
+                                <option value="Gas & Fuel">Gas & Fuel</option>
+                                <option value="Groceries">Groceries</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Household">Household</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Business Services">Business Services</option>
+                                <option value="Bank Check">Bank Check</option>
+                                <option value="Education">Education</option>
+                                <option value="Fees">Fees</option>
+                                <option value="Hotel">Hotel</option>
+                                <option value="Income">Income</option>
+                                <option value="Insurance">Insurance</option>
+                                <option value="Personal Care">Personal Care</option>
+                                <option value="Transfer">Transfer</option>
                             </select>
                         </label>
+                        <label class="validation-error hide" id="descriptionValidationError">This field is required.</label>
                         <label for="description">
                             <div class="input_field">
                             <textarea class="textarea" placeholder="Description" cols="30" rows="10" id="description"></textarea>
                             </div>
                         </label>
                     </div>
-                    <button class="cancel" onclick="closeItem();blurToggle()">Cancel</button>
+                    <button class="cancel" onclick="closeItem();blurToggle();event.preventDefault()">Cancel</button>
                     <div class="form-action-buttons">
-                        <button type="submit" class="confirm" onclick="saveFile();event.preventDefault();onFormSubmit();">Submit</button>
+                        <button type="submit" class="confirm" onclick="event.preventDefault();onFormSubmit();">Submit</button>
                     </div>
                 </form>
             </form>

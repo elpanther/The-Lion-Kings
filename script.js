@@ -174,15 +174,7 @@ function closeItem() {
 	document.getElementById("add-new-item").style.display = "none";
 }
 
-// Hide file on click
-function hideFile() {
-	let x = document.getElementById("file");
-	if (x.style.display === "none") {
-	  x.style.display = "block";
-	} else {
-	  x.style.display = "none";
-	}
-  }
+
 
 //   allows user to add a image
 function readURL(input) {
@@ -216,14 +208,14 @@ var btn = document.getElementById("Howto");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-Howto.onclick = function() {
-  modal.style.display = "block";
-}
+// Howto.onclick = function() {
+//   modal.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -232,13 +224,7 @@ window.onclick = function(event) {
   }
 }
 
-// $('#blur').click(function() {
-// 	$('#blur, #myForm').css('display','none');
-// });
 
-// function closePopup() {
-// 	document.getElementsById("myForm").style.display = 'none';
-// }
 
 var selectedRow = null
 
@@ -249,8 +235,48 @@ function onFormSubmit() {
             insertNewRecord(formData);
         else
             updateRecord(formData);
-        resetForm();
+            document.getElementById("myModal").classList.add("hide");
     }
+}
+
+// Checking info and makes sure inputs are filled in
+function validate() {
+  isValid = true;
+  if (!document.getElementById("fullNameValidationError").classList.contains("hide")){
+    document.getElementById("fullNameValidationError").classList.add("hide");
+  }
+  if (!document.getElementById("purposeValidationError").classList.contains("hide")){
+   document.getElementById("purposeValidationError").classList.add("hide");
+  }
+  if (!document.getElementById("amountValidationError").classList.contains("hide")){
+    document.getElementById("amountValidationError").classList.add("hide");
+   }
+   if (!document.getElementById("categoryValidationError").classList.contains("hide")){
+    document.getElementById("categoryValidationError").classList.add("hide");
+   }
+   if (!document.getElementById("descriptionValidationError").classList.contains("hide")){
+    document.getElementById("descriptionValidationError").classList.add("hide");
+   }
+  if (document.getElementById("name").value == "") {
+      isValid = false;
+      document.getElementById("fullNameValidationError").classList.remove("hide");
+      
+  } else if (document.getElementById("purpose").value == "Select purpose"){
+    isValid = false;
+    document.getElementById("purposeValidationError").classList.remove("hide");
+
+  } else if(document.getElementById("amount").value == ""){
+    isValid = false;
+    document.getElementById("amountValidationError").classList.remove("hide");
+  } else if(document.getElementById("category").value == "select category"){
+    isValid = false;
+    document.getElementById("categoryValidationError").classList.remove("hide");
+  } else if(document.getElementById("description").value == ""){
+    isValid = false;
+    document.getElementById("descriptionValidationError").classList.remove("hide");
+  } 
+  // console.log(isValid);
+  return isValid;
 }
 
 function readFormData() {
@@ -328,76 +354,3 @@ function onFormSubmit() {
     }
 }
 
-// let saveFile = () => {
-    	
-// 	// Get the data from each element on the form.
-// 	const fname = document.getElementById('fname');
-// 	const lname = document.getElementById('lname');
-// 	const username = document.getElementById('username');
-// 	const psw = document.getElementById('psw');
-// 	const vpsw = document.getElementById('vpsw');
-// 	const email = document.getElementById('email');
-	
-// 	// This variable stores all the data.
-// 	let data = 
-// 		'\r Firstname: ' + fname.value + ' \r\n ' + 
-// 		'Lastname: ' +lname.value + ' \r\n ' + 
-// 		'Username: ' + username.value + ' \r\n ' + 
-// 		'Password: ' + psw.value + ' \r\n ' + 
-// 		'Verify: ' + vpsw.value; + '\r\n' +
-// 		'Email: ' + email.value; + '\r\n'
-	
-// 	// Convert the text to BLOB.
-// 	const textToBLOB = new Blob([data], { type: 'text/plain' });
-// 	const sFileName = 'file.txt';	   // The file to save the data.
-
-// 	let newLink = document.createElement("a");
-// 	newLink.download = sFileName;
-
-// 	if (window.webkitURL != null) {
-// 		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-// 	}
-// 	else {
-// 		newLink.href = window.URL.createObjectURL(textToBLOB);
-// 		newLink.style.display = "none";
-// 		document.body.appendChild(newLink);
-// 	}
-
-// 	newLink.click(); 
-// }
-
-// let saveFile = () => {
-    	
-// 	// Get the data from each element on the form.
-// 	const name = document.getElementById('name');
-// 	const amount = document.getElementById('amount');
-// 	const purpose = document.getElementById('purpose');
-// 	const category = document.getElementById('category');
-// 	const description = document.getElementById('description');
-	
-// 	// This variable stores all the data.
-// 	let data = 
-// 		'\r Name: ' + name.value + ' \r\n ' + 
-// 		'Amount: ' + amount.value + ' \r\n ' + 
-// 		'Purpose: ' + purpose.value + ' \r\n ' + 
-// 		'Category: ' + category.value + ' \r\n ' + 
-// 		'Description: ' + description.value; + '\r\n'
-	
-// 	// Convert the text to BLOB.
-// 	const textToBLOB = new Blob([data], { type: 'text/plain' });
-// 	const sFileName = 'file.txt';	   // The file to save the data.
-
-// 	let newLink = document.createElement("a");
-// 	newLink.download = sFileName;
-
-// 	if (window.webkitURL != null) {
-// 		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-// 	}
-// 	else {
-// 		newLink.href = window.URL.createObjectURL(textToBLOB);
-// 		newLink.style.display = "none";
-// 		document.body.appendChild(newLink);
-// 	}
-
-// 	newLink.click(); 
-// }
