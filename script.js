@@ -193,14 +193,14 @@ var btn = document.getElementById("Howto");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-// Howto.onclick = function() {
-//   modal.style.display = "block";
-// }
+Howto.onclick = function() {
+  modal.style.display = "block";
+}
 
 // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -223,7 +223,7 @@ function onFormSubmit() {
     }
 }
 
-// Checking info and makes sure inputs are filled in
+// Checking info and making sure inputs are filled in
 function validate() {
   isValid = true;
   if (!document.getElementById("fullNameValidationError").classList.contains("hide")){
