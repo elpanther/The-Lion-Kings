@@ -222,7 +222,7 @@ function onFormSubmit() {
   }
 }
 
-// Checking info and makes sure inputs are filled in
+// Checking info and making sure inputs are filled in
 function validate() {
   isValid = true;
   if (!document.getElementById("fullNameValidationError").classList.contains("hide")) {
@@ -335,4 +335,16 @@ function onFormSubmit() {
       updateRecord(formData);
     resetForm();
   }
+    if (validate()) {
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
+}
+
+function emailValidation() {
+
 }
