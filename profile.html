@@ -8,7 +8,21 @@
   <title>Profile Page</title>
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+  <script>
+    function ValidateEmail(inputText) {
+            var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (inputText.value.match(mailformat)) {
+                alert("Valid email address!");
+                document.form.email.focus();
+                return true;
+            }
+            else {
+                alert("You have entered an invalid email address!");
+                document.form.email.focus();
+                return false;
+            }
+        }
+  </script>
 </head>
 
 <body>
@@ -32,7 +46,7 @@
     </div>
 
 
-    <form action="#">
+    <form action="#" name="form">
       <div class="wrapper">
         <div class="img">
           <img id="profile_img" src="#" alt="your image" onclick="changeImage()"/>
@@ -49,7 +63,7 @@
       </div>
       <!-- placeholder="Your Name" -->
       <div class="field">
-        <input type="email" required>
+        <input type="email" name="email" required>
         <span class="fas fa-envelope"></span>
         <label>Email</label>
       </div>
@@ -74,7 +88,7 @@
       <!-- placeholder="Confirm Password"  -->
 
       <!-- <div class="field"> -->
-      <button id="save" type="submit">Update</button>
+      <button id="save" type="submit" onclick="ValidateEmail(document.form.email)">Update</button>
       <!-- </div> -->
       <button id="da">Delete Account</button>
 

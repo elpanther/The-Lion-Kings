@@ -4,6 +4,24 @@
 <link rel="stylesheet" href="index.css">
 <title>Welcome Page</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    // Preset email validation interference
+    // Make function that stops form from going to the home page
+    // Use item page as a reference
+    function ValidateEmail(inputText) {
+            var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (inputText.value.match(mailformat)) {
+                alert("Valid email address!");
+                document.form.email.focus();
+                return true;
+            }
+            else {
+                alert("You have entered an invalid email address!");
+                document.form.email.focus();
+                return false;
+            }
+        }
+</script>
 </head>
 
 <body>
@@ -45,18 +63,16 @@
     </div>
     <div class="form-popup" id="myForm">
         <div id="mask"></div>
-        <form action="home.html" class="form-container">
+        <form action="home.html" class="form-container" name="form">
             <img class="exit-button" src="close+cross+delete+exit+remove+trash+icon-1320073180398720461.png" onclick="closeForm()" alt="Exit button for form">
             <div class="title">
                 <h1>Login</h1>
             </div>
             <div class="field">
-                <input type="email" required>
-                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <div class="field">
-                <input type="password" required>
-                <label>Password</label>
+                <input type="password" placeholder="Password" required>
             </div>
             <div class="content">
                 <div class="checkbox">
@@ -69,7 +85,7 @@
                 </div>
             </div>
             <div class="field">
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" onclick="ValidateEmail(document.form.email)">
             </div>
             <div class="signup-link">
                 Not a member? <a href="signup.html">Signup now</a>
