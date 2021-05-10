@@ -51,14 +51,13 @@ body {
 .bankrate  {
   width: 20%;
 }
+
 .saving img {
     width: 20%;
    margin: 20px;
    margin-left: 90px;
    float: left;
   }
-  
-
 
 .saving-info {
     margin-top: 37px;
@@ -68,7 +67,6 @@ body {
     text-align: center;
    margin-left: 300px;
 }
-
 
 .checking img {
     width: 20%;
