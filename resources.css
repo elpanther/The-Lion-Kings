@@ -92,6 +92,7 @@ margin-right: 40px;
   text-shadow: 2px 2px 7px #5E95E1;
 }
 
+<<<<<<< HEAD
 /* moves headings left */
 .heading {
  margin-right: 67%;
@@ -117,14 +118,14 @@ a:visited {
 }
 
 
+=======
+>>>>>>> dee8337ee06b3f897b3b22b3824043a16cf1ec15
 .saving img {
     width: 20%;
    margin: 20px;
    margin-left: 90px;
    float: left;
   }
-  
-
 
 .saving-info {
     margin-top: 37px;
@@ -135,7 +136,6 @@ a:visited {
     text-align: center;
    margin-left: 300px;
 }
-
 
 .checking img {
     width: 20%;
@@ -167,7 +167,7 @@ a:visited {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 22px;
     text-decoration: none;
   }
   
@@ -181,11 +181,11 @@ a:visited {
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 20px 22px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    background-color: #5E95E1;
+    background-color: #1034A6;
   }
   
   .navbar a:hover, .subnav:hover .subnavbtn {
@@ -224,4 +224,11 @@ a:visited {
   .pull-right{
     float:right;
     list-style: none;
+}
+
+
+
+a {
+  font-size: 25px;
+  font-weight: bold;
 }
