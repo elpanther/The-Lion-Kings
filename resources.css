@@ -16,78 +16,104 @@ body {
     float:right;
     }
   
-
 .links {
-  text-align: center;
+  margin-top: 48px;
 }
-/* Images */
+
+/* Image */
 .bank {
   width: 20%;
   float: left;
-margin-bottom: 40px;
 border-radius: 10px;
+margin-right: 40px;
 }
-/* Images */
+/* Image */
 .savings  {
   width: 20%;
   float: right;
   border-radius: 10px;
+  margin-left: 30px;
 }
-/* Images */
+/* Image */
 .moneyrates  {
-  width: 20%;
+  width: 22%;
   float: left;
   border-radius: 10px;
+  margin-right: 40px;
 }
-/* Images */
+/* Image */
 .askmoney  {
-  width: 20%;
+  width: 22%;
   float: right;
   border-radius: 10px;
+  margin-left: 40px;
 }
-/* Images */
+/* Image */
 .college  {
-  width: 20%;
+  width: 21%;
   float: left;
   border-radius: 10px;
+  margin-right: 50px;
 }
-/* Images */
+/* Image */
 .blog  {
-  width: 20%;
+  width: 22%;
   float: right;
   border-radius: 10px;
+  margin-left: 40px;
 }
-/* Images */
+/* Image */
 .invest  {
-  width: 20%;
+  width: 22%;
   float: left;
   border-radius: 10px;
+  margin-right: 20px;
+  
 }
-/* Images */
+/* Image */
 .bankrate  {
-  width: 20%;
+  width: 22%;
   float: right;
   border-radius: 10px;
+  margin-left: 40px;
 }
 
+/* moves some paragraphs to the left and some down */
 .left {
-  text-align: left;
+  /* margin-right: 5%; */
+  margin-bottom: 200px;
+  text-shadow: 2px 2px 7px #5E95E1;
 }
 
-h4 {
-  text-align: right;
+/* moves some paragraphs to the right and some down */
+.right {
+  margin-left: 6%;
+  margin-bottom: 200px;
+  text-shadow: 2px 2px 7px #5E95E1;
 }
+
+/* moves headings left */
+.heading {
+ margin-right: 67%;
+ text-shadow: 2px 2px 7px #5E95E1;
+}
+
+/* moves headings right */
+.heading-right {
+  margin-left: 68%;
+  text-shadow: 2px 2px 7px #5E95E1;
+ }
+
+/* fixed investopedia heading */
+.heading-fix {
+  margin-right: 64.5%;
+  text-shadow: 2px 2px 7px #5E95E1;
+ }
 
 a:visited {
   color: black;
   background-color: transparent;
   text-decoration: none;
-}
-
-p {
-  text-align: right;
-  margin-bottom: 100px;
-  
 }
 
 
@@ -102,6 +128,7 @@ p {
 
 .saving-info {
     margin-top: 37px;
+    text-align: left;
 }
 
 #SA {
@@ -118,7 +145,7 @@ p {
   }
 
   .checking-info {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 #CA {
