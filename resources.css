@@ -9,7 +9,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
-    background-size: 1400% 1400%;
+    background-size: 100% 100%;
 }
 /* logout button */
 .pull-right{
@@ -17,41 +17,83 @@ body {
     }
   
 
-
 .links {
   text-align: center;
 }
-
-.moneyrates  {
-  width: 20%;
-}
-.askmoney  {
-  width: 20%;
-}
-
-.college  {
-  width: 20%;
-}
+/* Images */
 .bank {
   width: 20%;
+  float: left;
+margin-bottom: 40px;
+border-radius: 10px;
 }
+/* Images */
 .savings  {
   width: 20%;
-  background-color: black;
+  float: right;
+  border-radius: 10px;
 }
-
+/* Images */
+.moneyrates  {
+  width: 20%;
+  float: left;
+  border-radius: 10px;
+}
+/* Images */
+.askmoney  {
+  width: 20%;
+  float: right;
+  border-radius: 10px;
+}
+/* Images */
+.college  {
+  width: 20%;
+  float: left;
+  border-radius: 10px;
+}
+/* Images */
 .blog  {
   width: 20%;
+  float: right;
+  border-radius: 10px;
 }
-
+/* Images */
 .invest  {
   width: 20%;
+  float: left;
+  border-radius: 10px;
 }
-
+/* Images */
 .bankrate  {
   width: 20%;
+  float: right;
+  border-radius: 10px;
 }
 
+.left {
+  text-align: left;
+}
+
+<<<<<<< HEAD
+=======
+h4 {
+  text-align: right;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+p {
+  text-align: right;
+  margin-bottom: 100px;
+  
+}
+
+
+>>>>>>> 74cfef511ac5d53f4c8063740816562c4334ae93
 .saving img {
     width: 20%;
    margin: 20px;

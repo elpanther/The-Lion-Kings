@@ -345,6 +345,28 @@ function onFormSubmit() {
     }
 }
 
-function emailValidation() {
+// Check browser support
+// if (typeof(Storage) !== "undefined") {
+//   // Store
+//   localStorage.setItem("name", "");
+//   // Retrieve
+//   document.getElementById("result").innerHTML = localStorage.getItem("name");
+// } else {
+//   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+// }
 
-}
+// if(!localStorage.getItem('bgcolor')){
+//   populateStroage();
+// } else {
+//   setStyles();
+// }
+
+// function populateStroage(){ 
+//   localStorage.getItem('bgcolor',
+
+//   documentget.getElementById('bgcolor').value);
+//   localStorage.getItem('font', document.getElementById('font').value);
+
+//   localStorage.setItem('bgcolor',
+// }
+
