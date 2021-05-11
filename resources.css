@@ -92,7 +92,6 @@ margin-right: 40px;
   text-shadow: 2px 2px 7px #5E95E1;
 }
 
-<<<<<<< HEAD
 /* moves headings left */
 .heading {
  margin-right: 67%;
@@ -118,8 +117,7 @@ a:visited {
 }
 
 
-=======
->>>>>>> dee8337ee06b3f897b3b22b3824043a16cf1ec15
+
 .saving img {
     width: 20%;
    margin: 20px;
@@ -224,11 +222,4 @@ a:visited {
   .pull-right{
     float:right;
     list-style: none;
-}
-
-
-
-a {
-  font-size: 25px;
-  font-weight: bold;
 }
