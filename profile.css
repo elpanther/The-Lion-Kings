@@ -220,6 +220,7 @@ ul li:active {
   opacity: 1;
 }
 
+/* Nav bar is broken */
 .navbar {
   overflow: hidden;
   background-color: #1034A6; 
