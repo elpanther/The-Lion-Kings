@@ -335,15 +335,42 @@ function onFormSubmit() {
       updateRecord(formData);
     resetForm();
   }
-    if (validate()) {
-        var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
-        resetForm();
-    }
+  if (validate()) {
+    var formData = readFormData();
+    if (selectedRow == null)
+      insertNewRecord(formData);
+    else
+      updateRecord(formData);
+    resetForm();
+  }
 }
+
+// Does not save table inputs after reloading page or leaving page
+
+function save() {
+  var table = document.getElementById("expensesList");
+  var trs = table.getElementsByTagName('tr');  // list of all rows
+  
+  var values = [];  // will be a (potentially jagged) 2D array of all values
+  for (var i = 0; i < trs.length; i++) {
+    // loop through all rows, each will be one entrie in values
+    var trValues = [];
+    var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
+    
+    for (var j = 0; j < tds.length; j++) {
+      trValues[j] = tds[j].innerText;
+      // get the value of the cell (preserve newlines, if you don't want that use .textContent)
+    }
+    
+    values[i] = trValues;
+  }
+  // save values
+  console.log(values);
+}
+
+window.onbeforeunload = function() {
+  save().event.preventDefault()
+};
 
 // Check browser support
 // if (typeof(Storage) !== "undefined") {
@@ -370,3 +397,38 @@ function onFormSubmit() {
 //   localStorage.setItem('bgcolor',
 // }
 
+
+// Store email as a key and use password as the value
+function SaveData() {
+  var a = new Array();
+  // const hash = Object.fromEntries(
+  //   a.map(e => [e.name, e.password])
+  // )
+  // var username = document.getElementById('email').value;
+  // var password = document.getElementById('psw').value;
+  // for (let key of hash) {
+
+  //   if (key[0] === username && key[1] === atob(password)) {
+  //     alert('Login successful');
+  //   }
+
+  //   else {
+  //     alert('Login fail');
+  //   }
+  // }
+
+  var username = document.getElementById('email').value;
+  var password = document.getElementById('psw').value;
+  sessionStorage.setItem("currentloggedin", username);
+
+  localStorage.setItem('all_users', JSON.stringify(a));
+
+  a = JSON.parse((localStorage.getItem("all_users")));
+  a.push({ name: username, password: password });
+  localStorage.setItem('name', JSON.stringify(a));
+  for (var i = 0; i < a.length; i++) {
+    var li = document.createElement("li");
+    li.innerHTML = a[i]['name'];
+    document.getElementById("listuser").appendChild(li);
+  }
+}
