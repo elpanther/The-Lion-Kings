@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
+  
   /* user-select: none; */
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -12,7 +11,7 @@ html,body{
 }
 body{
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -22,17 +21,21 @@ body{
   background-size: 170% 170%;
 }
 
+
+
 input[type=file] {
     width: 55%;
 }
 
 .profile{
+  margin-left: 450px;
   width: 330px;
   padding: 40px 30px;
   background: aliceblue;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73,
                2px 2px 5px rgba(29, 46, 77, 0.288);
+               
 }
 .profile .text{
   font-size: 33px;
@@ -82,7 +85,7 @@ input[type=file] {
   opacity: 0;
 }
 
-}
+
 button:focus{
   color: #3498db;
   box-shadow: inset 2px 2px 5px #BABECC,
@@ -222,7 +225,6 @@ ul li:active {
 
 /* Nav bar is broken */
 .navbar {
-  overflow: hidden;
   background-color: #1034A6; 
   text-align: center;
 }
@@ -249,7 +251,6 @@ ul li:active {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
   background-color: #1034A6;
 }
 
