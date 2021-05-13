@@ -401,21 +401,21 @@ window.onbeforeunload = function() {
 // Store email as a key and use password as the value
 function SaveData() {
   var a = new Array();
-  // const hash = Object.fromEntries(
-  //   a.map(e => [e.name, e.password])
-  // )
-  // var username = document.getElementById('email').value;
-  // var password = document.getElementById('psw').value;
-  // for (let key of hash) {
+  const hash = Object.fromEntries(
+    a.map(e => [e.name, e.password])
+  )
+  var username = document.getElementById('email').value;
+  var password = document.getElementById('psw').value;
+  for (let key of hash) {
 
-  //   if (key[0] === username && key[1] === atob(password)) {
-  //     alert('Login successful');
-  //   }
+    if (key[0] === username && key[1] === atob(password)) {
+      alert('Login successful');
+    }
 
-  //   else {
-  //     alert('Login fail');
-  //   }
-  // }
+    else {
+      alert('Login fail');
+    }
+  }
 
   var username = document.getElementById('email').value;
   var password = document.getElementById('psw').value;
@@ -431,4 +431,33 @@ function SaveData() {
     li.innerHTML = a[i]['name'];
     document.getElementById("listuser").appendChild(li);
   }
+}
+
+// Name and Password from the register-form
+var name = document.getElementById('email');
+var pw = document.getElementById('psw');
+
+// storing input from register-form
+function store() {
+    localStorage.setItem('email', name.value);
+    localStorage.setItem('psw', psw.value);
+}
+
+// check if stored data from register-form is equal to entered data in the   login-form
+function check() {
+
+    // stored data from the register-form
+    var storedName = localStorage.getItem('email');
+    var storedPw = localStorage.getItem('psw');
+
+    // entered data from the login-form
+    var userName = document.getElementById('email');
+    var userPw = document.getElementById('psw');
+
+    // check if stored data from register-form is equal to data from login form
+    if(userName.value !== storedName || userPw.value !== storedPw) {
+        alert('ERROR');
+    }else {
+        alert('You are loged in.');
+    }
 }
