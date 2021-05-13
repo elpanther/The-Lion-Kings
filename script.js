@@ -401,6 +401,8 @@ window.onbeforeunload = function () {
 //     }
 // }
 
+// unable to save the table data so we can refresh the page and still see it
+
 // Get the text field that we're going to track
 let field = document.getElementByTagName("tbody");
 
