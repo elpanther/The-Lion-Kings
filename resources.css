@@ -1,5 +1,3 @@
-
-
 /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -9,7 +7,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient( #f0f8ff, 75%, #5E95E1);
-    background-size: 100% 100%;
+    background-size: 105% 105%;
 }
 /* logout button */
 .pull-right{
@@ -17,7 +15,7 @@ body {
     }
   
 .links {
-  margin-top: 48px;
+  margin-top: 58px;
 }
 
 /* Image */
@@ -67,7 +65,7 @@ margin-right: 40px;
   width: 22%;
   float: left;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 40px;
   
 }
 /* Image */
@@ -80,43 +78,50 @@ margin-right: 40px;
 
 /* moves some paragraphs to the left and some down */
 .left {
-  /* margin-right: 5%; */
-  margin-bottom: 200px;
-  text-shadow: 2px 2px 7px #5E95E1;
+  margin-bottom: 120px;
 }
 
-/* moves some paragraphs to the right and some down */
+ /* moves some paragraphs to the right and some down  */
 .right {
   margin-left: 6%;
-  margin-bottom: 200px;
-  text-shadow: 2px 2px 7px #5E95E1;
+  margin-bottom: 120px;
+}
+
+.right-fix {
+  margin-left: 6%;
 }
 
 /* moves headings left */
 .heading {
  margin-right: 67%;
- text-shadow: 2px 2px 7px #5E95E1;
 }
 
 /* moves headings right */
 .heading-right {
   margin-left: 68%;
-  text-shadow: 2px 2px 7px #5E95E1;
  }
 
 /* fixed investopedia heading */
 .heading-fix {
   margin-right: 64.5%;
-  text-shadow: 2px 2px 7px #5E95E1;
  }
 
-a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
+/* fixed SavingsAccount heading */
+.heading-fix2 {
+  margin-left: 67%;
+ }
+/* fixed Bloglines heading */
+ .heading-fix3 {
+  margin-left: 69%;
+ }
+
+.container {
+  margin-left: 50px;
 }
 
-
+.container a {
+  font-size: 24px;
+}
 
 .saving img {
     width: 20%;
@@ -124,12 +129,12 @@ a:visited {
    margin-left: 90px;
    float: left;
   }
-
+/* Savings account info */
 .saving-info {
     margin-top: 37px;
     text-align: left;
 }
-
+/* Savings account heading */
 #SA {
     text-align: center;
    margin-left: 300px;
@@ -141,18 +146,16 @@ a:visited {
    float: right;
   margin-bottom: 20px;
   }
-
+  /* Checking account info */
   .checking-info {
     margin-left: 50px;
 }
-
+/* Checking account heading */
 #CA {
     margin: 60px;
    margin-left: 300px;
    
 }
-
-
 
 .navbar {
     overflow: hidden;
