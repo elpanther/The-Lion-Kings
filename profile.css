@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-  margin: 0;
-  padding: 0;
+  
   /* user-select: none; */
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -10,9 +9,12 @@ html,body{
   height: 100%;
 
 }
+
+/* Display and place items are issue */
+
 body{
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -22,17 +24,21 @@ body{
   background-size: 170% 170%;
 }
 
+
+
 input[type=file] {
     width: 55%;
 }
-
 .profile{
+  margin-left: 450px;
+  margin-top: 20px;
   width: 330px;
-  padding: 40px 30px;
+  padding: 0px 30px;
   background: aliceblue;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73,
                2px 2px 5px rgba(29, 46, 77, 0.288);
+               
 }
 .profile .text{
   font-size: 33px;
@@ -40,6 +46,7 @@ input[type=file] {
   margin-bottom: 35px;
   color: #595959;
 }
+
 .field{
   padding: 5px;
   height: 50px;
@@ -82,7 +89,7 @@ input[type=file] {
   opacity: 0;
 }
 
-}
+
 button:focus{
   color: #3498db;
   box-shadow: inset 2px 2px 5px #BABECC,
@@ -178,7 +185,6 @@ ul li:active {
     display: none;
 }
 
-/* check nav interference */
 .wrapper {
   height: 165px;
   width: 165px;
@@ -222,7 +228,6 @@ ul li:active {
 
 /* Nav bar is broken */
 .navbar {
-  overflow: hidden;
   background-color: #1034A6; 
   text-align: center;
 }
@@ -232,7 +237,7 @@ ul li:active {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 22px 20px;
   text-decoration: none;
 }
 
@@ -246,16 +251,15 @@ ul li:active {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 22px 20px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
   background-color: #1034A6;
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #5E95E1;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .subnav-content {
@@ -269,7 +273,7 @@ ul li:active {
 }
 
 .subnav-content a {
-  text-align: center;
+  /* text-align: center; */
   color: black;
   text-decoration: none;
 }
