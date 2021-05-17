@@ -230,6 +230,7 @@ ul li:active {
 .navbar {
   background-color: #1034A6; 
   text-align: center;
+  list-style: none;
 }
 
 .navbar a {
@@ -290,5 +291,4 @@ ul li:active {
 
 a {
   font-size: 25px;
-  font-weight: bold;
 }

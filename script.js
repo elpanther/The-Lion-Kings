@@ -393,6 +393,16 @@ window.onbeforeunload = function () {
 //     var userName = document.getElementById('email');
 //     var userPw = document.getElementById('psw');
 
+
+    // check if stored data from register-form is equal to data from login form
+    if(userName.value !== storedName || userPw.value !== storedPw) {
+        alert('ERROR');
+    }else {
+        alert('You are loged in.');
+    }
+
+
+
 //     // check if stored data from register-form is equal to data from login form
 //     if(userName.value !== storedName || userPw.value !== storedPw) {
 //         alert('ERROR');
@@ -434,3 +444,10 @@ function storageAvailable(type) {
   }
 }
 
+<<<<<<< HEAD
+  // Store
+  localStorage.setItem("table_info", field);
+  // Retrieve
+
+=======
+>>>>>>> b9d58d607b90d630a341e90f19c4ab6d85cf2dff
