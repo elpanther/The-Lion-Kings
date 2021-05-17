@@ -461,3 +461,9 @@ function check() {
         alert('You are loged in.');
     }
 }
+
+// function pieChart(){
+//   let data = pieData.getItem('name', '')
+//   document.getElementById("result").innerHTML = data.getItem("lastname");
+// }
+

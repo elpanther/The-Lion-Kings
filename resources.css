@@ -93,26 +93,31 @@ margin-right: 40px;
 
 /* moves headings left */
 .heading {
- margin-right: 67%;
+ margin-right: 65%;
+ font-size: 18px;
 }
 
 /* moves headings right */
 .heading-right {
-  margin-left: 68%;
+  margin-left: 67%;
+  font-size: 18px;
  }
 
 /* fixed investopedia heading */
 .heading-fix {
   margin-right: 64.5%;
+  font-size: 18px;
  }
 
 /* fixed SavingsAccount heading */
 .heading-fix2 {
-  margin-left: 67%;
+  margin-left: 66%;
+  font-size: 18px;
  }
 /* fixed Bloglines heading */
  .heading-fix3 {
-  margin-left: 69%;
+  margin-left: 68.5%;
+  font-size: 18px;
  }
 
 .container {

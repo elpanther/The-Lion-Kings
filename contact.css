@@ -109,6 +109,7 @@ body {
     overflow: hidden;
     background-color: #1034A6; 
     text-align: center;
+    list-style: none;
   }
   
   .navbar a {
