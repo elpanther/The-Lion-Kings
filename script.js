@@ -393,21 +393,16 @@ window.onbeforeunload = function () {
 //     var userName = document.getElementById('email');
 //     var userPw = document.getElementById('psw');
 
-<<<<<<< HEAD
+
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
         alert('ERROR');
     }else {
         alert('You are loged in.');
     }
-}
 
-// function pieChart(){
-//   let data = pieData.getItem('name', '')
-//   document.getElementById("result").innerHTML = data.getItem("lastname");
-// }
 
-=======
+
 //     // check if stored data from register-form is equal to data from login form
 //     if(userName.value !== storedName || userPw.value !== storedPw) {
 //         alert('ERROR');
@@ -424,4 +419,4 @@ let field = document.getElementByTagName("tbody");
   // Store
   localStorage.setItem("table_info", field);
   // Retrieve
->>>>>>> cd95938f366bbe0919f01b67691535d0a0c80a13
+
