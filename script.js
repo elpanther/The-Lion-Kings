@@ -404,8 +404,33 @@ window.onbeforeunload = function () {
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
-let field = document.getElementByTagName("tbody");
+let field = document.querySelector('tbody');
+let form = document.getElementById('add-new-item')
 
-  // Store
-  localStorage.setItem("table_info", field);
-  // Retrieve
+
+// Check if browser can use 
+function storageAvailable(type) {
+  var storage;
+  try {
+    storage = window[type];
+    var x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  }
+  catch (e) {
+    return e instanceof DOMException && (
+      // everything except Firefox
+      e.code === 22 ||
+      // Firefox
+      e.code === 1014 ||
+      // test name field too, because code might not be present
+      // everything except Firefox
+      e.name === 'QuotaExceededError' ||
+      // Firefox
+      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      (storage && storage.length !== 0);
+  }
+}
+
