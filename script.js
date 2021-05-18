@@ -73,28 +73,6 @@ var autoExpand = function (field) {
 
 };
 
-// Pop up form
-// $(document).ready(function() {
-// 	$(".form-popup, overlay").hide.fadeIn(300);
-
-// 	// Initialize the plugin
-// 	//$("#myForm").popup();
-
-// 	// Set default `pagecontainer` for all popups (optional, but recommended for screen readers and iOS*)
-// 	// $.fn.popup.defaults.pagecontainer = '#page'
-
-//   });
-// $(document).ready(function() {
-// 	$('#btn').click(function() {
-// 	   $('#myForm').fadeIn(300);
-// 	});
-
-// 	$('#close').click(function() {
-// 	   $('#myForm').fadeOut(300);
-// 	});
-//  });
-
-
 
 function on() {
 
@@ -115,45 +93,6 @@ function openItem() {
 // function closeItem() {
 // 	document.getElementsById("add-new-item").style.display = "none";
 // }
-
-// // Get the modal
-// var modal = document.getElementById('add-new-item');
-
-// // Get the main container and the body
-// var body = document.getElementsByTagName('body');
-// var container = document.getElementsByTagName('section');
-
-// // Get the open button
-// var btnOpen = document.getElementById("open-button");
-
-// // Get the close button
-// var btnClose = document.getElementsByClassName("cancel");
-
-// // Open the popup
-// btnOpen.onclick = function() {
-//     modal.className = "Modal is-visuallyHidden";
-//     setTimeout(function() {
-//       container.className = "MainContainer is-blurred";
-//       modal.className = "Modal";
-//     }, 100);
-//     container.parentElement.className = "ModalOpen";
-// }
-
-// // Close the popup
-// btnClose.onclick = function() {
-//     modal.className = "Modal is-hidden is-visuallyHidden";
-//     body.className = "";
-//     container.tagName = "section";
-//     container.parentElement.tagName = "";
-// }
-
-// When the user clicks anywhere outside of the popup, close it
-// let blur = document.getElementById('blur');
-
-// if ( blur.classList.toggle == 'active' ) {
-// 	window.onclick = closeForm();
-// }
-
 
 function closeItem() {
   document.getElementById("add-new-item").style.display = "none";
@@ -286,8 +225,13 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
+<<<<<<< HEAD
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+=======
+  cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+>>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
 }
 
 function resetForm() {
@@ -350,25 +294,25 @@ function onFormSubmit() {
 function save() {
   var table = document.getElementById("expensesList");
   var trs = table.getElementsByTagName('tr');  // list of all rows
-  
+
   var values = [];  // will be a (potentially jagged) 2D array of all values
   for (var i = 0; i < trs.length; i++) {
     // loop through all rows, each will be one entrie in values
     var trValues = [];
     var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
-    
+
     for (var j = 0; j < tds.length; j++) {
       trValues[j] = tds[j].innerText;
       // get the value of the cell (preserve newlines, if you don't want that use .textContent)
     }
-    
+
     values[i] = trValues;
   }
   // save values
   console.log(values);
 }
 
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
   save().event.preventDefault()
 };
 
@@ -398,62 +342,81 @@ window.onbeforeunload = function() {
 // }
 
 
-// Store email as a key and use password as the value
-function SaveData() {
-  var a = new Array();
-  const hash = Object.fromEntries(
-    a.map(e => [e.name, e.password])
-  )
-  var username = document.getElementById('email').value;
-  var password = document.getElementById('psw').value;
-  for (let key of hash) {
+// // Store email as a key and use password as the value
+// function SaveData() {
+//   var a = new Array();
+//   const hash = Object.fromEntries(
+//     a.map(e => [e.name, e.password])
+//   )
+//   var username = document.getElementById('email').value;
+//   var password = document.getElementById('psw').value;
+//   for (let key of hash) {
 
-    if (key[0] === username && key[1] === atob(password)) {
-      alert('Login successful');
-    }
+//     if (key[0] === username && key[1] === atob(password)) {
+//       alert('Login successful');
+//     }
 
-    else {
-      alert('Login fail');
-    }
-  }
+//     else {
+//       alert('Login fail');
+//     }
+//   }
 
-  var username = document.getElementById('email').value;
-  var password = document.getElementById('psw').value;
-  sessionStorage.setItem("currentloggedin", username);
+//   var username = document.getElementById('email').value;
+//   var password = document.getElementById('psw').value;
+//   sessionStorage.setItem("currentloggedin", username);
 
-  localStorage.setItem('all_users', JSON.stringify(a));
+//   localStorage.setItem('all_users', JSON.stringify(a));
 
-  a = JSON.parse((localStorage.getItem("all_users")));
-  a.push({ name: username, password: password });
-  localStorage.setItem('name', JSON.stringify(a));
-  for (var i = 0; i < a.length; i++) {
-    var li = document.createElement("li");
-    li.innerHTML = a[i]['name'];
-    document.getElementById("listuser").appendChild(li);
-  }
+//   a = JSON.parse((localStorage.getItem("all_users")));
+//   a.push({ name: username, password: password });
+//   localStorage.setItem('name', JSON.stringify(a));
+//   for (var i = 0; i < a.length; i++) {
+//     var li = document.createElement("li");
+//     li.innerHTML = a[i]['name'];
+//     document.getElementById("listuser").appendChild(li);
+//   }
+// }
+
+// // Name and Password from the register-form
+// var name = document.getElementById('email');
+// var pw = document.getElementById('psw');
+
+// // storing input from register-form
+// function store() {
+//     localStorage.setItem('email', name.value);
+//     localStorage.setItem('psw', psw.value);
+// }
+
+// // check if stored data from register-form is equal to entered data in the   login-form
+// function check() {
+
+//     // stored data from the register-form
+//     var storedName = localStorage.getItem('email');
+//     var storedPw = localStorage.getItem('psw');
+
+//     // entered data from the login-form
+//     var userName = document.getElementById('email');
+//     var userPw = document.getElementById('psw');
+
+
+// check if stored data from register-form is equal to data from login form
+if (userName.value !== storedName || userPw.value !== storedPw) {
+  alert('ERROR');
+} else {
+  alert('You are loged in.');
 }
 
-// Name and Password from the register-form
-var name = document.getElementById('email');
-var pw = document.getElementById('psw');
 
-// storing input from register-form
-function store() {
-    localStorage.setItem('email', name.value);
-    localStorage.setItem('psw', psw.value);
-}
 
-// check if stored data from register-form is equal to entered data in the   login-form
-function check() {
+//     // check if stored data from register-form is equal to data from login form
+//     if(userName.value !== storedName || userPw.value !== storedPw) {
+//         alert('ERROR');
+//     }else {
+//         alert('You are loged in.');
+//     }
+// }
 
-    // stored data from the register-form
-    var storedName = localStorage.getItem('email');
-    var storedPw = localStorage.getItem('psw');
-
-    // entered data from the login-form
-    var userName = document.getElementById('email');
-    var userPw = document.getElementById('psw');
-
+<<<<<<< HEAD
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
         alert('ERROR');
@@ -490,3 +453,72 @@ anychart.onDocumentReady(function() {
   chart.draw();
   
   });
+=======
+// unable to save the table data so we can refresh the page and still see it
+
+// Get the text field that we're going to track
+// let field = document.querySelector('tbody');
+// let form = document.getElementById('add-new-item')
+
+
+// Check if browser can use 
+// function storageAvailable(type) {
+//   var storage;
+//   try {
+//     storage = window[type];
+//     var x = '__storage_test__';
+//     storage.setItem(x, x);
+//     storage.removeItem(x);
+//     return true;
+//   }
+//   catch (e) {
+//     return e instanceof DOMException && (
+//       // everything except Firefox
+//       e.code === 22 ||
+//       // Firefox
+//       e.code === 1014 ||
+//       // test name field too, because code might not be present
+//       // everything except Firefox
+//       e.name === 'QuotaExceededError' ||
+//       // Firefox
+//       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+//       // acknowledge QuotaExceededError only if there's something already stored
+//       (storage && storage.length !== 0);
+//   }
+// }
+
+<<<<<<< HEAD
+  // Store
+  localStorage.setItem("table_info", field);
+  // Retrieve
+
+=======
+//   localStorage.setItem("table_info", field);
+// Retrieve
+
+document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
+document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
+document.getElementById("category").value = getSavedValue("category");   // set the value to this input
+document.getElementById("description").value = getSavedValue("description");   // set the value to this input
+/* Here you can add more inputs to set value. if it's saved */
+
+//Save the value function - save it to localStorage as (ID, VALUE)
+function saveValue(e) {
+  var id = e.id;  // get the sender's id to save it . 
+  var val = e.value; // get the value. 
+  localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+}
+
+//get the saved value function - return the value of "v" from localStorage. 
+function getSavedValue(v) {
+  if (!localStorage.getItem(v)) {
+    return "";// You can change this to your defualt value. 
+  }
+  return localStorage.getItem(v);
+}
+window.beforeonload() = function () {
+  getSavedValue(this);
+};
+>>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
+>>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297

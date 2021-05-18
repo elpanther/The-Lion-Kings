@@ -8,6 +8,7 @@
     <title>Items Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
@@ -35,7 +36,6 @@
 
     <section id="add-new-item" class="pop-up">
         <div class="expenses-form">
-            <div id="myModal" class="Modal is-hidden is-visuallyHidden"></div>
             <form class="form-container" autocomplete="off">
                 <h3>Item Setup</h3>
                 <form>
@@ -98,7 +98,11 @@
                     </div>
                     <button class="cancel" onclick="closeItem();blurToggle();event.preventDefault()">Cancel</button>
                     <div class="form-action-buttons">
-                        <button type="submit" class="confirm" onclick="event.preventDefault();onFormSubmit();save()">Submit</button>
+<<<<<<< HEAD
+                        <button type="submit" class="confirm" id="plotSubmit" onclick="event.preventDefault();onFormSubmit();save()">Submit</button>
+=======
+                        <button type="submit" class="confirm" onclick="event.preventDefault();onFormSubmit();save();closeItem();blurToggle()">Submit</button>
+>>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
                     </div>
                 </form>
             </form>
