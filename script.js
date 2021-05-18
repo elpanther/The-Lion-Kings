@@ -225,7 +225,7 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
-  cell6.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+  cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -414,36 +414,57 @@ window.onbeforeunload = function () {
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
-let field = document.querySelector('tbody');
-let form = document.getElementById('add-new-item')
+// let field = document.querySelector('tbody');
+// let form = document.getElementById('add-new-item')
 
 
 // Check if browser can use 
-function storageAvailable(type) {
-  var storage;
-  try {
-    storage = window[type];
-    var x = '__storage_test__';
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  }
-  catch (e) {
-    return e instanceof DOMException && (
-      // everything except Firefox
-      e.code === 22 ||
-      // Firefox
-      e.code === 1014 ||
-      // test name field too, because code might not be present
-      // everything except Firefox
-      e.name === 'QuotaExceededError' ||
-      // Firefox
-      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-      // acknowledge QuotaExceededError only if there's something already stored
-      (storage && storage.length !== 0);
-  }
-}
+// function storageAvailable(type) {
+//   var storage;
+//   try {
+//     storage = window[type];
+//     var x = '__storage_test__';
+//     storage.setItem(x, x);
+//     storage.removeItem(x);
+//     return true;
+//   }
+//   catch (e) {
+//     return e instanceof DOMException && (
+//       // everything except Firefox
+//       e.code === 22 ||
+//       // Firefox
+//       e.code === 1014 ||
+//       // test name field too, because code might not be present
+//       // everything except Firefox
+//       e.name === 'QuotaExceededError' ||
+//       // Firefox
+//       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+//       // acknowledge QuotaExceededError only if there's something already stored
+//       (storage && storage.length !== 0);
+//   }
+// }
 
-  localStorage.setItem("table_info", field);
+//   localStorage.setItem("table_info", field);
   // Retrieve
 
+  document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+  document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
+  document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
+  document.getElementById("category").value = getSavedValue("category");   // set the value to this input
+  document.getElementById("description").value = getSavedValue("description");   // set the value to this input
+  /* Here you can add more inputs to set value. if it's saved */
+
+  //Save the value function - save it to localStorage as (ID, VALUE)
+  function saveValue(e){
+      var id = e.id;  // get the sender's id to save it . 
+      var val = e.value; // get the value. 
+      localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+  }
+
+  //get the saved value function - return the value of "v" from localStorage. 
+  function getSavedValue  (v){
+      if (!localStorage.getItem(v)) {
+          return "";// You can change this to your defualt value. 
+      }
+      return localStorage.getItem(v);
+  }
