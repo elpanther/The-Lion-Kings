@@ -43,14 +43,14 @@
                         <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
                         <label for="name"><span>Name</span>
                             
-                            <input type="text" name="name" id="name" size="20" onkeyup='saveValue(this);'/>
+                            <input type="text" name="name" id="name" size="20" />
                             
                         </label>
                     </div>
                     <div>
                         <label class="validation-error hide" id="purposeValidationError">This field is required.</label>
                         <label for="purpose"><span>Purpose</span>
-                            <select name="purpose" id="purpose" onchange='saveValue(this);'>
+                            <select name="purpose" id="purpose">
                                 <option value="Select purpose">Select purpose</option>
                                 <option value="Savings">Savings</option>
                                 <option value="Spending">Spending</option>
@@ -61,13 +61,13 @@
                     <div>
                         <label class="validation-error hide" id="amountValidationError">This field is required.</label>
                         <label for="amount"><span>Amount</span>
-                            <input type="number" name="amount" id="amount" onkeyup='saveValue(this);'/>
+                            <input type="number" name="amount" id="amount"/>
                         </label>
                     </div>
                     <div>
                         <label class="validation-error hide" id="categoryValidationError">This field is required.</label>
                         <label for="category"><span>Catagory</span>
-                            <select name="categories" id="category" onchange='saveValue(this);'>
+                            <select name="categories" id="category">
                                 <option value="select category">Select category</option>
                                 <option value="Restaurants & Bars">Restaurants & Bars</option>
                                 <option value="Shopping">Shopping</option>
@@ -92,7 +92,7 @@
                         <label class="validation-error hide" id="descriptionValidationError">This field is required.</label>
                         <label for="description">
                             <div class="input_field">
-                            <textarea class="textarea" placeholder="Description" cols="30" rows="10" id="description" onkeyup='saveValue(this);'></textarea>
+                            <textarea class="textarea" placeholder="Description" cols="30" rows="10" id="description"></textarea>
                             </div>
                         </label>
                     </div>
@@ -106,7 +106,7 @@
     </section>
     <br />
     <div class="expenses-table">
-        <table class="list" id="expensesList" onchange='saveValue(this);'>
+        <table class="list" id="expensesList">
             <thead>
                 <tr>
                     <th>Name</th>
