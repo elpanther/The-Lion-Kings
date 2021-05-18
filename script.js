@@ -444,10 +444,7 @@ function storageAvailable(type) {
   }
 }
 
-<<<<<<< HEAD
   // Store
   localStorage.setItem("table_info", field);
   // Retrieve
 
-=======
->>>>>>> b9d58d607b90d630a341e90f19c4ab6d85cf2dff
