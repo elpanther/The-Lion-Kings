@@ -444,12 +444,11 @@ if (userName.value !== storedName || userPw.value !== storedPw) {
 //   }
 // }
 
-<<<<<<< HEAD
   // Store
   localStorage.setItem("table_info", field);
   // Retrieve
 
-=======
+
 //   localStorage.setItem("table_info", field);
 // Retrieve
 
@@ -477,4 +476,4 @@ function getSavedValue(v) {
 window.beforeonload() = function () {
   getSavedValue(this);
 };
->>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
+
