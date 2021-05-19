@@ -23,15 +23,6 @@ function hideNav() {
   document.getElementsByTagName("ul").style.display = "none";
 }
 
-// function hideHover() {
-// 	let x = document.getElementsByTagName("ul li:hover");
-// 		if (x.style.display === "none") {
-// 		  x.style.display = "block";
-// 		} else {
-// 		  x.style.display = "none";
-// 		}
-// 	  }
-
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
   let blur = document.getElementById('blur');
@@ -79,10 +70,6 @@ function on() {
   document.getElementsByClassName("overlay").style.display = "block";
 }
 
-//   function off() {
-
-//   }
-
 // Displays the item setup form
 function openItem() {
   document.getElementById("add-new-item").style.display = "block";
@@ -90,15 +77,9 @@ function openItem() {
 
 // Sets the display of the item setup form to none
 
-// function closeItem() {
-// 	document.getElementsById("add-new-item").style.display = "none";
-// }
-
 function closeItem() {
   document.getElementById("add-new-item").style.display = "none";
 }
-
-
 
 //   allows user to add a image
 function readURL(input) {
@@ -130,16 +111,6 @@ var btn = document.getElementById("Howto");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-// Howto.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -147,19 +118,19 @@ window.onclick = function (event) {
   }
 }
 
-
+// Sets row to null for insertion
 var selectedRow = null
 
-function onFormSubmit() {
-  if (validate()) {
-    var formData = readFormData();
-    if (selectedRow == null)
-      insertNewRecord(formData);
-    else
-      updateRecord(formData);
-    document.getElementById("myModal").classList.add("hide");
-  }
-}
+// function onFormSubmit() {
+//   if (validate()) {
+//     var formData = readFormData();
+//     if (selectedRow == null)
+//       insertNewRecord(formData);
+//     else
+//       updateRecord(formData);
+//     document.getElementById("myModal").classList.add("hide");
+//   }
+// }
 
 // Checking info and making sure inputs are filled in
 function validate() {
@@ -313,89 +284,6 @@ window.onbeforeunload = function () {
   save().event.preventDefault()
 };
 
-// Check browser support
-// if (typeof(Storage) !== "undefined") {
-//   // Store
-//   localStorage.setItem("name", "");
-//   // Retrieve
-//   document.getElementById("result").innerHTML = localStorage.getItem("name");
-// } else {
-//   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-// }
-
-// if(!localStorage.getItem('bgcolor')){
-//   populateStroage();
-// } else {
-//   setStyles();
-// }
-
-// function populateStroage(){ 
-//   localStorage.getItem('bgcolor',
-
-//   documentget.getElementById('bgcolor').value);
-//   localStorage.getItem('font', document.getElementById('font').value);
-
-//   localStorage.setItem('bgcolor',
-// }
-
-
-// // Store email as a key and use password as the value
-// function SaveData() {
-//   var a = new Array();
-//   const hash = Object.fromEntries(
-//     a.map(e => [e.name, e.password])
-//   )
-//   var username = document.getElementById('email').value;
-//   var password = document.getElementById('psw').value;
-//   for (let key of hash) {
-
-//     if (key[0] === username && key[1] === atob(password)) {
-//       alert('Login successful');
-//     }
-
-//     else {
-//       alert('Login fail');
-//     }
-//   }
-
-//   var username = document.getElementById('email').value;
-//   var password = document.getElementById('psw').value;
-//   sessionStorage.setItem("currentloggedin", username);
-
-//   localStorage.setItem('all_users', JSON.stringify(a));
-
-//   a = JSON.parse((localStorage.getItem("all_users")));
-//   a.push({ name: username, password: password });
-//   localStorage.setItem('name', JSON.stringify(a));
-//   for (var i = 0; i < a.length; i++) {
-//     var li = document.createElement("li");
-//     li.innerHTML = a[i]['name'];
-//     document.getElementById("listuser").appendChild(li);
-//   }
-// }
-
-// // Name and Password from the register-form
-// var name = document.getElementById('email');
-// var pw = document.getElementById('psw');
-
-// // storing input from register-form
-// function store() {
-//     localStorage.setItem('email', name.value);
-//     localStorage.setItem('psw', psw.value);
-// }
-
-// // check if stored data from register-form is equal to entered data in the   login-form
-// function check() {
-
-//     // stored data from the register-form
-//     var storedName = localStorage.getItem('email');
-//     var storedPw = localStorage.getItem('psw');
-
-//     // entered data from the login-form
-//     var userName = document.getElementById('email');
-//     var userPw = document.getElementById('psw');
-
-
 // check if stored data from register-form is equal to data from login form
 if (userName.value !== storedName || userPw.value !== storedPw) {
   alert('ERROR');
@@ -448,45 +336,6 @@ anychart.onDocumentReady(function() {
   chart.draw();
   
   });
-// unable to save the table data so we can refresh the page and still see it
-
-// Get the text field that we're going to track
-// let field = document.querySelector('tbody');
-// let form = document.getElementById('add-new-item')
-
-
-// Check if browser can use 
-// function storageAvailable(type) {
-//   var storage;
-//   try {
-//     storage = window[type];
-//     var x = '__storage_test__';
-//     storage.setItem(x, x);
-//     storage.removeItem(x);
-//     return true;
-//   }
-//   catch (e) {
-//     return e instanceof DOMException && (
-//       // everything except Firefox
-//       e.code === 22 ||
-//       // Firefox
-//       e.code === 1014 ||
-//       // test name field too, because code might not be present
-//       // everything except Firefox
-//       e.name === 'QuotaExceededError' ||
-//       // Firefox
-//       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-//       // acknowledge QuotaExceededError only if there's something already stored
-//       (storage && storage.length !== 0);
-//   }
-// }
-
-  // Store
-  localStorage.setItem("table_info", field);
-  // Retrieve
-
-//   localStorage.setItem("table_info", field);
-// Retrieve
 
 document.getElementById("name").value = getSavedValue("name");    // set the value to this input
 document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
@@ -512,3 +361,54 @@ function getSavedValue(v) {
 window.beforeonload() = function () {
   getSavedValue(this);
 };
+
+
+// problems with the pop up form on the items page. maybe names of the classes/ids?
+
+
+const fs = require('fs');
+
+const users = new FormData(event.target);
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+
+  const value = Object.fromEntries(users.entries());
+
+  console.log({ value });
+  }
+
+  const form = document.querySelector('container');
+  form.addEventListener('submit', handleSubmit);
+
+fs.writeFile('users.json', JSON.stringify(users), (err) => {  
+    // Catch this!
+    if (err) throw err;
+
+    console.log('Users saved!');
+});
+
+fs.readFile('users.json', (err, data) => {
+  // Catch this!
+  if (err) throw err;
+
+  const loadedUsers = JSON.parse(data);
+  console.log(loadedUsers);
+});
+
+// hello-sqlite
+var fs = require('fs');
+var dbFile = './.data/sqlite.db'; // Our database file
+var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
+var sqlite3 = require('sqlite3').verbose(); // For long stack traces
+var db = new sqlite3.Database(dbFile);
+
+db.run('CREATE TABLE Dreams (dream TEXT)');
+db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('Dream saved!');
+    }
+});

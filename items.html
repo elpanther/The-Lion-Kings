@@ -31,6 +31,8 @@
               </div>
           </div>
 
+
+          <!-- Button no longer working. Problems with javascript functionality -->
         <button class="new-item" id="open-button" onclick="openItem();blurToggle()">Add new item</button>
     </div>
 
@@ -99,7 +101,7 @@
                     <button class="cancel" onclick="closeItem();blurToggle();event.preventDefault()">Cancel</button>
                     <div class="form-action-buttons">
                         <!-- <button type="submit" class="confirm" id="plotSubmit" onclick="event.preventDefault();onFormSubmit();save()">Submit</button> -->
-                        <button type="submit" class="confirm" onclick="event.preventDefault();onFormSubmit();save();closeItem();blurToggle()">Submit</button>
+                        <button type="submit" class="confirm" onclick="event.preventDefault();onFormSubmit();save();closeItem();blurToggle();handleSubmit()">Submit</button>
                     </div>
                 </form>
             </form>
