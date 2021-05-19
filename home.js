@@ -44,11 +44,11 @@
     var Savings = 0.00;
     var Deposits = 0.00;
     if ( document.getElementById('purpose').value = 'Spending'){
-    var input = document.getElementsById('amount');
+    var input = document.getElementById('amount');
     Spending += input[0].value;
     }
     if (document.getElementById('purpose').value = 'Savings'){
-    var input = document.getElementsById('amount');
+    var input = document.getElementById('amount');
     Savings += input[0].value;
     }
     if (document.getElementById('purpose').value = 'Deposits'){

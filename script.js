@@ -487,12 +487,11 @@ anychart.onDocumentReady(function() {
 //   }
 // }
 
-<<<<<<< HEAD
   // Store
   localStorage.setItem("table_info", field);
   // Retrieve
 
-=======
+
 //   localStorage.setItem("table_info", field);
 // Retrieve
 
@@ -520,5 +519,9 @@ function getSavedValue(v) {
 window.beforeonload() = function () {
   getSavedValue(this);
 };
+<<<<<<< HEAD
+
+=======
 >>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
 >>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
+>>>>>>> cb703a999d52812df9928678d4bebd2176e74224
