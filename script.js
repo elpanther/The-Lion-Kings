@@ -484,6 +484,10 @@ anychart.onDocumentReady(function() {
   localStorage.setItem("table_info", field);
   // Retrieve
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
 //   localStorage.setItem("table_info", field);
 // Retrieve
 
@@ -510,4 +514,14 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
 };
+=======
+};
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
+>>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
+>>>>>>> cb703a999d52812df9928678d4bebd2176e74224
+>>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
