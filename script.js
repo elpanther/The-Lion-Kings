@@ -362,7 +362,6 @@ window.beforeonload() = function () {
   getSavedValue(this);
 };
 
-
 // problems with the pop up form on the items page. maybe names of the classes/ids?
 
 
