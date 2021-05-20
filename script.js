@@ -196,10 +196,25 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
+<<<<<<< HEAD
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
+=======
+<<<<<<< HEAD
+
+  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+                       <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+
+  cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+
+=======
+  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+                       <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+>>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
+>>>>>>> 074e2a744c9004738378e66f2c611d5269679569
 }
 
 function resetForm() {
@@ -301,11 +316,18 @@ if (userName.value !== storedName || userPw.value !== storedPw) {
 //     }
 // }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
+>>>>>>> 074e2a744c9004738378e66f2c611d5269679569
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
         alert('ERROR');
     }else {
-        alert('You are loged in.');
+        alert('You are loged in.');{
     }
 
 
@@ -336,6 +358,56 @@ anychart.onDocumentReady(function() {
   chart.draw();
   
   });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
+// unable to save the table data so we can refresh the page and still see it
+
+// Get the text field that we're going to track
+// let field = document.querySelector('tbody');
+// let form = document.getElementById('add-new-item')
+
+
+// Check if browser can use 
+// function storageAvailable(type) {
+//   var storage;
+//   try {
+//     storage = window[type];
+//     var x = '__storage_test__';
+//     storage.setItem(x, x);
+//     storage.removeItem(x);
+//     return true;
+//   }
+//   catch (e) {
+//     return e instanceof DOMException && (
+//       // everything except Firefox
+//       e.code === 22 ||
+//       // Firefox
+//       e.code === 1014 ||
+//       // test name field too, because code might not be present
+//       // everything except Firefox
+//       e.name === 'QuotaExceededError' ||
+//       // Firefox
+//       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+//       // acknowledge QuotaExceededError only if there's something already stored
+//       (storage && storage.length !== 0);
+//   }
+// }
+
+  // Store
+  localStorage.setItem("table_info", field);
+  // Retrieve
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
+//   localStorage.setItem("table_info", field);
+// Retrieve
+>>>>>>> 074e2a744c9004738378e66f2c611d5269679569
 
 document.getElementById("name").value = getSavedValue("name");    // set the value to this input
 document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
@@ -360,7 +432,11 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
 };
+=======
+};
+<<<<<<< HEAD
 
 // problems with the pop up form on the items page. maybe names of the classes/ids?
 
@@ -411,3 +487,15 @@ db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(e
     console.log('Dream saved!');
     }
 });
+=======
+
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
+>>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
+>>>>>>> cb703a999d52812df9928678d4bebd2176e74224
+>>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
+>>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
+>>>>>>> 074e2a744c9004738378e66f2c611d5269679569
