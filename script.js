@@ -225,7 +225,6 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
-<<<<<<< HEAD
 
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
@@ -233,10 +232,8 @@ function insertNewRecord(data) {
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 
-=======
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
 }
 
 function resetForm() {
@@ -421,10 +418,7 @@ if (userName.value !== storedName || userPw.value !== storedPw) {
 //     }
 // }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
         alert('ERROR');
@@ -460,10 +454,7 @@ anychart.onDocumentReady(function() {
   chart.draw();
   
   });
-<<<<<<< HEAD
 
-=======
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -501,10 +492,7 @@ anychart.onDocumentReady(function() {
   localStorage.setItem("table_info", field);
   // Retrieve
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
 //   localStorage.setItem("table_info", field);
 // Retrieve
 
@@ -531,17 +519,4 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
-<<<<<<< HEAD
 };
-=======
-};
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
->>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
->>>>>>> cb703a999d52812df9928678d4bebd2176e74224
->>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f

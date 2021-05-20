@@ -156,18 +156,23 @@ margin-right: 40px;
 /* Checking account heading */
 #CA {
     margin: 60px;
-   margin-left: 300px;
+   margin-left: 500px;
    
 }
 
-/* Moving container  */
+
+.checking {
+  margin-top: 150px;
+}
+
+/* Moving container */
 .invest-container {
   margin-left: 50px;
 }
+
 /* Images  */
 .invest-101 {
   width: 20%;
-  float: left;
 }
 
 
