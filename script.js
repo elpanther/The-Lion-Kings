@@ -196,10 +196,7 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
-<<<<<<< HEAD
 
-=======
->>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
@@ -210,7 +207,6 @@ function insertNewRecord(data) {
 
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
-<<<<<<< HEAD
 
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
@@ -224,10 +220,8 @@ function resetForm() {
   document.getElementById("description").value = "";
   selectedRow = null;
 }
-=======
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
->>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
 
   function resetForm() {
     document.getElementById("name").value = "";
@@ -320,7 +314,6 @@ function resetForm() {
 
 
 
-<<<<<<< HEAD
 
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
@@ -429,7 +422,6 @@ window.beforeonload() = function () {
 
 };
 
-=======
   //     // check if stored data from register-form is equal to data from login form
   //     if(userName.value !== storedName || userPw.value !== storedPw) {
   //         alert('ERROR');
@@ -528,7 +520,6 @@ window.beforeonload() = function () {
       var val = e.value; // get the value. 
       localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
     }
->>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
 
     //get the saved value function - return the value of "v" from localStorage. 
     function getSavedValue(v) {
@@ -544,7 +535,6 @@ window.beforeonload() = function () {
   // problems with the pop up form on the items page. maybe names of the classes/ids?
 
 
-<<<<<<< HEAD
 // const fs = require('fs');
 
 // const users = new FormData(event.target);
@@ -601,7 +591,6 @@ window.beforeonload() = function () {
 
 
 
-=======
   const fs = require('fs');
 
   const users = new FormData(event.target);
@@ -649,4 +638,4 @@ window.beforeonload() = function () {
     }
   });
 }
->>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
+
