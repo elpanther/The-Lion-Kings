@@ -313,7 +313,30 @@ nav {
     margin-bottom:10px;
   } */ 
   
+  .navbar {
+    overflow: hidden;
+    background-color: #1034A6; 
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    height: auto;
+  }
   
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+  }
+
+  .navbar p {
+    text-align: center;
+    color: white;
+    padding: 20px 22px;
+    font-size: 25px;
+  }
 
   /* Add a red background color to the cancel button */
   
