@@ -167,7 +167,7 @@ section {
 
 
 /* adds opacity to the background might change..... */
-.container#blur.active {
+.items-container#blur.active {
     /* filter: blur(20px); */
    z-index: 5;
  filter: opacity(30%);
