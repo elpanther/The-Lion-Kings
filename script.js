@@ -220,8 +220,11 @@ function resetForm() {
   document.getElementById("description").value = "";
   selectedRow = null;
 }
+<<<<<<< HEAD
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+=======
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
 
   function resetForm() {
     document.getElementById("name").value = "";
@@ -351,8 +354,11 @@ anychart.onDocumentReady(function() {
   
   });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -417,6 +423,7 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
 
 };
 
@@ -521,6 +528,10 @@ window.beforeonload() = function () {
       localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
     }
 
+=======
+};
+
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
     //get the saved value function - return the value of "v" from localStorage. 
     function getSavedValue(v) {
       if (!localStorage.getItem(v)) {
@@ -586,4 +597,8 @@ window.beforeonload() = function () {
 //   document.getElementById('butval').onclick = function(){
 //       document.getElementById('test-1').value = document.getElementById('fname').value;   
 //   }
+<<<<<<< HEAD
 // }; 
+=======
+// }; 
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
