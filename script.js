@@ -351,11 +351,8 @@ anychart.onDocumentReady(function() {
   
   });
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -420,14 +417,11 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
-<<<<<<< HEAD
-};
-=======
 
 };
 
-};
 
+};
   //     // check if stored data from register-form is equal to data from login form
   //     if(userName.value !== storedName || userPw.value !== storedPw) {
   //         alert('ERROR');
@@ -593,60 +587,3 @@ window.beforeonload() = function () {
 //       document.getElementById('test-1').value = document.getElementById('fname').value;   
 //   }
 // }; 
-
-
-
-
-  const fs = require('fs');
-
-  const users = new FormData(event.target);
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-
-    const value = Object.fromEntries(users.entries());
-
-    console.log({ value });
-  }
-
-  const form = document.querySelector('container');
-  form.addEventListener('submit', handleSubmit);
-
-  fs.writeFile('users.json', JSON.stringify(users), (err) => {
-    // Catch this!
-    if (err) throw err;
-
-    console.log('Users saved!');
-  });
-
-  fs.readFile('users.json', (err, data) => {
-    // Catch this!
-    if (err) throw err;
-
-    const loadedUsers = JSON.parse(data);
-    console.log(loadedUsers);
-  });
-
-  // hello-sqlite
-  var fs = require('fs');
-  var dbFile = './.data/sqlite.db'; // Our database file
-  var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
-  var sqlite3 = require('sqlite3').verbose(); // For long stack traces
-  var db = new sqlite3.Database(dbFile);
-
-  db.run('CREATE TABLE Dreams (dream TEXT)');
-  db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function (err) {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log('Dream saved!');
-    }
-  });
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
->>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
->>>>>>> fb7630789c78cb651a362c10a55bbfd51fb7a305
