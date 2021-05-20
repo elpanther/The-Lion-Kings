@@ -220,6 +220,11 @@ function resetForm() {
   document.getElementById("description").value = "";
   selectedRow = null;
 }
+<<<<<<< HEAD
+  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+                       <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+=======
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
 
   function resetForm() {
     document.getElementById("name").value = "";
@@ -349,6 +354,11 @@ anychart.onDocumentReady(function() {
   
   });
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -413,8 +423,115 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
+
 };
 
+
+};
+  //     // check if stored data from register-form is equal to data from login form
+  //     if(userName.value !== storedName || userPw.value !== storedPw) {
+  //         alert('ERROR');
+  //     }else {
+  //         alert('You are loged in.');
+  //     }
+  // }
+
+
+  // check if stored data from register-form is equal to data from login form
+  if (userName.value !== storedName || userPw.value !== storedPw) {
+    alert('ERROR');
+  } else {
+    alert('You are loged in.'); {
+    }
+
+
+    anychart.onDocumentReady(function () {
+
+      // set the data
+      var data = [
+        { x: "White", value: 223553265 },
+        { x: "Black or African American", value: 38929319 },
+        { x: "American Indian and Alaska Native", value: 2932248 },
+        { x: "Asian", value: 14674252 },
+        { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+        { x: "Some Other Race", value: 19107368 },
+        { x: "Two or More Races", value: 9009073 }
+      ];
+
+      // create the chart
+      var chart = anychart.pie();
+
+      // set the chart title
+      chart.title("Population by Race for the United States: 2010 Census");
+
+      // add the data
+      chart.data(data);
+
+      // display the chart in the container
+      chart.container('chart');
+      chart.draw();
+
+    });
+
+    // unable to save the table data so we can refresh the page and still see it
+
+    // Get the text field that we're going to track
+    // let field = document.querySelector('tbody');
+    // let form = document.getElementById('add-new-item')
+
+
+    // Check if browser can use 
+    // function storageAvailable(type) {
+    //   var storage;
+    //   try {
+    //     storage = window[type];
+    //     var x = '__storage_test__';
+    //     storage.setItem(x, x);
+    //     storage.removeItem(x);
+    //     return true;
+    //   }
+    //   catch (e) {
+    //     return e instanceof DOMException && (
+    //       // everything except Firefox
+    //       e.code === 22 ||
+    //       // Firefox
+    //       e.code === 1014 ||
+    //       // test name field too, because code might not be present
+    //       // everything except Firefox
+    //       e.name === 'QuotaExceededError' ||
+    //       // Firefox
+    //       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+    //       // acknowledge QuotaExceededError only if there's something already stored
+    //       (storage && storage.length !== 0);
+    //   }
+    // }
+
+    // Store
+    localStorage.setItem("table_info", field);
+    // Retrieve
+
+    //   localStorage.setItem("table_info", field);
+    // Retrieve
+
+    document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+    document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
+    document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
+    document.getElementById("category").value = getSavedValue("category");   // set the value to this input
+    document.getElementById("description").value = getSavedValue("description");   // set the value to this input
+    /* Here you can add more inputs to set value. if it's saved */
+
+    //Save the value function - save it to localStorage as (ID, VALUE)
+    function saveValue(e) {
+      var id = e.id;  // get the sender's id to save it . 
+      var val = e.value; // get the value. 
+      localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+    }
+
+=======
+};
+
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
     //get the saved value function - return the value of "v" from localStorage. 
     function getSavedValue(v) {
       if (!localStorage.getItem(v)) {
@@ -480,4 +597,8 @@ window.beforeonload() = function () {
 //   document.getElementById('butval').onclick = function(){
 //       document.getElementById('test-1').value = document.getElementById('fname').value;   
 //   }
+<<<<<<< HEAD
 // }; 
+=======
+// }; 
+>>>>>>> 88a24f4da730e8df2d2e37ff9060bfdf8d6fe3b4
