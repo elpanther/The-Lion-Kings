@@ -279,7 +279,7 @@ function insertNewRecord(data) {
       for (var j = 0; j < tds.length; j++) {
         trValues[j] = tds[j].innerText;
         // get the value of the cell (preserve newlines, if you don't want that use .textContent)
-      }
+      } 
 
       values[i] = trValues;
     }
