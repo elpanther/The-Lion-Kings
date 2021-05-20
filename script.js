@@ -351,8 +351,11 @@ anychart.onDocumentReady(function() {
   
   });
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -417,6 +420,9 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
+};
+=======
 
 };
 
@@ -638,4 +644,9 @@ window.beforeonload() = function () {
     }
   });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
+>>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
+>>>>>>> fb7630789c78cb651a362c10a55bbfd51fb7a305
