@@ -23,15 +23,6 @@ function hideNav() {
   document.getElementsByTagName("ul").style.display = "none";
 }
 
-// function hideHover() {
-// 	let x = document.getElementsByTagName("ul li:hover");
-// 		if (x.style.display === "none") {
-// 		  x.style.display = "block";
-// 		} else {
-// 		  x.style.display = "none";
-// 		}
-// 	  }
-
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
   let blur = document.getElementById('blur');
@@ -79,10 +70,6 @@ function on() {
   document.getElementsByClassName("overlay").style.display = "block";
 }
 
-//   function off() {
-
-//   }
-
 // Displays the item setup form
 function openItem() {
   document.getElementById("add-new-item").style.display = "block";
@@ -90,15 +77,9 @@ function openItem() {
 
 // Sets the display of the item setup form to none
 
-// function closeItem() {
-// 	document.getElementsById("add-new-item").style.display = "none";
-// }
-
 function closeItem() {
   document.getElementById("add-new-item").style.display = "none";
 }
-
-
 
 //   allows user to add a image
 function readURL(input) {
@@ -130,16 +111,6 @@ var btn = document.getElementById("Howto");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-// Howto.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -147,19 +118,19 @@ window.onclick = function (event) {
   }
 }
 
-
+// Sets row to null for insertion
 var selectedRow = null
 
-function onFormSubmit() {
-  if (validate()) {
-    var formData = readFormData();
-    if (selectedRow == null)
-      insertNewRecord(formData);
-    else
-      updateRecord(formData);
-    document.getElementById("myModal").classList.add("hide");
-  }
-}
+// function onFormSubmit() {
+//   if (validate()) {
+//     var formData = readFormData();
+//     if (selectedRow == null)
+//       insertNewRecord(formData);
+//     else
+//       updateRecord(formData);
+//     document.getElementById("myModal").classList.add("hide");
+//   }
+// }
 
 // Checking info and making sure inputs are filled in
 function validate() {
@@ -226,11 +197,19 @@ function insertNewRecord(data) {
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
 
+=======
+>>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
+  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+                       <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+  cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
 
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
+<<<<<<< HEAD
 
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
@@ -244,179 +223,101 @@ function resetForm() {
   document.getElementById("description").value = "";
   selectedRow = null;
 }
+=======
+  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+                       <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
+>>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
 
-function onEdit(td) {
-  selectedRow = td.parentElement.parentElement;
-  document.getElementById("name").value = selectedRow.cells[0].innerHTML;
-  document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
-  document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("category").value = selectedRow.cells[3].innerHTML;
-  document.getElementById("description").value = selectedRow.cells[4].innerHTML;
-}
-function updateRecord(formData) {
-  selectedRow.cells[0].innerHTML = formData.name;
-  selectedRow.cells[1].innerHTML = formData.purpose;
-  selectedRow.cells[2].innerHTML = formData.amount;
-  selectedRow.cells[3].innerHTML = formData.category;
-  selectedRow.cells[4].innerHTML = formData.description;
-}
-
-function onDelete(td) {
-  if (confirm('Are you sure to delete this record ?')) {
-    row = td.parentElement.parentElement;
-    document.getElementById("expensesList").deleteRow(row.rowIndex);
-    resetForm();
+  function resetForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("purpose").value = "";
+    document.getElementById("amount").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("description").value = "";
+    selectedRow = null;
   }
-}
-// Let's understand the above JavaScript code.
 
-// Handling HTML form submission with the following function:
-
-function onFormSubmit() {
-  if (validate()) {
-    var formData = readFormData();
-    if (selectedRow == null)
-      insertNewRecord(formData);
-    else
-      updateRecord(formData);
-    resetForm();
+  function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("name").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("category").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("description").value = selectedRow.cells[4].innerHTML;
   }
-  if (validate()) {
-    var formData = readFormData();
-    if (selectedRow == null)
-      insertNewRecord(formData);
-    else
-      updateRecord(formData);
-    resetForm();
+  function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.name;
+    selectedRow.cells[1].innerHTML = formData.purpose;
+    selectedRow.cells[2].innerHTML = formData.amount;
+    selectedRow.cells[3].innerHTML = formData.category;
+    selectedRow.cells[4].innerHTML = formData.description;
   }
-}
 
-// Does not save table inputs after reloading page or leaving page
-
-function save() {
-  var table = document.getElementById("expensesList");
-  var trs = table.getElementsByTagName('tr');  // list of all rows
-
-  var values = [];  // will be a (potentially jagged) 2D array of all values
-  for (var i = 0; i < trs.length; i++) {
-    // loop through all rows, each will be one entrie in values
-    var trValues = [];
-    var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
-
-    for (var j = 0; j < tds.length; j++) {
-      trValues[j] = tds[j].innerText;
-      // get the value of the cell (preserve newlines, if you don't want that use .textContent)
+  function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
+      row = td.parentElement.parentElement;
+      document.getElementById("expensesList").deleteRow(row.rowIndex);
+      resetForm();
     }
-
-    values[i] = trValues;
   }
-  // save values
-  console.log(values);
-}
+  // Let's understand the above JavaScript code.
 
-window.onbeforeunload = function () {
-  save().event.preventDefault()
-};
+  // Handling HTML form submission with the following function:
 
-// Check browser support
-// if (typeof(Storage) !== "undefined") {
-//   // Store
-//   localStorage.setItem("name", "");
-//   // Retrieve
-//   document.getElementById("result").innerHTML = localStorage.getItem("name");
-// } else {
-//   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-// }
+  function onFormSubmit() {
+    if (validate()) {
+      var formData = readFormData();
+      if (selectedRow == null)
+        insertNewRecord(formData);
+      else
+        updateRecord(formData);
+      resetForm();
+    }
+    if (validate()) {
+      var formData = readFormData();
+      if (selectedRow == null)
+        insertNewRecord(formData);
+      else
+        updateRecord(formData);
+      resetForm();
+    }
+  }
 
-// if(!localStorage.getItem('bgcolor')){
-//   populateStroage();
-// } else {
-//   setStyles();
-// }
+  // Does not save table inputs after reloading page or leaving page
 
-// function populateStroage(){ 
-//   localStorage.getItem('bgcolor',
+  function save() {
+    var table = document.getElementById("expensesList");
+    var trs = table.getElementsByTagName('tr');  // list of all rows
 
-//   documentget.getElementById('bgcolor').value);
-//   localStorage.getItem('font', document.getElementById('font').value);
+    var values = [];  // will be a (potentially jagged) 2D array of all values
+    for (var i = 0; i < trs.length; i++) {
+      // loop through all rows, each will be one entrie in values
+      var trValues = [];
+      var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
 
-//   localStorage.setItem('bgcolor',
-// }
+      for (var j = 0; j < tds.length; j++) {
+        trValues[j] = tds[j].innerText;
+        // get the value of the cell (preserve newlines, if you don't want that use .textContent)
+      } 
 
+      values[i] = trValues;
+    }
+    // save values
+    console.log(values);
+  }
 
-// // Store email as a key and use password as the value
-// function SaveData() {
-//   var a = new Array();
-//   const hash = Object.fromEntries(
-//     a.map(e => [e.name, e.password])
-//   )
-//   var username = document.getElementById('email').value;
-//   var password = document.getElementById('psw').value;
-//   for (let key of hash) {
+  window.onbeforeunload = function () {
+    save().event.preventDefault()
+  };
 
-//     if (key[0] === username && key[1] === atob(password)) {
-//       alert('Login successful');
-//     }
-
-//     else {
-//       alert('Login fail');
-//     }
-//   }
-
-//   var username = document.getElementById('email').value;
-//   var password = document.getElementById('psw').value;
-//   sessionStorage.setItem("currentloggedin", username);
-
-//   localStorage.setItem('all_users', JSON.stringify(a));
-
-//   a = JSON.parse((localStorage.getItem("all_users")));
-//   a.push({ name: username, password: password });
-//   localStorage.setItem('name', JSON.stringify(a));
-//   for (var i = 0; i < a.length; i++) {
-//     var li = document.createElement("li");
-//     li.innerHTML = a[i]['name'];
-//     document.getElementById("listuser").appendChild(li);
-//   }
-// }
-
-// // Name and Password from the register-form
-// var name = document.getElementById('email');
-// var pw = document.getElementById('psw');
-
-// // storing input from register-form
-// function store() {
-//     localStorage.setItem('email', name.value);
-//     localStorage.setItem('psw', psw.value);
-// }
-
-// // check if stored data from register-form is equal to entered data in the   login-form
-// function check() {
-
-//     // stored data from the register-form
-//     var storedName = localStorage.getItem('email');
-//     var storedPw = localStorage.getItem('psw');
-
-//     // entered data from the login-form
-//     var userName = document.getElementById('email');
-//     var userPw = document.getElementById('psw');
+  // check if stored data from register-form is equal to data from login form
+  if (userName.value !== storedName || userPw.value !== storedPw) {
+    alert('ERROR');
+  } else {
+    alert('You are loged in.');
+  }
 
 
-// check if stored data from register-form is equal to data from login form
-if (userName.value !== storedName || userPw.value !== storedPw) {
-  alert('ERROR');
-} else {
-  alert('You are loged in.');
-}
-
-
-
-//     // check if stored data from register-form is equal to data from login form
-//     if(userName.value !== storedName || userPw.value !== storedPw) {
-//         alert('ERROR');
-//     }else {
-//         alert('You are loged in.');
-//     }
-// }
 
 
     // check if stored data from register-form is equal to data from login form
@@ -455,6 +356,11 @@ anychart.onDocumentReady(function() {
   
   });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -519,4 +425,233 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
+<<<<<<< HEAD
 };
+=======
+
+};
+
+};
+
+=======
+  //     // check if stored data from register-form is equal to data from login form
+  //     if(userName.value !== storedName || userPw.value !== storedPw) {
+  //         alert('ERROR');
+  //     }else {
+  //         alert('You are loged in.');
+  //     }
+  // }
+
+
+  // check if stored data from register-form is equal to data from login form
+  if (userName.value !== storedName || userPw.value !== storedPw) {
+    alert('ERROR');
+  } else {
+    alert('You are loged in.'); {
+    }
+
+
+    anychart.onDocumentReady(function () {
+
+      // set the data
+      var data = [
+        { x: "White", value: 223553265 },
+        { x: "Black or African American", value: 38929319 },
+        { x: "American Indian and Alaska Native", value: 2932248 },
+        { x: "Asian", value: 14674252 },
+        { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+        { x: "Some Other Race", value: 19107368 },
+        { x: "Two or More Races", value: 9009073 }
+      ];
+
+      // create the chart
+      var chart = anychart.pie();
+
+      // set the chart title
+      chart.title("Population by Race for the United States: 2010 Census");
+
+      // add the data
+      chart.data(data);
+
+      // display the chart in the container
+      chart.container('chart');
+      chart.draw();
+
+    });
+
+    // unable to save the table data so we can refresh the page and still see it
+
+    // Get the text field that we're going to track
+    // let field = document.querySelector('tbody');
+    // let form = document.getElementById('add-new-item')
+
+
+    // Check if browser can use 
+    // function storageAvailable(type) {
+    //   var storage;
+    //   try {
+    //     storage = window[type];
+    //     var x = '__storage_test__';
+    //     storage.setItem(x, x);
+    //     storage.removeItem(x);
+    //     return true;
+    //   }
+    //   catch (e) {
+    //     return e instanceof DOMException && (
+    //       // everything except Firefox
+    //       e.code === 22 ||
+    //       // Firefox
+    //       e.code === 1014 ||
+    //       // test name field too, because code might not be present
+    //       // everything except Firefox
+    //       e.name === 'QuotaExceededError' ||
+    //       // Firefox
+    //       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+    //       // acknowledge QuotaExceededError only if there's something already stored
+    //       (storage && storage.length !== 0);
+    //   }
+    // }
+
+    // Store
+    localStorage.setItem("table_info", field);
+    // Retrieve
+
+    //   localStorage.setItem("table_info", field);
+    // Retrieve
+
+    document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+    document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
+    document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
+    document.getElementById("category").value = getSavedValue("category");   // set the value to this input
+    document.getElementById("description").value = getSavedValue("description");   // set the value to this input
+    /* Here you can add more inputs to set value. if it's saved */
+
+    //Save the value function - save it to localStorage as (ID, VALUE)
+    function saveValue(e) {
+      var id = e.id;  // get the sender's id to save it . 
+      var val = e.value; // get the value. 
+      localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+    }
+>>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
+
+    //get the saved value function - return the value of "v" from localStorage. 
+    function getSavedValue(v) {
+      if (!localStorage.getItem(v)) {
+        return "";// You can change this to your defualt value. 
+      }
+      return localStorage.getItem(v);
+    }
+    window.beforeonload() = function () {
+      getSavedValue(this);
+    };
+  };
+  // problems with the pop up form on the items page. maybe names of the classes/ids?
+
+
+<<<<<<< HEAD
+// const fs = require('fs');
+
+// const users = new FormData(event.target);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+
+
+//   const value = Object.fromEntries(users.entries());
+
+//   console.log({ value });
+//   }
+
+//   const form = document.querySelector('container');
+//   form.addEventListener('submit', handleSubmit);
+
+// fs.writeFile('users.json', JSON.stringify(users), (err) => {  
+//     // Catch this!
+//     if (err) throw err;
+
+//     console.log('Users saved!');
+// });
+
+// fs.readFile('users.json', (err, data) => {
+//   // Catch this!
+//   if (err) throw err;
+
+//   const loadedUsers = JSON.parse(data);
+//   console.log(loadedUsers);
+// });
+
+// // hello-sqlite
+// var fs = require('fs');
+// var dbFile = './.data/sqlite.db'; // Our database file
+// var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
+// var sqlite3 = require('sqlite3').verbose(); // For long stack traces
+// var db = new sqlite3.Database(dbFile);
+
+// db.run('CREATE TABLE Dreams (dream TEXT)');
+// db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log('Dream saved!');
+//     }
+// });
+
+// window.onload = function(){
+//   document.getElementById('butval').onclick = function(){
+//       document.getElementById('test-1').value = document.getElementById('fname').value;   
+//   }
+// }; 
+
+
+
+
+=======
+  const fs = require('fs');
+
+  const users = new FormData(event.target);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+
+    const value = Object.fromEntries(users.entries());
+
+    console.log({ value });
+  }
+
+  const form = document.querySelector('container');
+  form.addEventListener('submit', handleSubmit);
+
+  fs.writeFile('users.json', JSON.stringify(users), (err) => {
+    // Catch this!
+    if (err) throw err;
+
+    console.log('Users saved!');
+  });
+
+  fs.readFile('users.json', (err, data) => {
+    // Catch this!
+    if (err) throw err;
+
+    const loadedUsers = JSON.parse(data);
+    console.log(loadedUsers);
+  });
+
+  // hello-sqlite
+  var fs = require('fs');
+  var dbFile = './.data/sqlite.db'; // Our database file
+  var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
+  var sqlite3 = require('sqlite3').verbose(); // For long stack traces
+  var db = new sqlite3.Database(dbFile);
+
+  db.run('CREATE TABLE Dreams (dream TEXT)');
+  db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function (err) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('Dream saved!');
+    }
+  });
+}
+>>>>>>> a3a086114a582a83adc9a73a4dc4c9e5969d5226
+>>>>>>> fbf9d9ec71b79c2fadd29fce1d37ca3902c71be5
