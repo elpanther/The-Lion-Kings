@@ -196,13 +196,11 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
-<<<<<<< HEAD
+
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
-=======
-<<<<<<< HEAD
 
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
@@ -210,11 +208,8 @@ function insertNewRecord(data) {
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 
-=======
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
->>>>>>> 074e2a744c9004738378e66f2c611d5269679569
 }
 
 function resetForm() {
@@ -316,13 +311,7 @@ if (userName.value !== storedName || userPw.value !== storedPw) {
 //     }
 // }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
->>>>>>> 074e2a744c9004738378e66f2c611d5269679569
     // check if stored data from register-form is equal to data from login form
     if(userName.value !== storedName || userPw.value !== storedPw) {
         alert('ERROR');
@@ -358,12 +347,9 @@ anychart.onDocumentReady(function() {
   chart.draw();
   
   });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
+
+
 // unable to save the table data so we can refresh the page and still see it
 
 // Get the text field that we're going to track
@@ -401,13 +387,9 @@ anychart.onDocumentReady(function() {
   localStorage.setItem("table_info", field);
   // Retrieve
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
 //   localStorage.setItem("table_info", field);
 // Retrieve
->>>>>>> 074e2a744c9004738378e66f2c611d5269679569
 
 document.getElementById("name").value = getSavedValue("name");    // set the value to this input
 document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
@@ -432,70 +414,68 @@ function getSavedValue(v) {
 }
 window.beforeonload() = function () {
   getSavedValue(this);
-<<<<<<< HEAD
+
 };
-=======
+
 };
-<<<<<<< HEAD
+
 
 // problems with the pop up form on the items page. maybe names of the classes/ids?
 
 
-const fs = require('fs');
+// const fs = require('fs');
 
-const users = new FormData(event.target);
+// const users = new FormData(event.target);
 
-function handleSubmit(event) {
-  event.preventDefault();
+// function handleSubmit(event) {
+//   event.preventDefault();
 
 
-  const value = Object.fromEntries(users.entries());
+//   const value = Object.fromEntries(users.entries());
 
-  console.log({ value });
-  }
+//   console.log({ value });
+//   }
 
-  const form = document.querySelector('container');
-  form.addEventListener('submit', handleSubmit);
+//   const form = document.querySelector('container');
+//   form.addEventListener('submit', handleSubmit);
 
-fs.writeFile('users.json', JSON.stringify(users), (err) => {  
-    // Catch this!
-    if (err) throw err;
+// fs.writeFile('users.json', JSON.stringify(users), (err) => {  
+//     // Catch this!
+//     if (err) throw err;
 
-    console.log('Users saved!');
-});
+//     console.log('Users saved!');
+// });
 
-fs.readFile('users.json', (err, data) => {
-  // Catch this!
-  if (err) throw err;
+// fs.readFile('users.json', (err, data) => {
+//   // Catch this!
+//   if (err) throw err;
 
-  const loadedUsers = JSON.parse(data);
-  console.log(loadedUsers);
-});
+//   const loadedUsers = JSON.parse(data);
+//   console.log(loadedUsers);
+// });
 
-// hello-sqlite
-var fs = require('fs');
-var dbFile = './.data/sqlite.db'; // Our database file
-var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
-var sqlite3 = require('sqlite3').verbose(); // For long stack traces
-var db = new sqlite3.Database(dbFile);
+// // hello-sqlite
+// var fs = require('fs');
+// var dbFile = './.data/sqlite.db'; // Our database file
+// var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
+// var sqlite3 = require('sqlite3').verbose(); // For long stack traces
+// var db = new sqlite3.Database(dbFile);
 
-db.run('CREATE TABLE Dreams (dream TEXT)');
-db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Dream saved!');
-    }
-});
-=======
+// db.run('CREATE TABLE Dreams (dream TEXT)');
+// db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log('Dream saved!');
+//     }
+// });
 
-<<<<<<< HEAD
+// window.onload = function(){
+//   document.getElementById('butval').onclick = function(){
+//       document.getElementById('test-1').value = document.getElementById('fname').value;   
+//   }
+// }; 
 
-=======
-=======
->>>>>>> 3016c695ca1279ca437bc1d1a8bc825b5df96d91
->>>>>>> 6f8dc4bed0ca7e7c2e95fe1cdce00cce8fb0d297
->>>>>>> cb703a999d52812df9928678d4bebd2176e74224
->>>>>>> 1e9038a9a9bd5c0fc3183686ae8b7c09fffd0d53
->>>>>>> 509669a6c13ae5867ee23b6cf0c8e7617d69004f
->>>>>>> 074e2a744c9004738378e66f2c611d5269679569
+
+
+
