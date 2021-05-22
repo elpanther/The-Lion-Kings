@@ -128,19 +128,20 @@ margin-right: 40px;
 
 .saving img {
     width: 20%;
-   margin: 20px;
+   margin: 16px;
    margin-left: 90px;
    float: left;
   }
 /* Savings account info */
 .saving-info {
-    margin-top: 37px;
+    margin-top: 30px;
     text-align: left;
 }
 /* Savings account heading */
 #SA {
     text-align: center;
-   margin-left: 300px;
+   margin-right: 400px;
+   margin-top: 60px;
 }
 
 .checking img {
@@ -155,10 +156,19 @@ margin-right: 40px;
 }
 /* Checking account heading */
 #CA {
-    margin: 60px;
-   margin-left: 500px;
+    margin: 30px;
+   margin-left: 730px;
 }
 
+.savings-source {
+  margin-right: 100px;
+  font-style: italic;
+}
+
+.checking-source {
+  margin-left: 50px;
+  font-style: italic;
+}
 
 .checking {
   margin-top: 150px;
@@ -247,6 +257,6 @@ margin-right: 40px;
 
 
 a {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
 }
