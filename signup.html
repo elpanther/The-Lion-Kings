@@ -22,6 +22,34 @@
       return false;
     }
   }
+
+  // Name and Password from the register-form
+  var username = document.getElementById('username');
+  var psw = document.getElementById('psw');
+  var email = document.getElementById('email');
+
+  // storing input from register-form
+  function store() {
+    localStorage.setItem('name', name.value);
+    localStorage.setItem('psw', psw.value);
+    localStorage.setItem('email', email.value)
+  }
+
+  // check if stored data from register-form is equal to entered data in the   login-form
+  function check() {
+
+    // stored data from the register-form
+    var storedName = localStorage.getItem('username');
+    var storedPw = localStorage.getItem('psw');
+
+
+    // check if stored data from register-form is equal to data from login form 
+    if (userName.value == storedName && userPw.value == storedPw) {
+      alert('You are logged in.');
+    } else {
+      alert('ERROR.');
+    }
+  }
 </script>
 </head>
 
@@ -41,22 +69,22 @@
     <h1>Create an account</h1>
 
     <label for="fname">First Name</label>
-    <input type="text" placeholder="Enter first name" name="fname" id="fname" required>
+    <input type="text" placeholder="Enter first name" name="fname" id="setfname" required>
 
     <label for="lname">Last Name</label>
-    <input type="text" placeholder="Enter last name" name="lname" id="lname" required>
+    <input type="text" placeholder="Enter last name" name="lname" id="setlname" required>
 
     <label for="Username">Username</label>
-    <input type="text" placeholder="Enter username" name="Username" id="username" required>
+    <input type="text" placeholder="Enter username" name="Username" id="setusername" required>
 
     <label for="psw">Password</label>
-    <input type="password" maxlength="6" placeholder="Enter password" name="psw" id="psw" required>
+    <input type="password" maxlength="6" placeholder="Enter password" name="psw" id="setpsw" required>
 
     <label for="vpsw">Verify Password</label>
-    <input type="password" maxlength="6" placeholder="Verify password" name="vpsw" id="vpsw" required>
+    <input type="password" maxlength="6" placeholder="Verify password" name="vpsw" id="setvpsw" required>
 
     <label for="email">Email</label>
-    <input type="email" placeholder="Enter email" name="email" id="email" required>
+    <input type="email" placeholder="Enter email" name="email" id="setemail" required>
 
     <input type="submit" value="Create an account" class="button" onclick="SaveData();handleSubmit();">
 

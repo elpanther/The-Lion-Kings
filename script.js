@@ -481,3 +481,24 @@ window.beforeonload() = function () {
 //       document.getElementById('test-1').value = document.getElementById('fname').value;   
 //   }
 // }; 
+
+// Name and Password from the register-form
+var username = document.getElementById('username');
+var psw = document.getElementById('psw');
+var email = document.getElementById('email');
+
+// storing input from register-form
+function store() {
+  localStorage.setItem('name', name.value);
+  localStorage.setItem('psw', psw.value);
+  localStorage.setItem('email', email.value)
+}
+
+// check if stored data from register-form is equal to entered data in the   login-form
+function check() {
+
+  // stored data from the register-form
+  var storedName = localStorage.getItem('username');
+  var storedPw = localStorage.getItem('psw');
+
+}
