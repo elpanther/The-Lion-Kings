@@ -196,8 +196,8 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.description;
   cell6 = newRow.insertCell(5)
-// Edit Icon
-// Messing with space
+  // Edit Icon
+  // Messing with space
   cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px" left="2500px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
   cell6.innerHTML = `<a onClick="onEdit(this);openItem();blurToggle()">Edit</a>
@@ -221,138 +221,253 @@ function resetForm() {
   document.getElementById("description").value = "";
   selectedRow = null;
 }
-  cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
+cell6.innerHTML = `<a onClick="onEdit(this)"><img src="https://image.flaticon.com/icons/png/512/61/61456.png" alt="Edit" width="25px"></a>
                        <a onClick="onDelete(this)"><img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/trashcan-512.png" alt="Delete" width="25px"></a>`;
 
-  function resetForm() {
-    document.getElementById("name").value = "";
-    document.getElementById("purpose").value = "";
-    document.getElementById("amount").value = "";
-    document.getElementById("category").value = "";
-    document.getElementById("description").value = "";
-    selectedRow = null;
+function resetForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("purpose").value = "";
+  document.getElementById("amount").value = "";
+  document.getElementById("category").value = "";
+  document.getElementById("description").value = "";
+  selectedRow = null;
+}
+
+function onEdit(td) {
+  selectedRow = td.parentElement.parentElement;
+  document.getElementById("name").value = selectedRow.cells[0].innerHTML;
+  document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
+  document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("category").value = selectedRow.cells[3].innerHTML;
+  document.getElementById("description").value = selectedRow.cells[4].innerHTML;
+}
+function updateRecord(formData) {
+  selectedRow.cells[0].innerHTML = formData.name;
+  selectedRow.cells[1].innerHTML = formData.purpose;
+  selectedRow.cells[2].innerHTML = formData.amount;
+  selectedRow.cells[3].innerHTML = formData.category;
+  selectedRow.cells[4].innerHTML = formData.description;
+}
+
+function onDelete(td) {
+  if (confirm('Are you sure to delete this record ?')) {
+    row = td.parentElement.parentElement;
+    document.getElementById("expensesList").deleteRow(row.rowIndex);
+    resetForm();
   }
+}
+// Let's understand the above JavaScript code.
 
-  function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("name").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("purpose").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("amount").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("category").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("description").value = selectedRow.cells[4].innerHTML;
+// Handling HTML form submission with the following function:
+
+function onFormSubmit() {
+  if (validate()) {
+    var formData = readFormData();
+    if (selectedRow == null)
+      insertNewRecord(formData);
+    else
+      updateRecord(formData);
+    resetForm();
   }
-  function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.name;
-    selectedRow.cells[1].innerHTML = formData.purpose;
-    selectedRow.cells[2].innerHTML = formData.amount;
-    selectedRow.cells[3].innerHTML = formData.category;
-    selectedRow.cells[4].innerHTML = formData.description;
+  if (validate()) {
+    var formData = readFormData();
+    if (selectedRow == null)
+      insertNewRecord(formData);
+    else
+      updateRecord(formData);
+    resetForm();
   }
+}
 
-  function onDelete(td) {
-    if (confirm('Are you sure to delete this record ?')) {
-      row = td.parentElement.parentElement;
-      document.getElementById("expensesList").deleteRow(row.rowIndex);
-      resetForm();
-    }
-  }
-  // Let's understand the above JavaScript code.
+// Does not save table inputs after reloading page or leaving page
 
-  // Handling HTML form submission with the following function:
+function save() {
+  var table = document.getElementById("expensesList");
+  var trs = table.getElementsByTagName('tr');  // list of all rows
 
-  function onFormSubmit() {
-    if (validate()) {
-      var formData = readFormData();
-      if (selectedRow == null)
-        insertNewRecord(formData);
-      else
-        updateRecord(formData);
-      resetForm();
-    }
-    if (validate()) {
-      var formData = readFormData();
-      if (selectedRow == null)
-        insertNewRecord(formData);
-      else
-        updateRecord(formData);
-      resetForm();
-    }
-  }
+  var values = [];  // will be a (potentially jagged) 2D array of all values
+  for (var i = 0; i < trs.length; i++) {
+    // loop through all rows, each will be one entrie in values
+    var trValues = [];
+    var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
 
-  // Does not save table inputs after reloading page or leaving page
-
-  function save() {
-    var table = document.getElementById("expensesList");
-    var trs = table.getElementsByTagName('tr');  // list of all rows
-
-    var values = [];  // will be a (potentially jagged) 2D array of all values
-    for (var i = 0; i < trs.length; i++) {
-      // loop through all rows, each will be one entrie in values
-      var trValues = [];
-      var tds = trs[i].getElementsByTagName('td');  // list of all cells in this row
-
-      for (var j = 0; j < tds.length; j++) {
-        trValues[j] = tds[j].innerText;
-        // get the value of the cell (preserve newlines, if you don't want that use .textContent)
-      } 
-
-      values[i] = trValues;
-    }
-    // save values
-    console.log(values);
-  }
-
-  window.onbeforeunload = function () {
-    save().event.preventDefault()
-  };
-
-  // check if stored data from register-form is equal to data from login form
-  if (userName.value !== storedName || userPw.value !== storedPw) {
-    alert('ERROR');
-  } else {
-    alert('You are loged in.');
-  }
-
-
-
-
-    // check if stored data from register-form is equal to data from login form
-    if(userName.value !== storedName || userPw.value !== storedPw) {
-        alert('ERROR');
-    }else {
-        alert('You are loged in.');{
+    for (var j = 0; j < tds.length; j++) {
+      trValues[j] = tds[j].innerText;
+      // get the value of the cell (preserve newlines, if you don't want that use .textContent)
     }
 
+    values[i] = trValues;
+  }
+  // save values
+  console.log(values);
+}
 
-anychart.onDocumentReady(function() {
+window.onbeforeunload = function () {
+  save().event.preventDefault()
+};
 
-  // set the data
-  var data = [
-      {x: "White", value: 223553265},
-      {x: "Black or African American", value: 38929319},
-      {x: "American Indian and Alaska Native", value: 2932248},
-      {x: "Asian", value: 14674252},
-      {x: "Native Hawaiian and Other Pacific Islander", value: 540013},
-      {x: "Some Other Race", value: 19107368},
-      {x: "Two or More Races", value: 9009073}
-  ];
-  
-  // create the chart
-  var chart = anychart.pie();
-  
-  // set the chart title
-  chart.title("Population by Race for the United States: 2010 Census");
-  
-  // add the data
-  chart.data(data);
-  
-  // display the chart in the container
-  chart.container('chart');
-  chart.draw();
-  
+// check if stored data from register-form is equal to data from login form
+if (userName.value !== storedName || userPw.value !== storedPw) {
+  alert('ERROR');
+} else {
+  alert('You are loged in.');
+}
+
+
+
+
+// check if stored data from register-form is equal to data from login form
+if (userName.value !== storedName || userPw.value !== storedPw) {
+  alert('ERROR');
+} else {
+  alert('You are loged in.'); {
+  }
+
+
+  anychart.onDocumentReady(function () {
+
+    // set the data
+    var data = [
+      { x: "White", value: 223553265 },
+      { x: "Black or African American", value: 38929319 },
+      { x: "American Indian and Alaska Native", value: 2932248 },
+      { x: "Asian", value: 14674252 },
+      { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+      { x: "Some Other Race", value: 19107368 },
+      { x: "Two or More Races", value: 9009073 }
+    ];
+
+    // create the chart
+    var chart = anychart.pie();
+
+    // set the chart title
+    chart.title("Population by Race for the United States: 2010 Census");
+
+    // add the data
+    chart.data(data);
+
+    // display the chart in the container
+    chart.container('chart');
+    chart.draw();
+
   });
 
 
+
+  // unable to save the table data so we can refresh the page and still see it
+
+  // Get the text field that we're going to track
+  // let field = document.querySelector('tbody');
+  // let form = document.getElementById('add-new-item')
+
+
+  // Check if browser can use 
+  // function storageAvailable(type) {
+  //   var storage;
+  //   try {
+  //     storage = window[type];
+  //     var x = '__storage_test__';
+  //     storage.setItem(x, x);
+  //     storage.removeItem(x);
+  //     return true;
+  //   }
+  //   catch (e) {
+  //     return e instanceof DOMException && (
+  //       // everything except Firefox
+  //       e.code === 22 ||
+  //       // Firefox
+  //       e.code === 1014 ||
+  //       // test name field too, because code might not be present
+  //       // everything except Firefox
+  //       e.name === 'QuotaExceededError' ||
+  //       // Firefox
+  //       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+  //       // acknowledge QuotaExceededError only if there's something already stored
+  //       (storage && storage.length !== 0);
+  //   }
+  // }
+
+  // Store
+  localStorage.setItem("table_info", field);
+  // Retrieve
+
+
+  //   localStorage.setItem("table_info", field);
+  // Retrieve
+
+  document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+  document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
+  document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
+  document.getElementById("category").value = getSavedValue("category");   // set the value to this input
+  document.getElementById("description").value = getSavedValue("description");   // set the value to this input
+  /* Here you can add more inputs to set value. if it's saved */
+
+  //Save the value function - save it to localStorage as (ID, VALUE)
+  function saveValue(e) {
+    var id = e.id;  // get the sender's id to save it . 
+    var val = e.value; // get the value. 
+    localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+  }
+
+  //get the saved value function - return the value of "v" from localStorage. 
+  function getSavedValue(v) {
+    if (!localStorage.getItem(v)) {
+      return "";// You can change this to your defualt value. 
+    }
+    return localStorage.getItem(v);
+  }
+  window.beforeonload() = function () {
+    getSavedValue(this);
+
+  };
+
+
+};
+//     // check if stored data from register-form is equal to data from login form
+//     if(userName.value !== storedName || userPw.value !== storedPw) {
+//         alert('ERROR');
+//     }else {
+//         alert('You are loged in.');
+//     }
+// }
+
+
+// check if stored data from register-form is equal to data from login form
+if (userName.value !== storedName || userPw.value !== storedPw) {
+  alert('ERROR');
+} else {
+  alert('You are loged in.'); {
+  }
+}
+
+
+// anychart.onDocumentReady(function () {
+
+//   // set the data
+//   var data = [
+//     { x: "White", value: 223553265 },
+//     { x: "Black or African American", value: 38929319 },
+//     { x: "American Indian and Alaska Native", value: 2932248 },
+//     { x: "Asian", value: 14674252 },
+//     { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+//     { x: "Some Other Race", value: 19107368 },
+//     { x: "Two or More Races", value: 9009073 }
+//   ];
+
+//   // create the chart
+//   var chart = anychart.pie();
+
+//   // set the chart title
+//   chart.title("Population by Race for the United States: 2010 Census");
+
+//   // add the data
+//   chart.data(data);
+
+//   // display the chart in the container
+//   chart.container('chart');
+//   chart.draw();
+
+// });
 
 // unable to save the table data so we can refresh the page and still see it
 
@@ -387,201 +502,84 @@ anychart.onDocumentReady(function() {
 //   }
 // }
 
-  // Store
-  localStorage.setItem("table_info", field);
-  // Retrieve
-
-
-//   localStorage.setItem("table_info", field);
-// Retrieve
-
-document.getElementById("name").value = getSavedValue("name");    // set the value to this input
-document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
-document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
-document.getElementById("category").value = getSavedValue("category");   // set the value to this input
-document.getElementById("description").value = getSavedValue("description");   // set the value to this input
 /* Here you can add more inputs to set value. if it's saved */
 
-//Save the value function - save it to localStorage as (ID, VALUE)
-function saveValue(e) {
-  var id = e.id;  // get the sender's id to save it . 
-  var val = e.value; // get the value. 
-  localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+
+
+// var fs = require('fs');
+
+// const users = new FormData(event.target);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+
+
+//   const value = Object.fromEntries(users.entries());
+
+//   console.log({ value });
+//   }
+
+//   const form = document.querySelector('items-container');
+//   form.addEventListener('submit', handleSubmit);
+
+// fs.writeFile('users.json', JSON.stringify(users), (err) => {  
+//     // Catch this!
+//     if (err) throw err;
+
+//     console.log('Users saved!');
+// });
+
+// fs.readFile('users.json', (err, data) => {
+//   // Catch this!
+//   if (err) throw err;
+
+//   const loadedUsers = JSON.parse(data);
+//   console.log(loadedUsers);
+// });
+
+// // hello-sqlite
+// var fs = require('fs');
+// var dbFile = './.data/sqlite.db'; // Our database file
+// var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
+// var sqlite3 = require('sqlite3').verbose(); // For long stack traces
+// var db = new sqlite3.Database(dbFile);
+
+// db.run('CREATE TABLE Dreams (dream TEXT)');
+// db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log('Dream saved!');
+//     }
+// });
+
+
+// function getLocalStorage() {
+//   var a = {};
+//   for (var i = 0; i < localStorage.length; i++) {
+//     var k = localStorage.key(i);
+//     var v = localStorage.getItem(k);
+//     a[k] = v;
+//   }
+//   var s = JSON.stringify(a);
+//   return s;
+// }
+
+
+
+// function writeLocalStorage(data) {
+//   var o = JSON.parse(data);
+//   for (var property in o) {
+//     if (o.hasOwnProperty(property)) {
+//       localStorage.setItem(property, o[property]);
+//     }
+//   }
+// }
+
+function getLocalStorage() {
+  return JSON.stringify(localStorage)
 }
 
-//get the saved value function - return the value of "v" from localStorage. 
-function getSavedValue(v) {
-  if (!localStorage.getItem(v)) {
-    return "";// You can change this to your defualt value. 
-  }
-  return localStorage.getItem(v);
+function writeLocalStorage(data) {
+  Object.keys(data).forEach(function(key) { localStorage.setItem(key, data[key])})
 }
-window.beforeonload() = function () {
-  getSavedValue(this);
-
-};
-
-
-};
-  //     // check if stored data from register-form is equal to data from login form
-  //     if(userName.value !== storedName || userPw.value !== storedPw) {
-  //         alert('ERROR');
-  //     }else {
-  //         alert('You are loged in.');
-  //     }
-  // }
-
-
-  // check if stored data from register-form is equal to data from login form
-  if (userName.value !== storedName || userPw.value !== storedPw) {
-    alert('ERROR');
-  } else {
-    alert('You are loged in.'); {
-    }
-
-
-    anychart.onDocumentReady(function () {
-
-      // set the data
-      var data = [
-        { x: "White", value: 223553265 },
-        { x: "Black or African American", value: 38929319 },
-        { x: "American Indian and Alaska Native", value: 2932248 },
-        { x: "Asian", value: 14674252 },
-        { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
-        { x: "Some Other Race", value: 19107368 },
-        { x: "Two or More Races", value: 9009073 }
-      ];
-
-      // create the chart
-      var chart = anychart.pie();
-
-      // set the chart title
-      chart.title("Population by Race for the United States: 2010 Census");
-
-      // add the data
-      chart.data(data);
-
-      // display the chart in the container
-      chart.container('chart');
-      chart.draw();
-
-    });
-
-    // unable to save the table data so we can refresh the page and still see it
-
-    // Get the text field that we're going to track
-    // let field = document.querySelector('tbody');
-    // let form = document.getElementById('add-new-item')
-
-
-    // Check if browser can use 
-    // function storageAvailable(type) {
-    //   var storage;
-    //   try {
-    //     storage = window[type];
-    //     var x = '__storage_test__';
-    //     storage.setItem(x, x);
-    //     storage.removeItem(x);
-    //     return true;
-    //   }
-    //   catch (e) {
-    //     return e instanceof DOMException && (
-    //       // everything except Firefox
-    //       e.code === 22 ||
-    //       // Firefox
-    //       e.code === 1014 ||
-    //       // test name field too, because code might not be present
-    //       // everything except Firefox
-    //       e.name === 'QuotaExceededError' ||
-    //       // Firefox
-    //       e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-    //       // acknowledge QuotaExceededError only if there's something already stored
-    //       (storage && storage.length !== 0);
-    //   }
-    // }
-
-    // Store
-    localStorage.setItem("table_info", field);
-    // Retrieve
-
-    //   localStorage.setItem("table_info", field);
-    // Retrieve
-
-    document.getElementById("name").value = getSavedValue("name");    // set the value to this input
-    document.getElementById("purpose").value = getSavedValue("purpose");   // set the value to this input
-    document.getElementById("amount").value = getSavedValue("amount");   // set the value to this input
-    document.getElementById("category").value = getSavedValue("category");   // set the value to this input
-    document.getElementById("description").value = getSavedValue("description");   // set the value to this input
-    /* Here you can add more inputs to set value. if it's saved */
-
-    //Save the value function - save it to localStorage as (ID, VALUE)
-    function saveValue(e) {
-      var id = e.id;  // get the sender's id to save it . 
-      var val = e.value; // get the value. 
-      localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
-    }
-
-};
-
-    //get the saved value function - return the value of "v" from localStorage. 
-    function getSavedValue(v) {
-      if (!localStorage.getItem(v)) {
-        return "";// You can change this to your defualt value. 
-      }
-      return localStorage.getItem(v);
-    }
-    window.beforeonload() = function () {
-      getSavedValue(this);
-    };
-  // problems with the pop up form on the items page. maybe names of the classes/ids?
-
-
-var fs = require('fs');
-
-const users = new FormData(event.target);
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-
-  const value = Object.fromEntries(users.entries());
-
-  console.log({ value });
-  }
-
-  const form = document.querySelector('items-container');
-  form.addEventListener('submit', handleSubmit);
-
-fs.writeFile('users.json', JSON.stringify(users), (err) => {  
-    // Catch this!
-    if (err) throw err;
-
-    console.log('Users saved!');
-});
-
-fs.readFile('users.json', (err, data) => {
-  // Catch this!
-  if (err) throw err;
-
-  const loadedUsers = JSON.parse(data);
-  console.log(loadedUsers);
-});
-
-// hello-sqlite
-var fs = require('fs');
-var dbFile = './.data/sqlite.db'; // Our database file
-var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
-var sqlite3 = require('sqlite3').verbose(); // For long stack traces
-var db = new sqlite3.Database(dbFile);
-
-db.run('CREATE TABLE Dreams (dream TEXT)');
-db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Dream saved!');
-    }
-});
-
-
