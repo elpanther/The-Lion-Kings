@@ -534,71 +534,9 @@ window.beforeonload() = function () {
     window.beforeonload() = function () {
       getSavedValue(this);
     };
-  // problems with the pop up form on the items page. maybe names of the classes/ids?
 
-
-var fs = require('fs');
-
-const users = new FormData(event.target);
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-
-  const value = Object.fromEntries(users.entries());
-
-  console.log({ value });
-  }
-
-  const form = document.querySelector('items-container');
-  form.addEventListener('submit', handleSubmit);
-
-fs.writeFile('users.json', JSON.stringify(users), (err) => {  
-    // Catch this!
-    if (err) throw err;
-
-    console.log('Users saved!');
-});
-
-fs.readFile('users.json', (err, data) => {
-  // Catch this!
-  if (err) throw err;
-
-  const loadedUsers = JSON.parse(data);
-  console.log(loadedUsers);
-});
-
-// hello-sqlite
-var fs = require('fs');
-var dbFile = './.data/sqlite.db'; // Our database file
-var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
-var sqlite3 = require('sqlite3').verbose(); // For long stack traces
-var db = new sqlite3.Database(dbFile);
-
-db.run('CREATE TABLE Dreams (dream TEXT)');
-db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Dream saved!');
-    }
-});
-
-function getLocalStorage() {
-  var a = {};
-  for (var i = 0; i < localStorage.length; i++) {
-      var k = localStorage.key(i);
-      var v = localStorage.getItem(k);
-      a[k] = v;
-  }
-  var s = JSON.stringify(a);
-  return s;
-}
-
-getLocalStorage()
-
-function writeLocalStorage(data) {
-  Object.keys(data).forEach(function(key) { localStorage.setItem(key, data[key])})
-}
-
-writeLocalStorage()
+var firstName = document.getElementById('setfname')
+var lastName = document.getElementById('setlname')
+var userName = document.getElementById('setusername')
+var passWord = document.getElementById('setpsw')
+var eMail = document.getElementById('setemail')
