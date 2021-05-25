@@ -2,8 +2,7 @@
 
 body {
     padding: 0 10px;
-    background: linear-gradient( #f0f8ff, 75%, #5E95E1);
-    background-size: 1300% 1300%;
+    background: linear-gradient(to left, #fdff97 0%, #6D9AD9 45%);
 }
 .pull-right{
     float:right;
@@ -17,7 +16,7 @@ body {
     border-radius: 10px;
     max-width: 500px;
     width: 100%;
-    background: #5E95E1;
+    background: #1034A6;
     margin: 20px auto;
     margin-top: 60px;
     padding: 30px;
@@ -26,7 +25,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 .form .input_field {
@@ -38,7 +37,7 @@ body {
 .form .input_field .input {
     width: 100%;
     outline: none;
-    border: 1px solid #5E95E1;
+    border: 1px solid #1034A6;
     border-bottom: 2px solid #000;
     font-size: 15px;
     padding: 8px 10px;
@@ -56,7 +55,7 @@ body {
   border: 1px solid #5E95E1;
 }
 .form .input_field .input:focus {
-    border-bottom: 3.5px solid #000;
+    border-bottom: 3.5px solid rgb(255, 255, 255);
 }
 .form .button .btn {
     width: 100%;
@@ -64,7 +63,7 @@ body {
     font-size: 15px;
     border: 0;
     background: #FEE5A2;
-    color: #000;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 3px;
     outline: none;
@@ -76,7 +75,7 @@ body {
     background: #e6c97b;
 }
 .form input {
-  background-color: #5E95E1;
+  background-color: #1034A6;
 }
 textarea {
     min-height: 5em;
@@ -84,7 +83,7 @@ textarea {
     width: 100%;
 }
 input::placeholder {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 420px){
@@ -100,6 +99,7 @@ input::placeholder {
 
 /* Universal font */
 body {
+  color: white;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
