@@ -580,6 +580,10 @@ function getLocalStorage() {
   return JSON.stringify(localStorage)
 }
 
+getLocalStorage()
+
 function writeLocalStorage(data) {
   Object.keys(data).forEach(function(key) { localStorage.setItem(key, data[key])})
 }
+
+writeLocalStorage()
