@@ -6,7 +6,8 @@
 /* Universal font */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to left, #fdff97 0%, #6D9AD9 45%);
+    background: linear-gradient( #f0f8ff, 75%, #5E95E1);
+    background-size: 175% 175%;
 }
 
 html,
