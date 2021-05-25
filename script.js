@@ -534,7 +534,6 @@ window.beforeonload() = function () {
     window.beforeonload() = function () {
       getSavedValue(this);
     };
-  // problems with the pop up form on the items page. maybe names of the classes/ids?
 
 
 var fs = require('fs');
@@ -603,3 +602,8 @@ function writeLocalStorage(data) {
 
 writeLocalStorage()
 
+var firstName = document.getElementById('setfname')
+var lastName = document.getElementById('setlname')
+var userName = document.getElementById('setusername')
+var passWord = document.getElementById('setpsw')
+var eMail = document.getElementById('setemail')
