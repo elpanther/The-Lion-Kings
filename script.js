@@ -440,33 +440,33 @@ window.beforeonload() = function () {
     }
 
 
-    anychart.onDocumentReady(function () {
+    // anychart.onDocumentReady(function () {
 
-      // set the data
-      var data = [
-        { x: "White", value: 223553265 },
-        { x: "Black or African American", value: 38929319 },
-        { x: "American Indian and Alaska Native", value: 2932248 },
-        { x: "Asian", value: 14674252 },
-        { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
-        { x: "Some Other Race", value: 19107368 },
-        { x: "Two or More Races", value: 9009073 }
-      ];
+    //   // set the data
+    //   var data = [
+    //     { x: "White", value: 223553265 },
+    //     { x: "Black or African American", value: 38929319 },
+    //     { x: "American Indian and Alaska Native", value: 2932248 },
+    //     { x: "Asian", value: 14674252 },
+    //     { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+    //     { x: "Some Other Race", value: 19107368 },
+    //     { x: "Two or More Races", value: 9009073 }
+    //   ];
 
-      // create the chart
-      var chart = anychart.pie();
+    //   // create the chart
+    //   var chart = anychart.pie();
 
-      // set the chart title
-      chart.title("Population by Race for the United States: 2010 Census");
+    //   // set the chart title
+    //   chart.title("Population by Race for the United States: 2010 Census");
 
-      // add the data
-      chart.data(data);
+    //   // add the data
+    //   chart.data(data);
 
-      // display the chart in the container
-      chart.container('chart');
-      chart.draw();
+    //   // display the chart in the container
+    //   chart.container('chart');
+    //   chart.draw();
 
-    });
+    // });
 
     // unable to save the table data so we can refresh the page and still see it
 
@@ -534,54 +534,9 @@ window.beforeonload() = function () {
     window.beforeonload() = function () {
       getSavedValue(this);
     };
-  // problems with the pop up form on the items page. maybe names of the classes/ids?
 
-
-var fs = require('fs');
-
-const users = new FormData(event.target);
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-
-  const value = Object.fromEntries(users.entries());
-
-  console.log({ value });
-  }
-
-  const form = document.querySelector('items-container');
-  form.addEventListener('submit', handleSubmit);
-
-fs.writeFile('users.json', JSON.stringify(users), (err) => {  
-    // Catch this!
-    if (err) throw err;
-
-    console.log('Users saved!');
-});
-
-fs.readFile('users.json', (err, data) => {
-  // Catch this!
-  if (err) throw err;
-
-  const loadedUsers = JSON.parse(data);
-  console.log(loadedUsers);
-});
-
-// hello-sqlite
-var fs = require('fs');
-var dbFile = './.data/sqlite.db'; // Our database file
-var exists = fs.existsSync(dbFile); // Sync is okay since we're booting up
-var sqlite3 = require('sqlite3').verbose(); // For long stack traces
-var db = new sqlite3.Database(dbFile);
-
-db.run('CREATE TABLE Dreams (dream TEXT)');
-db.run('INSERT INTO Dreams (dream) VALUES (?)', ['Well tested code'], function(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log('Dream saved!');
-    }
-});
-
-
+var firstName = document.getElementById('setfname')
+var lastName = document.getElementById('setlname')
+var userName = document.getElementById('setusername')
+var passWord = document.getElementById('setpsw')
+var eMail = document.getElementById('setemail')
