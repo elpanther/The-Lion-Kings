@@ -2,7 +2,6 @@
 
 body {
     padding: 0 10px;
-    background: linear-gradient(to left, #fdff97 0%, #6D9AD9 45%);
 }
 .pull-right{
     float:right;
@@ -16,7 +15,7 @@ body {
     border-radius: 10px;
     max-width: 500px;
     width: 100%;
-    background: #1034A6;
+    background: #5E95E1;
     margin: 20px auto;
     margin-top: 60px;
     padding: 30px;
@@ -37,7 +36,7 @@ body {
 .form .input_field .input {
     width: 100%;
     outline: none;
-    border: 1px solid #1034A6;
+    border: 1px solid #5E95E1;
     border-bottom: 2px solid #000;
     font-size: 15px;
     padding: 8px 10px;
@@ -75,7 +74,7 @@ body {
     background: #e6c97b;
 }
 .form input {
-  background-color: #1034A6;
+  background-color: #5E95E1;
 }
 textarea {
     min-height: 5em;

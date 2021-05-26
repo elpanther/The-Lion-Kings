@@ -12,21 +12,8 @@ html,body{
 }
 
 body {
-  background: linear-gradient(-45deg, #fdff97 0%, #1034A6 );
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  background: linear-gradient( #F0F8FF, 75%, #5E95E1);
+  background-size: 200%;
 }
 
 /* blurs the background */
